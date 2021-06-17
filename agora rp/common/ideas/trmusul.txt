@@ -1,0 +1,24 @@
+ideas = {
+	
+		country = {
+
+		idea_tr_mosul_oil = {
+
+
+			picture = generic_economic_increase
+
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		
+	}
+}
