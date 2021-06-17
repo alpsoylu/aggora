@@ -1,0 +1,314 @@
+﻿###########################
+# Portugal Events
+###########################
+
+add_namespace = por_event
+
+country_event = {
+	id = por_event.1 # event por_event.1 POR
+	title = por_event.1.t
+	desc = por_event.1.d
+	picture = GFX_report_event_soldiers_marching
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	POR = {has_completed_focus = POR_iberian_union}
+	original_tag = SPR
+	}
+	
+	#YES
+	option = {
+		name = por_event.1.a
+		ai_chance = { factor = 100}
+		SPR = {
+	every_owned_state = {
+	limit = { is_core_of = SPR}
+	add_core_of = POR
+	}
+	}
+		name = por_event.1.a
+		POR = { change_tag_from = SPR }
+		POR = {
+		annex_country = {
+    target = SPR
+    transfer_troops = yes
+}
+}
+
+		POR = { country_event = { id = por_event.2 } }
+	}
+
+	
+	#NO
+	option = {
+		name = por_event.1.b
+		ai_chance = { factor = 0}
+		POR = { country_event = { id = por_event.3 } }
+	}
+}
+
+
+
+
+
+
+
+
+	
+
+#SPR ACCEPT
+country_event = {
+	id = por_event.2 #event por_event.2 SPR
+	title = por_event.2.t
+	desc = por_event.2.d
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	trigger = {
+	POR = {has_completed_focus = POR_iberian_union}
+	original_tag = POR
+	}
+	fire_only_once = yes
+	#DELIGHTFULL
+	option = {
+	ai_chance = {base = 10}
+		name = por_event.2.a
+		POR = {
+		set_cosmetic_tag = IBR_union
+		set_country_flag = POR_formed_iberia 
+		}
+	}
+	
+	}
+	
+
+#SPR REJECT
+country_event = {
+	id = por_event.3
+	title = por_event.3.t
+	desc = por_event.3.d
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = POR
+	POR = {has_completed_focus = POR_iberian_union}
+	SPR = {exists = yes}
+	POR = {
+	NOT = {
+	controls_state = 41
+	}
+	}
+	}
+	#NO
+	option = {
+	ai_chance = {base = 10}
+		name = por_event.3.a
+		POR = {
+		create_wargoal = { type = annex_everything target = SPR }
+		}
+	}
+	
+	}
+	
+
+#PORTUGAL ORGANIZES WEDDING
+country_event = {
+	id = por_event.4 #event por_event.4 POR
+	title = por_event.4.t
+	desc = por_event.4.d
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	trigger = {
+	POR = {has_completed_focus = POR_organize_brazil_wedding}
+	original_tag = BRA
+	}
+	#NO
+	option = {
+	ai_chance = {base = 10}
+		name = por_event.4.a
+		add_opinion_modifier = { target = POR modifier = large_increase }
+	}
+	
+	}
+	
+	
+	
+	
+	
+	
+	country_event = {
+	id = por_event.5 #event por_event.5 POR
+	title = por_event.5.t
+	desc = por_event.5.d
+	picture = GFX_report_event_soldiers_marching
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	POR = {has_completed_focus = POR_suggest_a_union_with_brazil}
+	original_tag = BRA
+	}
+	
+	#YES
+	option = {
+		name = por_event.5.a
+		ai_chance = { factor = 100}
+		BRA = {
+	every_owned_state = {
+	limit = { is_core_of = BRA}
+	add_core_of = POR
+	}
+	}
+		name = por_event.5.a
+		POR = { change_tag_from = BRA }
+		POR = {
+		annex_country = {
+    target = BRA
+    transfer_troops = yes
+}
+}
+
+		POR = { country_event = { id = por_event.6 } }
+	}
+
+	
+	#NO
+	option = {
+		name = por_event.5.b
+		ai_chance = { factor = 0}
+		POR = { country_event = { id = por_event.7 } }
+	}
+}
+
+
+
+
+
+
+
+
+	
+
+#BRA ACCEPT
+country_event = {
+	id = por_event.6 #event por_event.6 BRA
+	title = por_event.6.t
+	desc = por_event.6.d
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	trigger = {
+	POR = {has_completed_focus = POR_suggest_a_union_with_brazil}
+	original_tag = POR
+	POR = {controls_state = 505}
+	}
+	fire_only_once = yes
+	#DELIGHTFULL
+	option = {
+	ai_chance = {base = 10}
+		name = por_event.6.a
+		POR = {
+		set_cosmetic_tag = KPB_kingdom_portugal_and_brazil
+		set_country_flag = POR_formed_brazil_union
+		}
+	}
+	
+	}
+	
+
+#BRA REJECT
+country_event = {
+	id = por_event.7
+	title = por_event.7.t
+	desc = por_event.7.d
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	trigger = {
+	POR = {has_completed_focus = POR_suggest_a_union_with_brazil}
+	original_tag = POR
+	POR = {
+	NOT = {
+	controls_state = 505
+	}
+	}
+	}
+	#NO
+	option = {
+	ai_chance = {base = 10}
+		name = por_event.7.a
+		POR = {
+		create_wargoal = { type = annex_everything target = BRA }
+		}
+	}
+	
+	}
+	
+
+#Cored Catalonia
+country_event = {
+	id = por_event.8 #EVENT por_event.8 SPR
+	title = por_event.8.t
+	desc = por_event.8.d
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	trigger = {
+	owns_state = 165
+	controls_state = 165
+	165 = {is_core_of = ROOT}
+	165 = {
+			has_dynamic_modifier = { modifier = SPR_catolonian_resistance }
+		}
+	}
+	#NO
+	option = {
+	ai_chance = {base = 10}
+		name = por_event.8.a
+		165 = {
+			remove_dynamic_modifier = { modifier = SPR_catolonian_resistance }
+		}
+	}
+	
+	}
+	
+
+#Cyrus dyn Modifier
+country_event = {
+	id = por_event.9 #EVENT por_event.9 ENG
+	title = por_event.9.t
+	desc = por_event.9.d
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	trigger = {
+	controls_state = 183
+	ENG = {
+	NOT = {
+	controls_state = 183
+	}
+	}
+	#183 = {
+	#		has_dynamic_modifier = { modifier = ENG_protectarate_cyprus }
+	#	}
+	}
+	
+	
+	
+	option = {
+	ai_chance = {base = 10}
+		name = por_event.9.a
+		183 = {
+			remove_dynamic_modifier = { modifier = ENG_protectarate_cyprus }
+		}
+	}
+	
+	}

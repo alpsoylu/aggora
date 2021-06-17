@@ -1,0 +1,13 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_trait_ENG_royalist"
+		texturefile = "gfx/interface/traits/Royalist_trait.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_CHI_loyalist"
+		texturefile = "gfx/interface/traits/Royalist_trait.dds"
+	}
+
+}

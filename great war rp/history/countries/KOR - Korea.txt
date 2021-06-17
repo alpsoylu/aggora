@@ -1,0 +1,158 @@
+﻿capital=800 #Gyeongseong
+
+1910.1.1 = {
+	oob="KOR_1910"
+
+	if = {
+		limit = {
+			NOT = { has_dlc = "Man the Guns" }
+		}
+		set_naval_oob = "KOR_1910_naval_legacy"
+	}
+
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "KOR_1910_naval_mtg"
+	}
+
+	set_technology = {
+		#infantry
+		infantry_weapons = 1
+		
+		#support
+		tech_support = 1
+		tech_engineers = 1
+		
+		#artillery
+		gw_artillery = 1
+
+		#navy
+		transport = 1
+
+		#engineering
+		electrical_engineering = 1
+	}
+
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1910.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		democratic = 6
+		fascism = 0
+		communism = 3
+		neutrality = 91
+	}
+	add_ideas = {
+		KOR_disbanded_army
+		KOR_risk_of_famine
+		KOR_agrarian_society
+		disarmed_nation
+		isolation
+	}
+
+	set_rule = {
+		can_not_declare_war = yes
+	}
+
+	country_lock_all_division_template = yes
+
+	add_opinion_modifier = {
+		target = JAP
+		modifier = HOI4TGW_Opinion_hostile_diplomatic_relations
+	}
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "Gwangjeho"
+		type = light_cruiser_1
+		parent_version = 0
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Yangmuho"
+		type = light_cruiser_1
+		parent_version = 0
+		obsolete = yes
+	}
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	create_equipment_variant = {
+		name = "Gwangjeho"
+		type = ship_hull_cruiser_1
+		#name_group = KOR_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_light_battery_1
+			mid_2_custom_slot = ship_light_battery_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Yangmuho"
+		type = ship_hull_cruiser_1
+		#name_group = KOR_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+}
+
+set_stability=0.36
+
+create_country_leader={
+	name = "Yi Dong-hwi"
+	picture="gfx/leaders/KOR/KOR_yi_dong_hwi.dds"
+	expire="1935.1.1"
+	ideology = marxism
+	traits = { trait_marxism }
+}
+create_country_leader = {
+	name = "Syngman Rhee"
+	picture = "gfx/leaders/KOR/KOR_syngman_rhee.dds"
+	expire = "1935.1.1"
+	ideology = conservatism
+	traits = { anti_communist trait_conservatism }
+}
+create_country_leader = {
+	name = "Supreme Council"
+	picture = "gfx/leaders/KOR/KOR_scnr.dds"
+	expire = "1935.1.1"
+	ideology = stratocracy
+	traits = { generallissimo trait_stratocracy }
+}
+create_country_leader={
+	name = "Yi Cheok"
+	picture = "gfx/leaders/KOR/KOR_yi_cheok.dds"
+	expire = "1935.1.1"
+	ideology = autocracy
+	traits = { assassination_survivor inexperienced_monarch trait_autocracy }
+}
+
+country_event = { id = ww1_developer_note.3 days = 1}

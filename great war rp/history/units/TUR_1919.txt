@@ -1,0 +1,57 @@
+﻿###################################################################
+
+division_template = {
+	name = "Kuvayimilliye"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+###################################################################
+
+units = {
+	division= {
+			name = "1. Kuvayimilliye Birligi"
+			location = 11747 # Ankara
+			division_template="Kuvayimilliye"
+			start_experience_factor=0.3
+			start_equipment_factor=0.5
+			}
+
+	division= {
+			name = "2. Kuvayimilliye Birligi"
+			location = 11747 # Ankara
+			division_template="Kuvayimilliye"
+			start_experience_factor=0.3
+			start_equipment_factor=0.5
+			}
+
+	division= {
+			name = "3. Kuvayimilliye Birligi"
+			location = 11747 # Ankara
+			division_template="Kuvayimilliye"
+			start_experience_factor=0.3
+			start_equipment_factor=0.5
+			}
+
+	division= {
+			name = "4. Kuvayimilliye Birligi"
+			location = 11747 # Ankara
+			division_template="Kuvayimilliye"
+			start_experience_factor=0.3
+			start_equipment_factor=0.5
+			}
+
+	division= {
+			name = "5. Kuvayimilliye Birligi"
+			location = 11747 # Ankara
+			division_template="Kuvayimilliye"
+			start_experience_factor=0.3
+			start_equipment_factor=0.5
+			}
+}

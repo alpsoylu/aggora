@@ -1,0 +1,27 @@
+﻿
+units = {
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Kaiserliche Marine"			
+		naval_base = 167  # Valencia
+		task_force = {
+
+			name = "Spanish German Fleet"			
+			location = 167  # Valencia
+			ship = { 
+				name = "SMS Nassau"
+				definition = battleship
+				start_experience_factor = 0
+				equipment = { ship_hull_heavy_1 = { amount = 1 owner = SPR version_name = "Nassau Class" } }
+			}
+			ship = { 
+				name = "SMS Westfalen"
+				definition = battleship
+				start_experience_factor = 0
+				equipment = { ship_hull_heavy_1 = { amount = 1 owner = SPR version_name = "Nassau Class" } }
+			}
+			
+		}
+	}
+}
+		

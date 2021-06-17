@@ -1,0 +1,5 @@
+opinion_modifiers = {
+	RP_dissolution_triple_entente = {
+		value = -50
+	}
+}

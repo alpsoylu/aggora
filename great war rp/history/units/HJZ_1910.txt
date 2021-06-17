@@ -1,0 +1,23 @@
+﻿
+###################################################################
+
+division_template = {
+	name = "Arabian Rebellion Division"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+###################################################################
+
+units = {
+	division= { 
+			name = "Hejaz Rebellion"
+			location = 12758
+			division_template="Arabian Rebellion Division"
+			start_experience_factor=0.1
+		}
+}

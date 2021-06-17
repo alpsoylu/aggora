@@ -1,0 +1,40 @@
+decision_category_arabian_rebels = {
+	icon = decision_category_generic_propaganda
+	picture = GFX_decision_cat_picture_arab_rebel
+	allowed = {
+	tag = ENG
+	}
+	priority = 200
+	visible = {
+	}
+}
+
+decision_category_turkish_invasion = {
+	icon = decision_category_border_conflicts
+	allowed = {
+	NOT = {tag = TIM}
+	NOT = {tag = TUR}
+	}
+	priority = 200
+	visible = {
+	}
+}
+
+decision_category_turkish_war_of_independence = {
+	icon = decision_category_border_conflicts
+	allowed = {
+	}
+	priority = 200
+	visible = {
+	}
+}
+
+FRA_spreading_communism_cat = {
+	icon = decision_category_generic_communism
+	allowed = {
+	}
+	priority = 300
+	visible = {
+	FRA = {has_goverment = communism}
+	}
+}

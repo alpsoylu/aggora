@@ -1,0 +1,638 @@
+﻿
+###################################################################
+
+division_template = {
+	name = "Divisione Fanteria"
+	division_names_group = ITA_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Divisione Coloniale"
+	division_names_group = ITA_COL_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	priority = 0
+}
+
+division_template = {
+	name = "Reggimento Alpini"
+	division_names_group = ITA_MNT_01
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+	}
+	support = {
+        engineer = { x = 0 y = 0 } 
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Divisione di Cavalleria"
+	division_names_group = ITA_COL_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+###################################################################
+
+units = {
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+			location = 9904 # Roma
+			division_template="Reggimento Alpini"
+			start_experience_factor=0.4
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 23
+		}
+			location = 9904 # Roma
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			start_equipment_factor = 0.7
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 24
+		}
+			location = 9904 # Roma
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 16
+		}
+			location = 6831 # Pescara
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 29
+		}
+			location = 6831 # Pescara
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			start_equipment_factor = 0.7
+			
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 19
+		}
+			location=10074 # Palermo
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			start_equipment_factor = 0.7
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 20
+		}
+			location = 4159 # Messina
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			start_equipment_factor = 0.7
+			}
+	
+	
+	division= { 
+			name = "6a Brigada Bersaglieri"
+			location=11837 # Taranto
+			division_template="Divisione Coloniale"
+			start_experience_factor=0.2
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 30
+		}
+			location=11837 # Taranto
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 31
+		}
+			location=11837 # Taranto
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 25
+		}
+			location=11837 # Taranto
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			start_equipment_factor = 0.7
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 28
+		}
+			location = 819 # Napoli
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 26
+		}
+			location = 819 # Napoli
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			start_equipment_factor = 0.7
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 27
+		}
+			location = 955 # Salerno
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+			location = 819 # Napoli
+			division_template="Divisione di Cavalleria"
+			start_experience_factor=0.2
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+			location = 819 # Napoli
+			division_template="Divisione di Cavalleria"
+			start_experience_factor=0.2
+			}
+	
+	
+	division= { 
+			name = "Carabinieri"
+			location = 819 # Napoli
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			start_equipment_factor = 0.7
+			}
+	
+	
+	division= { 
+			name = "4a Brigada Bersaglieri"
+			location = 6788 # Genova
+			division_template="Divisione Coloniale"
+			start_experience_factor=0.2
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+			location = 3772 # Savona
+			division_template="Reggimento Alpini"
+			start_experience_factor=0.4
+			}
+	
+	
+	division= { 
+			name = "22/27 Cavalleggeri"
+			location = 3772 # Savona
+			division_template="Divisione di Cavalleria"
+			start_experience_factor=0.2
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+			location = 3772 # Savona
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+			location = 3772 # Savona
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 35
+		}
+			location = 3772 # Savona
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+			location = 6780 # Torino
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 34
+		}
+			location = 6780 # Torino
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 15
+		}
+			location = 6780 # Torino
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+			location = 3780 # Milano
+			division_template="Reggimento Alpini"
+			start_experience_factor=0.4
+			}
+	
+	
+	division= { 
+			name = "1a Divisione Bersaglieri"
+			location = 3780 # Milano
+			division_template="Divisione Coloniale"
+			start_experience_factor=0.2
+			start_equipment_factor = 0.9
+			}
+	
+	
+	division= { 
+			name = "Fortezza Verona"
+			location = 3776 # Verona
+			division_template="Divisione Coloniale"
+			start_experience_factor=0.2
+			start_equipment_factor = 0.9
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 32
+		}
+			location = 6661 # Chiavenna
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+			location = 11587 # Lasa
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		
+			location = 11587 # Lasa
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			}
+	
+	
+	division= { 
+			name = "3a Brigada Bersaglieri"
+			location = 6793 # Ferrara
+			division_template="Divisione Coloniale"
+			start_experience_factor=0.2
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 11
+		}
+			location = 603 # Ala
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+			location = 603 # Ala
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+			location = 603 # Ala
+			division_template="Divisione di Cavalleria"
+			start_experience_factor=0.2
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 13
+		}
+			location = 11584 # Venezia
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 14
+		}
+			location = 11584 # Venezia
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 21
+		}
+			location = 6656 # Tolmezzo
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 22
+		}
+			location = 6656 # Tolmezzo
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+			location = 6656 # Tolmezzo
+			division_template="Divisione di Cavalleria"
+			start_experience_factor=0.2
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+			location = 9907 # Firenze
+			division_template="Reggimento Alpini"
+			start_experience_factor=0.4
+			}
+	
+	
+	division= { 
+			name = "5a Brigada Bersaglieri"
+			location = 9907 # Firenze
+			division_template="Divisione Coloniale"
+			start_experience_factor=0.2
+			start_equipment_factor = 0.9
+			}
+	
+	
+	division= { 
+			name = "1a Guardia Finanza"
+			location = 9907 # Firenze
+			division_template="Divisione Coloniale"
+			start_experience_factor=0.2
+			}
+	
+	
+	division= { 
+			name = "21/23 Cavalleggeri"
+			location = 9907 # Firenze
+			division_template="Divisione di Cavalleria"
+			start_experience_factor=0.2
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+			location = 6973 # La Spezia
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+			location = 6973 # La Spezia
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 10
+		}
+			location = 6973 # La Spezia
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 17
+		}
+			location = 11833 # Livorno
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			
+			}
+	
+	
+	division= { 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+			location = 11833 # Livorno
+			division_template="Divisione Fanteria"
+			start_experience_factor=0.05
+			
+			}
+	
+	
+	division= { 
+			name = "Regio Corpo Truppe Coloniali della Somalia"
+			location = 1964 # Rocca Littorio
+			division_template="Divisione Coloniale"
+			start_experience_factor=0.2
+			}
+	
+	
+	division= { 
+			name = "1o Gruppo Coloniali dell'Eritrea"
+			location=12766 # Asmara
+			division_template="Divisione Coloniale"
+			start_experience_factor=0.2
+			}
+}
+air_wings = { 
+	2 = {
+        fighter_equipment_0 = { owner = "ITA" amount = 4 }
+        airship_bomber_equipment_1 = { owner = "ITA" amount = 8 }
+    }
+}
+instant_effect = {
+	add_equipment_production = { equipment = { type = infantry_equipment_1 creator = "ITA" } requested_factories = 3 progress = 0.1 efficiency = 50}
+}

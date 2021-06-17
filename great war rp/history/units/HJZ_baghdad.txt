@@ -1,0 +1,25 @@
+﻿
+###################################################################
+
+division_template = {
+	name = "Baghdad Rebellion Division"
+	is_locked = yes
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+###################################################################
+
+
+units = {
+	division= { 
+			name = "Baghdad Rebellion"
+			location = 2004
+			division_template="Baghdad Rebellion Division"
+			start_experience_factor=0.1
+		}
+}

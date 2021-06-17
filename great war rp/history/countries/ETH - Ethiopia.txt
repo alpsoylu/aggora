@@ -1,0 +1,98 @@
+﻿capital = 271
+
+set_research_slots = 2
+set_stability = 0.40
+set_convoys = 1
+set_cosmetic_tag = ETH_menelik
+
+create_country_leader = {
+	name = "Menelik II"
+	picture="gfx/leaders/ETH/ETH_menelik_ii.dds" 
+	expire="1935.1.1" 
+	ideology = autocracy  
+	traits={  
+    	lion_of_judah
+		trait_autocracy
+	} 
+}
+
+create_field_marshal = {
+	name = "Menelik II"
+	id=30012 
+	portrait_path="gfx/leaders/ETH/ETH_menelik_ii.dds" 
+	traits = {
+		politically_connected
+		media_personality
+		old_guard
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander={  
+    name = "Balcha Safo" 
+	id=30004 
+    traits = {
+		trickster
+		guerilla_fighter
+		war_hero
+		media_personality
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+    logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Hailu Tekle Haymanot"
+	id=30014 
+	traits = {
+		politically_connected
+		harsh_leader
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}	
+
+
+1910.1.1 = {
+	oob = "ETH_1910"
+
+	set_technology = {
+		#infantry
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		support_weapons = 1
+		camelry = 1
+		
+		#support
+		tech_support = 1
+		tech_engineers = 1
+		
+		#artillery
+		gw_artillery = 1
+		
+		#engineering
+		electrical_engineering = 1
+	}
+
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1910.1.1"
+		election_frequency = 48 
+		elections_allowed = no 
+	}
+		
+	set_popularities = {
+		fascism = 0
+		communism = 0
+		democratic = 0
+		neutrality = 100
+	}
+}

@@ -1,0 +1,323 @@
+﻿###########################
+# Spain Events
+###########################
+
+add_namespace = spr_event
+
+	
+	
+	
+	
+#ELECTIONS
+country_event = {
+	id = spr_event.1 #Event spr_event.1 SPR
+	title = spr_event.1.t
+	desc = spr_event.1.desc
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = SPR
+	has_completed_focus = SPR_elections
+	}
+	#LIBERALS
+	option = {
+	ai_chance = {base = 10}
+		name = spr_event.1.a
+		set_country_flag = spr_liberal_flag
+	}
+	
+	#CONS
+	option = {
+	ai_chance = {base = 5}
+		name = spr_event.1.b
+		set_country_flag = spr_cons_flag
+	}
+	
+	}	
+	
+
+#SPR WANTS TO SIGN NAP AND GUARANTEE(BOURBON PACT)
+country_event = {
+	id = spr_event.2
+	title = spr_event.2.t
+	desc = spr_event.2.desc
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = FRA
+	SPR = {has_completed_focus = SPR_bourbon_pact}
+	}
+	#YES
+	option = {
+	ai_chance = {base = 10}
+		name = spr_event.2.a
+		SPR = { country_event = { id = spr_event.3 hours = 6 } }
+		diplomatic_relation = {
+    country = SPR
+    relation = guarantee
+    active = yes
+}
+		diplomatic_relation = {
+    country = SPR
+    relation = non_aggresion_pact
+    active = yes
+}
+set_country_flag = FRA_aggree
+	}
+	
+	#NO
+	option = {
+	ai_chance = {base = 5}
+		name = spr_event.2.b
+		SPR = { country_event = { id = spr_event.4 hours = 6 } }
+		set_country_flag = FRA_reject
+	}
+	
+	}
+	
+
+#FRA AGREES
+country_event = {
+	id = spr_event.3
+	title = spr_event.3.t
+	desc = spr_event.3.desc
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = SPR
+	SPR = {has_completed_focus = SPR_bourbon_pact}
+	FRA = {has_country_flag = FRA_aggree}
+	}
+	#DELIGHTFULL
+	option = {
+	ai_chance = {base = 10}
+		name = spr_event.3.a
+	}
+	
+	}
+	
+
+#FRA AGREES
+country_event = {
+	id = spr_event.4
+	title = spr_event.4.t
+	desc = spr_event.4.desc
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = SPR
+	SPR = {has_completed_focus = SPR_bourbon_pact}
+	FRA = {has_country_flag = FRA_reject}
+	}
+	#DELIGHTFULL
+	option = {
+	ai_chance = {base = 10}
+		name = spr_event.4.a
+	}
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+#SPR WANTS GIBRALTAR
+country_event = {
+	id = spr_event.5 #event spr_event.5 SPR
+	title = spr_event.5.t
+	desc = spr_event.5.desc
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = ENG
+	OR = {
+	SPR = {has_completed_focus = SPR_deal_for_gibraltar}
+	SPR = {has_completed_focus = SPR_democracy_deal_for_gibraltar}
+	}
+	}
+	#YES
+	option = {
+	ai_chance = {base = 10}
+		name = spr_event.5.a
+		SPR = { country_event = { id = spr_event.6 hours = 6 } }
+		diplomatic_relation = {
+    country = SPR
+    relation = non_aggression_pact
+    active = yes
+}
+SPR = {
+transfer_state = 118
+}
+ENG = {
+remove_state_core = 118
+set_country_flag = ENG_accept
+}
+	}
+	
+	#NO
+	option = {
+	ai_chance = {base = 5}
+		name = spr_event.5.b
+		SPR = { country_event = { id = spr_event.7 hours = 6 } }
+		set_country_flag = ENG_reject
+	}
+	
+	}
+	
+
+#ENG AGREES
+country_event = {
+	id = spr_event.6
+	title = spr_event.6.t
+	desc = spr_event.6.desc
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = SPR
+	OR = {
+	SPR = {has_completed_focus = SPR_deal_for_gibraltar}
+	SPR = {has_completed_focus = SPR_democracy_deal_for_gibraltar}
+	}
+	ENG = {has_country_flag = ENG_accept}
+	}
+	#DELIGHTFULL
+	option = {
+	ai_chance = {base = 10}
+		name = spr_event.6.a
+	}
+	
+	}
+	
+
+#ENG REJECTS
+country_event = {
+	id = spr_event.7
+	title = spr_event.7.t
+	desc = spr_event.7.desc
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = SPR
+	OR = {
+	SPR = {has_completed_focus = SPR_deal_for_gibraltar}
+	SPR = {has_completed_focus = SPR_democracy_deal_for_gibraltar}
+	}
+	ENG = {has_country_flag = ENG_reject}
+	}
+	#DELIGHTFULL
+	option = {
+	ai_chance = {base = 10}
+		name = spr_event.7.a
+	}
+	
+	}
+	
+
+#ASK FRANCE FOR KING ALFONSO TO BE KING
+country_event = {
+	id = spr_event.8 #event spr_event.8 SPR
+	title = spr_event.8.t
+	desc = spr_event.8.d
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = FRA
+	SPR = {has_completed_focus = SPR_one_king_two_nations}
+	}
+	#YES
+	option = {
+	ai_chance = {base = 10}
+		name = spr_event.8.a
+		SPR = { country_event = { id = spr_event.9 } }
+		create_country_leader={ 
+	name = "Alfonso XIII" 
+	picture="gfx/leaders/SPR/SPR_alfonso_xiii.dds" 
+	expire="1935.1.1" 
+	ideology=autocracy 
+	traits={ } 
+}
+set_country_flag = SPR_FRA_accept
+	}
+	#NO
+	option = {
+	ai_chance = {base = 0}
+		name = spr_event.8.b
+		SPR = { country_event = { id = spr_event.10 } }
+		set_country_flag = SPR_FRA_reject
+	}
+	
+	}
+
+#FRA REJECT
+country_event = {
+	id = spr_event.9
+	title = spr_event.9.t
+	desc = spr_event.9.d
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = SPR
+	SPR = {has_completed_focus = SPR_one_king_two_nations}
+	has_country_flag = SPR_FRA_accept
+	}
+	#YES
+	option = {
+	ai_chance = {base = 10}
+		name = spr_event.9.a
+	}
+	
+	}
+
+#FRA REJECT
+country_event = {
+	id = spr_event.10 
+	title = spr_event.10.t
+	desc = spr_event.10.d
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = SPR
+	SPR = {has_completed_focus = SPR_one_king_two_nations}
+	has_country_flag = SPR_FRA_reject
+	}
+	#YES
+	option = {
+	ai_chance = {base = 10}
+		name = spr_event.10.a
+	}
+	
+	}
+	
+	

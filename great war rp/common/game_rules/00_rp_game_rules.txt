@@ -1,0 +1,17 @@
+
+#TUR_focus_rule = {
+	name = "TUR_FOCUS_RULE"
+	group = "RULE_GROUP_RP"
+	default = {
+		name = TUR_NEW_TREE
+		text = "TUR_NEW_TREE_TEXT"
+		desc = "TUR_NEW_TREE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TUR_OLD_TREE
+		text = "TUR_OLD_TREE_TEXT"
+		desc = "TUR_OLD_TREE_DESC"
+		allow_achievements = yes
+	}
+}

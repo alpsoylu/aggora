@@ -1,0 +1,25 @@
+state={
+	id=677
+	name="STATE_677"
+	resources={
+		steel = 2
+	}
+	history={
+		victory_points = {
+			3942 1
+		}
+		victory_points = { 
+			12473 5 
+		}
+		owner=TUR
+		add_core_of=SYR
+		add_core_of = TUR
+		buildings={
+			infrastructure = 3
+			arms_factory=1
+		}
+	}
+	provinces={ 2013 3942 7513 7671 12473 }
+	manpower = 553600
+	state_category=large_town
+}

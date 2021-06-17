@@ -1,0 +1,227 @@
+#focus_tree = {
+	id = TIM_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 00
+			tag = TIM
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 720
+		y = 1350
+	}
+	shared_focus = TUR_send_kemal_to_samsun
+	focus = {
+		id = TUR_misakimilli
+		icon = GFX_focus_TUR_misak_i_milli
+		cost = 10,00
+		x = 5
+		y = 0
+		completion_reward = {
+		add_ideas = idea_misakımilli
+		}
+
+	}
+	focus = {
+		id = TUR_open_a_parliement_in_ankara
+		icon = GFX_focus_generic_treaty
+		cost = 10,00
+		prerequisite = {
+			focus = TUR_misakimilli
+		}
+		completion_reward = {
+		set_cosmetic_tag = TUR_PARLIEMENT
+		}
+		x = 5
+		y = 1
+
+	}
+	focus = {
+		id = TUR_elections
+		icon = GFX_elections1
+		cost = 5,00
+		prerequisite = {
+			focus = TUR_open_a_parliement_in_ankara
+		}
+		x = 5
+		y = 2
+	}
+	focus = {
+		id = TUR_reject_sevres
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 4,00
+		prerequisite = {
+			focus = TUR_elections
+		}
+		completion_reward = {
+		add_ideas = idea_rejected_sevres
+		}
+		x = 5
+		y = 3
+
+	}
+	
+	focus = {
+		id = TUR_moscow_agreement
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 2,00
+		prerequisite = {
+			focus = TUR_reject_sevres
+		}
+		available = {SOV = {exists = yes}}
+		completion_reward = {
+		diplomatic_relation = {
+    country = SOV
+    relation = non_aggression_pact
+    active = yes
+}
+		}
+		x = 2
+		y = 4
+
+	}
+	focus = {
+		id = TUR_afghan_friendship
+		icon = GFX_focus_tur_afganistan
+		cost = 2,00
+		prerequisite = {
+			focus = TUR_reject_sevres
+		}
+		available = {AFG = {exists = yes}}
+		completion_reward = {
+		diplomatic_relation = {
+    country = AFG
+    relation = non_aggression_pact
+    active = yes
+}
+AFG = {send_equipment = { equipment = infantry_equipment amount = 2000 target = TUR}}
+		}
+		x = 5
+		y = 4
+
+	}
+	focus = {
+		id = TUR_ukranian_friendship
+		icon = GFX_focus_generic_treaty
+		cost = 2,00
+		prerequisite = {
+			focus = TUR_moscow_agreement
+		}
+		available = {UKR = {exists = yes}}
+		completion_reward = {
+		diplomatic_relation = {
+    country = UKR
+    relation = non_aggression_pact
+    active = yes
+}
+		}
+		x = 5
+		y = 5
+
+	}
+	focus = {
+		id = TUR_azeri_friendship
+		icon = GFX_focus_generic_treaty
+		cost = 2,00
+		prerequisite = {
+			focus = TUR_reject_sevres
+		}
+		available = {AZR = {exists = yes}}
+		completion_reward = {
+		diplomatic_relation = {
+    country = AZR
+    relation = non_aggression_pact
+    active = yes
+}
+AZR = {send_equipment = { equipment = infantry_equipment amount = 2000 target = TUR}}
+}
+		x = 8
+		y = 4
+
+	}
+	focus = {
+		id = TUR_kars_agreement
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 5,00
+		prerequisite = {
+			focus = TUR_moscow_agreement
+		}
+		available = {SOV = {exists = yes}}
+		available = {
+		SOV = {
+		controls_state = 849
+		controls_state = 837
+		controls_state = 231
+		controls_state = 230
+		}
+		}
+		completion_reward = {
+		}
+		x = 2
+		y = 5
+
+	}
+	
+	
+	
+	focus = {
+		id = TUR_armenian_sit
+		icon = GFX_goal_generic_major_war
+		cost = 10,00
+		available = {
+		has_completed_focus = TUR_reject_sevres
+		}
+		completion_reward = { 
+		add_timed_idea = { idea = TUR_armenian_sit_idea  days = 150 }
+		create_corps_commander = {
+	name = "Kazım Karabekir"
+	portrait_path = "gfx/leaders/TUR/kazim.dds"
+	traits = { }
+	skill = 3
+
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+
+		}
+		x = 13
+		y = 0
+
+	}
+	
+	focus = {
+		id = TUR_kazim_army
+		icon = GFX_kazım_karabekir_gumru
+		cost = 5,00
+		prerequisite = {
+			focus = TUR_armenian_sit
+		}
+		completion_reward = {
+		#kazim_army_se = yes
+		custom_effect_tooltip = kazim_army_tt
+		}
+		x = 13
+		y = 1
+
+	}
+	focus = {
+		id = TUR_stop_armenians
+		icon = GFX_stop_the_armenians
+		cost = 10,00
+		prerequisite = {
+			focus = TUR_kazim_army
+		}
+		completion_reward = {
+		declare_war_on = { target = ARM type = annex_everything }
+		}
+		x = 13
+		y = 2
+
+	}
+	
+}

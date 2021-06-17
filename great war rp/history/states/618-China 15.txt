@@ -1,0 +1,21 @@
+
+state={
+	id=618
+	name="STATE_618"
+
+	history={
+		owner = QIN
+		add_core_of = QIN
+		add_core_of = MON
+		buildings = {
+			infrastructure = 3
+		}
+	}
+
+	provinces={
+		1708 1844 4714 4823 4849 7693 7737 12590 12737 
+	}
+	manpower=670800
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

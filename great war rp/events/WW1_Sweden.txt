@@ -1,0 +1,96 @@
+add_namespace = ww1_sweden
+
+country_event = {
+	id = ww1_sweden.1
+	title = ww1_generic.1.t
+	desc = ww1_generic.1.d
+	picture = GFX_report_event_election_vote
+
+	fire_only_once = yes
+	trigger = {
+		original_tag = SWE
+		has_government = democratic
+		date > 1911.1.1
+		date < 1912.1.1
+	}
+	
+	option = {
+		name = ww1_generic.1.a
+		ai_chance = { factor = 100 }
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Karl Staaf"
+			picture = "gfx/leaders/SWE/SWE_karl_staaf.dds"
+			expire = "1925.1.1"
+			ideology = conservatism
+			traits = {
+				trait_conservatism
+			}
+		}
+	}
+}
+
+#Aland
+country_event = {
+	id = ww1_sweden.2
+	title = ww1_sweden.2.t
+	desc = ww1_sweden.2.d
+	picture = GFX_report_event_generic_battle
+	fire_only_once = yes
+	trigger = {
+		tag = SWE
+		has_war = no
+		has_global_flag = finnish_civil_war
+		FIN = { has_civil_war = yes owns_state = 145 exists = yes }
+	}
+	mean_time_to_happen = { days = 10 }
+	option = {
+		name = ww1_sweden.2.a
+		transfer_state = 145
+		set_country_flag = SWE_aland
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = ww1_sweden.2.b
+		ai_chance = { factor = 0 }
+	}
+}
+
+#Return Aland
+country_event = {
+	id = ww1_sweden.3
+	title = ww1_sweden.3.t
+	desc = ww1_sweden.3.d
+	picture = GFX_report_event_generic_battle
+	fire_only_once = yes
+	trigger = {
+		tag = SWE
+		has_war = no
+		has_country_flag = SWE_aland
+		has_global_flag = finnish_civil_war
+		FIN = { has_civil_war = no exists = yes }
+		owns_state = 145 
+	}
+	mean_time_to_happen = { days = 10 }
+	option = {
+		name = ww1_sweden.3.a
+		FIN = { transfer_state = 145 }
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = ww1_sweden.3.b
+		GER = {
+			add_opinion_modifier = {
+					target = SWE
+    				modifier = large_decrease
+			}
+		}
+		FIN = {
+			add_opinion_modifier = {
+					target = SWE
+    				modifier = large_decrease
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+}

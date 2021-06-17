@@ -1,0 +1,602 @@
+ideas = {
+		hidden_ideas = {
+		RP_ottoman_balance = {
+
+
+			picture = por_the_fifth_empire
+
+			available = {
+				tag = TUR
+				date < 1914.1.1
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			production_speed_industrial_complex_factor = -0.15
+			production_speed_arms_factory_factor = -0.15
+			consumer_goods_factor_factor = 0.15
+			}
+		}
+		}
+		country = {
+
+		RP_agricultur_idea = {
+
+
+			picture = ottoman_zanatkar
+
+			available = {
+				
+				tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			consumer_goods_factor = 0.15
+			stability_factor = 0.15
+			}
+		}
+
+		RP_hejaz_rebellion = {
+
+
+			picture = hejaz_rebel_idea
+
+			available = {
+				has_war_with = TUR
+				tag = HEJ
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			consumer_goods_factor = -0.25
+			war_support_factor = 0.15
+			army_attack_factor = 0.15
+			army_leader_start_attack_level = 1
+			}
+		}
+
+
+
+		RP_heavy_idea = {
+
+
+			picture = generic_local_self_management
+
+			available = {
+				
+				tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			consumer_goods_factor = -0.15
+			stability_factor = -0.15
+			production_speed_buildings_factor = 0.15
+			}
+		}
+
+		RP_parl_mon = {
+
+
+			picture = FRA_matignon_agreements
+
+			available = {
+			OR = {
+				tag = POR
+				tag = SPR
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = 0.1
+			political_power_factor = -0.4
+			}
+		}
+
+		RP_power_church = {
+
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			available = {
+				OR = {
+				tag = SPR
+				tag = POR
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = 0.15
+			consumer_goods_factor = 0.15
+			}
+		}
+
+		RP_spread_rev = {
+
+
+			picture = ottoman_dkzb
+
+			available = {
+				OR = {
+				tag = SPR
+				tag = POR
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			war_support_factor = 0.1
+			justify_war_goal_time = -0.5
+			}
+		}
+
+		RP_power_church_low = {
+
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			available = {
+				OR = {
+				tag = SPR
+				tag = POR
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = -0.15
+			consumer_goods_factor = -0.15
+			}
+		}
+
+		RP_closed_parliement = {
+
+
+			picture = generic_intel_bonus
+
+			available = {
+				
+				tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = -0.1
+			political_power_factor = 0.25
+			}
+		}
+
+		RP_long_live_king_alfonso = {
+
+
+			picture = SPA_embrace_the_spanish_destiny
+
+			available = {
+				
+				tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = 0.15
+			political_power_factor = 0.15
+			}
+		}
+
+		RP_legacy_of_american_spanish_war = {
+
+
+			picture = SPR_nationalist_remnants
+
+			available = {
+				
+				tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = -0.35
+			war_support_factor = -0.35
+			experience_gain_navy_factor = -0.50
+			}
+		}
+		
+		RP_legacy_of_american_spanish_war2 = {
+
+
+			picture = SPR_nationalist_remnants
+
+			available = {
+				
+				tag = SPR
+			}
+			on_remove = {
+		add_ideas = RP_legacy_of_american_spanish_war_good
+	}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = -0.45
+			war_support_factor = -0.45
+			experience_gain_navy_factor = -0.75
+			}
+		}
+		
+		RP_legacy_of_american_spanish_war_will = {
+
+
+			picture = SPR_nationalist_remnants
+
+			available = {
+				
+				tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = -0.20
+			war_support_factor = -0.15
+			army_morale = 15
+			experience_gain_navy_factor = -0.30
+			}
+		}
+		
+		RP_spanish_army = {
+
+
+			picture = generic_manpower_bonus
+
+			available = {
+				
+				tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			war_support_factor = 0.10
+			army_attack_factor = 0.10
+			army_defence_factor = 0.05
+			army_speed_factor = 0.05
+			}
+		}
+		
+		RP_for_democracy = {
+
+
+			picture = generic_disjointed_gov
+
+			available = {
+				
+				tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			political_power_factor = 0.25
+			stability_factor = 0ş05
+			}
+		}
+		
+		RP_catolonian_resistance = {
+
+
+			picture = generic_disjointed_gov
+
+			available = {
+				
+				tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = -0.15
+			}
+		}
+		#POR#POR#POR#
+		RP_never_surrender = {
+
+
+			picture = generic_disjointed_gov
+
+			available = {
+				is_in_civil_war = yes
+				tag = POR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			max_surrender_limit_offset = 0.7
+			stability_factor = 0.5
+			war_support_factor = 0.5
+			}
+		}
+		
+		RP_rebel_crushed = {
+
+
+			picture = tfv_can_conscription_crisis
+
+			available = {
+				tag = POR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = 0.1
+			war_support_factor = 0.05
+			}
+		}
+		
+		RP_legacy_revolution = {
+
+
+			picture = generic_king_handled
+
+			available = {
+				tag = POR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = 0.1
+			war_support_factor = 0.05
+			}
+		}
+		
+		RP_liberal_democracy = {
+
+
+			picture = AST_idea_Workers_Education_Association
+
+			available = {
+				tag = POR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = 0.05
+			political_power_factor = -0.05
+			}
+		}
+		
+		RP_auth_democracy = {
+
+
+			picture = NOR_general_strike
+
+			available = {
+				tag = POR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = -0.05
+			political_power_factor = 0.05
+			}
+		}
+		
+		RP_porto_brazilian_empire = {
+
+
+			picture = por_the_fifth_empire
+
+			available = {
+				tag = POR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = 0.10
+			political_power_factor = 0.15
+			war_support_factor = 0.05
+			justify_war_goal_time = -0.4
+			}
+		}
+		
+		RP_FRA_support_monarchism = {
+
+
+			picture = generic_intel_bonus
+
+			available = {
+				tag = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			neutrality_drift = 0.05
+			}
+		}
+		
+		RP_FRA_vive_la_france = {
+
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			available = {
+				tag = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = 0.1
+			war_support_factor = 0.1
+			}
+		}
+		
+		RP_FRA_decreased_working_times = {
+
+
+			picture = ottoman_welfare
+
+			available = {
+				tag = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = 0.05
+			production_speed_industrial_complex_factor = -0.05
+			production_speed_arms_factory_factor = -0.05
+			}
+		}
+		
+		RP_FRA_increased_working_rights = {
+
+
+			picture = ottoman_welfare
+
+			available = {
+				tag = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = 0.05
+			production_speed_industrial_complex_factor = -0.05
+			production_speed_arms_factory_factor = -0.05
+			}
+		}
+		
+		RP_FRA_socialist_education = {
+
+
+			picture = generic_communism_drift_bonus
+
+			available = {
+				tag = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			research_speed_factor = 0.125
+			}
+		}
+		
+		RP_FRA_agricultural_economy = {
+
+
+			picture = gre_agricultural_communes
+
+			available = {
+				tag = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			consumer_goods_factor = -0.1
+			}
+		}
+		
+		RP_FRA_for_fatherland = {
+
+
+			picture = generic_communist_army
+
+			available = {
+				tag = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			defensive_war_stability_factor = -0.25
+			army_defence_factor = 0.35
+			army_speed_factor = 0.25
+			army_attack_factor = -0.2
+			enemy_declare_war_tension = 0.6
+			}
+		}
+		
+		
+	}
+}

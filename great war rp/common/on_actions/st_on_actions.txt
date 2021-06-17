@@ -1,0 +1,78 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				set_variable = { ROOT.marked_states = 0 }
+			}
+			AFG = {
+			add_ideas = RP_optimizasyon
+			}
+			DOM = {
+			add_ideas = RP_optimizasyon
+			}
+			ARG = {
+			add_ideas = RP_optimizasyon
+			}
+			BOL = {
+			add_ideas = RP_optimizasyon
+			}
+			CHL = {
+			add_ideas = RP_optimizasyon
+			}
+			COL = {
+			add_ideas = RP_optimizasyon
+			}
+			COS = {
+			add_ideas = RP_optimizasyon
+			}
+			ECU = {
+			add_ideas = RP_optimizasyon
+			}
+			ETH = {
+			add_ideas = RP_optimizasyon
+			}
+			GUA = {
+			add_ideas = RP_optimizasyon
+			}
+			HAI = {
+			add_ideas = RP_optimizasyon
+			}
+			HON = {
+			add_ideas = RP_optimizasyon
+			}
+			LIB = {
+			add_ideas = RP_optimizasyon
+			}
+			NCI = {
+			add_ideas = RP_optimizasyon
+			}
+			PAN = {
+			add_ideas = RP_optimizasyon
+			}
+			PAR = {
+			add_ideas = RP_optimizasyon
+			}
+			PRU = {
+			add_ideas = RP_optimizasyon
+			}
+			SIA = {
+			add_ideas = RP_optimizasyon
+			}
+			SWI = {
+			add_ideas = RP_optimizasyon
+			}
+			URG = {
+			add_ideas = RP_optimizasyon
+			}
+			VEN = {
+			add_ideas = RP_optimizasyon
+			}
+			
+		}
+	}
+
+}

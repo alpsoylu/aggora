@@ -1,0 +1,852 @@
+focus_tree = {
+	id = RP_france_prrrs
+	default = no
+	country = { factor=0 modifier = { add = 10 tag = FRA} }
+	country = { factor=0 modifier = { add = 100 has_country_flag = FRA_prrr} }
+
+	focus = {
+		id = FRA_briand_victory #SRR WINS DEMOKRAT
+		icon = GFX_srr
+		completion_reward = {
+		}
+		ai_will_do = { factor = 200000 }
+		cost = 10
+		available = {
+		has_country_flag = FRA_prrr
+		}
+		completion_reward = {
+		add_popularity = {
+		ideology = democratic
+		popularity = 0.15
+		}
+		#set_cosmetic_tg = FRA_start
+		hidden_effect = {
+		set_politics = {
+	ruling_party = democratic
+        elections_allowed = yes
+        last_election = "1935.12.17"
+        election_frequency = 48
+}
+set_cosmetic_tg = FRA_start
+	}
+	create_country_leader = {
+	name = "Aristide Briand" 
+	picture = "gfx/leaders/FRA/briand.dds" 
+	expire = "1935.1.1" 
+	ideology = conservatism
+	traits = {} 
+}
+		}
+		x = 10
+		y = 0
+		
+	}
+	
+	
+	
+	focus = {
+		id = FRA_anti_german_policy
+		search_filters = { FOCUS_FILTER_ANTI_GERMAN }
+		prerequisite = {
+			focus = FRA_briand_victory
+		}
+		icon = GFX_fra_anti_german
+		available = {
+			NOT = { is_in_faction_with = GER }
+			NOT = { has_completed_focus = FRA_anti_british_policy }
+		}
+		bypass = {
+			has_war_with = GER
+		}
+		completion_reward = {
+		add_opinion_modifier = {
+				target = GER
+				modifier = HOI4TGW_Opinion_anti_ger_policy_malus
+			}
+			add_state_claim = 777
+			add_state_claim = 539
+			add_state_claim = 769
+			add_state_claim = 42
+			add_state_claim = 51
+			add_state_claim = 343
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_briand_victory
+	}
+	
+	focus = {
+		id = FRA_protest_italian_expansionism
+		search_filters = { FOCUS_FILTER_ANTI_GERMAN }
+		prerequisite = {
+			focus = FRA_anti_german_policy
+		}
+		icon = GFX_goal_generic_defence
+		mutually_exclusive = {
+			focus = FRA_support_italian_expansionism
+			focus = FRA_oppose_italian_expansionism
+		}
+		available = {
+		ITA = { has_completed_focus = ITA_colonial_ambition }
+		}
+		completion_reward = {
+		add_opinion_modifier = { target = ITA modifier = protest_action }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = FRA_anti_german_policy
+	}
+	
+	focus = {
+		id = FRA_oppose_italian_expansionism
+		search_filters = { FOCUS_FILTER_ANTI_GERMAN }
+		prerequisite = {
+			focus = FRA_anti_german_policy
+		}
+		icon = GFX_focus_attack_italy
+		mutually_exclusive = {
+			focus = FRA_support_italian_expansionism
+			focus = FRA_protest_italian_expansionism
+		}
+		available = {
+		ITA = { has_completed_focus = ITA_colonial_ambition }
+		NOT = {has_completed_focus = FRA_claim_syria}
+		}
+		completion_reward = {
+		add_opinion_modifier = { target = ITA modifier = protest_action_strong }
+		give_guarantee = TUR
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = FRA_anti_german_policy
+	}
+	
+	focus = {
+		id = FRA_support_italian_expansionism
+		search_filters = { FOCUS_FILTER_ANTI_GERMAN }
+		prerequisite = {
+			focus = FRA_anti_german_policy
+		}
+		icon = GFX_focus_befriend_italy#GFX_focus_italian_monarchy
+		mutually_exclusive = {
+			focus = FRA_protest_italian_expansionism
+			focus = FRA_protest_italian_expansionism
+		}
+		bypass = {
+		OR = {
+			is_in_faction_with = ITA
+			ITA = {controls_state = 661}
+			}
+		}
+		available = {
+		ITA = { has_completed_focus = ITA_colonial_ambition }
+		}
+		completion_reward = {
+		add_opinion_modifier = { target = ITA modifier = huge_increase }
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = FRA_anti_german_policy
+	}
+	
+	focus = {
+		id = FRA_ww1_back_russia
+		search_filters = { FOCUS_FILTER_ANTI_GERMAN }
+		prerequisite = {
+			focus = FRA_protest_italian_expansionism
+			focus = FRA_oppose_italian_expansionism
+			focus = FRA_support_italian_expansionism
+		}
+		icon = GFX_focus_deal_with_russia
+		available = {
+			NOT = {
+				has_war_with = RUS
+			}
+		}
+		completion_reward = {
+			RUS = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = HOI4TGW_Opinion_diplomats_bonus
+				}
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = HOI4TGW_Opinion_ger_ita_alliance_focus_malus
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		cost = 10
+		x = 0
+		y = 2
+		relative_position_id = FRA_anti_german_policy
+	}
+	
+	focus = {
+		id = FRA_ww1_inviteUK		#Open Beta 0.2
+		search_filters = { FOCUS_FILTER_ANTI_GERMAN }
+		prerequisite = {
+			focus = FRA_ww1_back_russia
+		}
+		icon = GFX_focus_consolidate_entente
+		available = {
+			ENG = {
+				has_war_with = GER
+			}
+			FRA = {
+				has_war_with = GER
+			}
+			NOT = {
+				has_war_with = ENG
+			}
+			FRA = {
+				is_faction_leader = yes
+			}
+		}
+		bypass = {
+			ENG = {
+				is_in_faction_with = FRA
+			}
+		}
+		completion_reward = {
+			ENG = {
+				country_event = {
+					id = generic.5
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 500
+		}
+		cost = 5
+		x = 0
+		y = 3
+		relative_position_id = FRA_anti_german_policy
+	}
+	
+	focus = {
+		id = FRA_ww1_inviteBELGIUM		#Open Beta 0.2
+		search_filters = { FOCUS_FILTER_ANTI_GERMAN }
+		prerequisite = {
+			focus = FRA_ww1_inviteUK
+		}
+		icon = GFX_goal_generic_improve_relations
+		available = {
+			BEL = {
+				has_war_with = GER
+			}
+			FRA = {
+				has_war_with = GER
+			}
+			NOT = {
+				has_war_with = BEL
+			}
+			FRA = {
+				is_faction_leader = yes
+			}
+		}
+		bypass = {
+			is_in_faction_with = BEL
+		}
+		completion_reward = {
+			BEL = {
+				country_event = {
+					id = generic.5
+					days = 2
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		cost = 1
+		x = 0
+		y = 4
+		relative_position_id = FRA_anti_german_policy
+	}
+	
+	focus = {
+		id = FRA_claim_syria
+		prerequisite = {
+			focus = FRA_briand_victory
+		}
+		search_filters = { FOCUS_FILTER_FRA_OTTOMAN }
+		icon = GFX_focus_otto_investment
+		available = {
+			NOT = {
+				is_in_faction_with = TUR
+			}
+			NOT = {has_completed_focus = FRA_oppose_italian_expansionism}
+		}
+		bypass = {
+			has_war_with = TUR
+		}
+		completion_reward = {
+			add_state_claim = 677			#Syria/Lebanon
+			add_state_claim = 680
+			add_state_claim = 553
+			add_state_claim = 554
+			add_state_claim = 831
+			add_state_claim = 829
+			add_state_claim = 344	
+			unlock_decision_tooltip = RP_FRA_create_syrian_mandate
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		cost = 10
+		x = -9
+		y = 1
+		relative_position_id = FRA_briand_victory
+	}
+	
+	focus = {
+		id = FRA_support_armenians
+		prerequisite = {
+			focus = FRA_claim_syria
+		}
+		search_filters = { FOCUS_FILTER_FRA_OTTOMAN }
+		icon = GFX_focus_tur_fight_wahhabis
+		available = {
+			NOT = {
+				has_war_with = ARM
+			}
+			NOT = {
+				is_in_faction_with = TUR
+			}
+			ARM = {exists = yes}
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+		send_equipment = {
+    equipment = infantry_equipment
+    amount = 10000
+    target = ARM
+}
+		}
+		ai_will_do = {
+			factor = 13
+		}
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = FRA_claim_syria
+	}
+	
+	focus = {
+		id = FRA_support_arabians
+		prerequisite = {
+			focus = FRA_fight_turks
+		}
+		search_filters = { FOCUS_FILTER_FRA_OTTOMAN }
+		icon = GFX_focus_crush_arabia
+		available = {
+			NOT = {
+				has_war_with = KUR
+			}
+			NOT = {
+				is_in_faction_with = TUR
+			}
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+		custom_effect_tooltip = FRA_support_arab_tt
+		hidden_effect = {
+		if = {
+		limit = { HJZ = {exists = yes}}
+		send_equipment = {
+    equipment = infantry_equipment
+    amount = 10000
+    target = HJZ
+}
+		}
+		if = {
+		limit = { HJZ = {exists = no}}
+		send_equipment = {
+    equipment = infantry_equipment
+    amount = 10000
+    target = SAU
+}
+		}
+		}
+		}
+		ai_will_do = {
+			factor = 13
+		}
+		cost = 5
+		
+		x = 0
+		y = 3
+		relative_position_id = FRA_claim_syria
+	}
+	
+	focus = {
+		id = FRA_fight_turks
+		prerequisite = {
+			focus = FRA_claim_syria
+		}
+		search_filters = { FOCUS_FILTER_FRA_OTTOMAN }
+		icon = GFX_focus_tur_erkaniharbiye
+		available = {
+			NOT = {
+				is_in_faction_with = TUR
+			}
+			OR = {
+			TUR = {
+			OR = {
+			has_war_with = ENG
+			has_war_with = RUS
+			has_war_with = GER
+			has_war_with = AUH
+			}
+			}
+			FRA = {
+			OR = {
+			has_war_with = ENG
+			has_war_with = RUS
+			has_war_with = GER
+			has_war_with = AUH
+			}
+			}
+			}
+		}
+		bypass = {
+		has_war_with = TUR
+		}
+		completion_reward = {
+		 create_wargoal = { type = take_claimed_state target = TUR }
+		}
+		ai_will_do = {
+			factor = 13
+		}
+		cost = 5
+		x = 0
+		y = 2
+		relative_position_id = FRA_claim_syria
+	}
+	
+	focus = {
+		id = FRA_support_kurds
+		prerequisite = {
+			focus = FRA_claim_syria
+		}
+		search_filters = { FOCUS_FILTER_FRA_OTTOMAN }
+		icon = GFX_focus_tur_fight_wahhabis
+		available = {
+			NOT = {
+				has_war_with = KUR
+			}
+			NOT = {
+				is_in_faction_with = TUR
+			}
+			KUR = {exists = yes}
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+		send_equipment = {
+    equipment = infantry_equipment
+    amount = 10000
+    target = KUR
+}
+		}
+		ai_will_do = {
+			factor = 13
+		}
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = FRA_claim_syria
+	}
+	
+	
+
+	
+	focus = {
+		id = FRA_anti_british_policy
+		icon = GFX_fra_anti_eng
+		search_filters = { FOCUS_FILTER_ANTI_ENG }
+		prerequisite = {
+			focus = FRA_briand_victory
+		}
+		available = {
+			NOT = { is_in_faction_with = ENG }
+			NOT = { has_completed_focus = FRA_anti_german_policy }
+		}
+		bypass = {
+			has_war_with = GER
+		}
+		completion_reward = {
+		ENG = {
+		add_opinion_modifier = { target = FRA modifier = RP_dissolution_triple_entente }
+			}
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		cost = 10
+		x = -5
+		y = 1
+		relative_position_id = FRA_briand_victory
+	}
+
+	
+	focus = {
+		id = FRA_oppose_british_colonialism
+		icon = GFX_focus_eng_continental_affairs
+		search_filters = { FOCUS_FILTER_ANTI_ENG }
+		prerequisite = {
+			focus = FRA_anti_british_policy
+		}
+		available = {
+		ENG = {exists = yes}
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+		add_state_claim = 701
+		add_state_claim = 700
+		add_state_claim = 274
+		add_state_claim = 558
+		add_state_claim = 827
+		add_state_claim = 549
+		add_state_claim = 551
+		add_state_claim = 447
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_anti_british_policy
+	}
+
+	
+	focus = {
+		id = FRA_befriend_germany
+		icon = GFX_focus_deal_with_german_empire
+		search_filters = { FOCUS_FILTER_ANTI_ENG }
+		prerequisite = {
+			focus = FRA_oppose_british_colonialism
+		}
+		available = {
+		GER = {exists = yes}
+		always = no
+		}
+		bypass = {
+			
+		}
+		mutually_exclusive = {
+		focus = FRA_embargo_germany
+		}
+		completion_reward = {
+		add_opinion_modifier = { target = GER modifier = large_increase }
+		GER = { add_opinion_modifier = { target = GER modifier = large_increase } }
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = FRA_oppose_british_colonialism
+	}
+
+	
+	focus = {
+		id = FRA_embargo_germany
+		icon = GFX_focus_align_germany
+		search_filters = { FOCUS_FILTER_ANTI_ENG }
+		prerequisite = {
+			focus = FRA_oppose_british_colonialism
+		}
+		available = {
+		GER = {exists = yes}
+		}
+		bypass = {
+			
+		}
+		mutually_exclusive = {
+		focus = FRA_befriend_germany
+		}
+		completion_reward = {
+		add_opinion_modifier = { target = GER modifier = cw_embargo_relations_initiator }
+		GER = {add_opinion_modifier = { target = FRA modifier = cw_embargo_relations_target }}
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = FRA_oppose_british_colonialism
+	}
+
+	
+	focus = {
+		id = FRA_conquer_congo
+		icon = GFX_focus_split_helmet
+		search_filters = { FOCUS_FILTER_ANTI_ENG }
+		prerequisite = {
+			focus = FRA_befriend_germany
+			focus = FRA_embargo_germany
+		}
+		available = {
+		date > 1913.6.1
+		}
+		bypass = {
+		controls_state = 538
+		}
+		completion_reward = {
+		add_state_claim = 295
+		add_state_claim = 449
+		add_state_claim = 538
+		add_state_claim = 718
+		if = {
+				limit = {
+					BEL = { owns_state = 538 }
+				}
+				FRA ={create_wargoal = { type = take_state_focus target = BEL generator = { 295 538 718 449 } }}
+			}
+			if = {
+				limit = {COG = {owns_state = 538}}
+					FRA = {create_wargoal = { type = take_state_focus target = COG generator = { 295 538 718 449 } }}
+				}
+			if = {
+				limit = {POR = {owns_state = 538}}
+					FRA = {create_wargoal = { type = take_state_focus target = POR generator = { 295 538 718 449 } }}
+				}
+			if = {
+				limit = {ENG = {owns_state = 538}}
+					FRA = {create_wargoal = { type = take_state_focus target = ENG generator = { 295 538 718 449 } }}
+				}
+			if = {
+				limit = {TUR = {owns_state = 538}}
+					FRA = {create_wargoal = { type = take_state_focus target = TUR generator = { 295 538 718 449 } }}
+				}
+			if = {
+				limit = {GER = {owns_state = 538}}
+					FRA = {create_wargoal = { type = take_state_focus target = GER generator = { 295 538 718 449 } }}
+				}
+			if = {
+				limit = {RUS = {owns_state = 538}}
+					FRA = {create_wargoal = { type = take_state_focus target = RUS generator = { 295 538 718 449 } }}
+				}
+			if = {
+				limit = {USA = {owns_state = 538}}
+					FRA = {create_wargoal = { type = take_state_focus target = USA generator = { 295 538 718 449 } }}
+				}
+			if = {
+				limit = {SPR = {owns_state = 538}}
+					FRA = {create_wargoal = { type = take_state_focus target = SPR generator = { 295 538 718 449 } }}
+				}
+			if = {
+				limit = {SAF = {owns_state = 538}}
+					FRA = {create_wargoal = { type = take_state_focus target = SAF generator = { 295 538 718 449 } }}
+				}
+			if = {
+				limit = {EGY = {owns_state = 538}}
+					FRA = {create_wargoal = { type = take_state_focus target = EGY generator = { 295 538 718 449 } }}
+				}
+			if = {
+				limit = {ITA = {owns_state = 538}}
+					FRA = {create_wargoal = { type = take_state_focus target = ITA generator = { 295 538 718 449 } }}
+				}
+			if = {
+				limit = {HOL = {owns_state = 538}}
+					FRA = {create_wargoal = { type = take_state_focus target = HOL generator = { 295 538 718 449 } }}
+				}
+			if = {
+				limit = {BRA = {owns_state = 538}}
+					FRA = {create_wargoal = { type = take_state_focus target = BRA generator = { 295 538 718 449 } }}
+				}
+			if = {
+				limit = {CAN = {owns_state = 538}}
+					FRA = {create_wargoal = { type = take_state_focus target = CAN generator = { 295 538 718 449 } }}
+				}
+			
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		cost = 10
+		x = 0
+		y = 2
+		relative_position_id = FRA_oppose_british_colonialism
+	}
+
+	
+	focus = {
+		id = FRA_conquer_portugeese_colonies
+		icon = GFX_focus_generic_attack_portugal
+		search_filters = { FOCUS_FILTER_ANTI_ENG }
+		prerequisite = {
+			focus = FRA_conquer_congo
+		}
+		available = {
+		POR = {exists = yes}
+		date > 1914.1.1
+		}
+		completion_reward = {
+		every_state = {
+		limit = {
+		AND = {
+		is_on_continent = africa
+		is_owned_by = POR
+		}
+		}
+		add_claim_by = FRA
+		}
+		create_wargoal = { type = take_claimed_state target = POR }
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = FRA_conquer_congo
+	}
+	
+	focus = {
+		id = FRA_conquer_spanish_colonies
+		icon = GFX_focus_generic_little_entente
+		search_filters = { FOCUS_FILTER_ANTI_ENG }
+		prerequisite = {
+			focus = FRA_conquer_congo
+		}
+		available = {
+		SPR = {exists = yes}
+		date > 1914.1.1
+		}
+		completion_reward = {
+		every_state = {
+		limit = {
+		AND = {
+		is_on_continent = africa
+		is_owned_by = SPR
+		}
+		}
+		add_claim_by = FRA
+		}
+		create_wargoal = { type = take_claimed_state target = SPR }
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = FRA_conquer_congo
+	}
+
+	
+	focus = {
+		id = FRA_attack_germany
+		icon = GFX_focus_attack_germany
+		search_filters = { FOCUS_FILTER_ANTI_ENG }
+		prerequisite = {
+			focus = FRA_embargo_germany
+		}
+		available = {
+		date > 1914.6.1
+		GER = {exists = yes}
+		}
+		bypass = {
+			
+		}
+		mutually_exclusive = {
+		focus = FRA_nap_with_germany
+		}
+		completion_reward = {
+		create_wargoal = { type = take_core_state target = GER }
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		cost = 10
+		x = 2
+		y = 2
+		relative_position_id = FRA_oppose_british_colonialism
+	}
+	
+	shared_focus = FRA_ww11_ready_country
+	
+	
+	focus = {
+		id = FRA_ww11_agadir_crisis
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_briand_victory
+		}
+		icon = GFX_protect_morocco
+		available = {
+			is_puppet = no
+			has_war = no
+			MOR = {
+				OR = {
+					is_subject = no
+					is_subject_of = FRA
+				}
+			}
+			date > 1911.4.1
+		}
+		bypass = {
+			OR = {
+				has_global_flag = agadir_crisis_ends
+				has_global_flag = kis_war
+			}
+		}
+		completion_reward = {
+			add_named_threat = {
+				threat = 5
+				name = FRA_ww1_agadir_crisis
+			}
+			MOR = {
+				country_event = {
+					id = ww1_morocco.1
+					days = 2
+				}
+			}
+		}
+		cost = 5
+		x = 5
+		y = 1
+		relative_position_id = FRA_briand_victory
+	}
+	shared_focus = FRA_ww11_bureau_colonies
+	
+	
+	shared_focus = GEN_GEN_FRA_aviation_effort
+	shared_focus = GEN_GEN_FRA_naval_effort
+	shared_focus = GEN_GEN_army_effort
+
+	
+}

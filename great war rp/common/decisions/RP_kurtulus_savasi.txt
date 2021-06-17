@@ -1,0 +1,1797 @@
+decision_category_turkish_war_of_independence = {
+
+
+
+
+
+
+
+	
+
+
+	TIM_victory = {
+		icon = GFX_decision_category_tur_unifying_the_country
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {
+		TIM = {NOT = {has_country_flag = great_war_winner}}
+		NOT = {has_border_war = yes}
+        }
+		available = {
+		TIM = {owns_state = 49}
+		TIM = {owns_state = 355}
+		TIM = {owns_state = 356}
+		TIM = {owns_state = 349}
+		TIM = {owns_state = 354}
+		TIM = {owns_state = 353}
+		TIM = {owns_state = 350}
+		TIM = {owns_state = 352}
+		TIM = {owns_state = 828}
+		TIM = {owns_state = 829}
+		TIM = {owns_state = 348}
+		TIM = {owns_state = 344}
+		TIM = {owns_state = 346}
+		TIM = {owns_state = 830}
+		TIM = {owns_state = 340}
+		TIM = {owns_state = 339}
+		TIM = {owns_state = 824}
+		TIM = {owns_state = 825}
+		TIM = {owns_state = 341}
+		TIM = {owns_state = 756}
+		TIM = {owns_state = 342}
+		}
+		fire_only_once = yes
+		complete_effect = {
+		TIM = {set_country_flag = great_war_winner}
+		custom_effect_tooltip = TIM_victory_tt
+		annex_country = { target = TUR transfer_troops = no}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	TUR_kastamonu1 = {
+		icon = GFX_dectim0
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 49}
+		TIM = {owns_state = 49}
+		TUR = {controls_state = 356}
+		TUR = {owns_state = 356}
+		NOT = {TIM = {controls_state = 356}}
+		NOT = {TIM = {owns_state = 356}}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		fire_only_once = yes
+		days_remove = 10
+		highlight_state_targets = {
+			state = 356
+		}
+		on_map_mode = map_only
+		cost =  50#1
+		remove_effect = {
+		356 = {set_state_flag = TIM_claim_1}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	TUR_kastamonu2 = {
+		icon = GFX_dectim1
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 49}
+		TIM = {owns_state = 49}
+		TUR = {controls_state = 356}
+		TUR = {owns_state = 356}
+		NOT = {TIM = {controls_state = 356}}
+		NOT = {TIM = {owns_state = 356}}
+		356 = {has_state_flag = TIM_claim_1}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		fire_only_once = yes
+		days_remove = 10
+		highlight_state_targets = {
+			state = 356
+		}
+		on_map_mode = map_only
+		cost =  50#2
+		remove_effect = {
+		356 = {set_state_flag = TIM_claim_2}
+		356 = {clr_state_flag = TIM_claim_1}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	TUR_kastamonu3 = {
+		icon = GFX_dectim2
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 49}
+		TIM = {owns_state = 49}
+		TUR = {controls_state = 356}
+		TUR = {owns_state = 356}
+		NOT = {TIM = {controls_state = 356}}
+		NOT = {TIM = {owns_state = 356}}
+		356 = {has_state_flag = TIM_claim_2}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		
+		highlight_state_targets = {
+			state = 356
+		}
+		on_map_mode = map_only
+		cost =  100#3
+		complete_effect = {
+		356 = {clr_state_flag = TIM_claim_2}
+		TIM = {
+		add_state_core = 356
+		transfer_state = 356
+		}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	TUR_bursa1 = {
+		icon = GFX_dectim0
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 49}
+		TIM = {owns_state = 49}
+		TUR = {controls_state = 340}
+		TUR = {owns_state = 340}
+		NOT = {TIM = {controls_state = 340}}
+		NOT = {TIM = {owns_state = 340}}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		fire_only_once = yes
+		days_remove = 10
+		highlight_state_targets = {
+			state = 340
+		}
+		on_map_mode = map_only
+		cost =  50#1
+		remove_effect = {
+		340 = {set_state_flag = TIM_claim_1}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	TUR_bursa2 = {
+		icon = GFX_dectim1
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 49}
+		TIM = {owns_state = 49}
+		TUR = {controls_state = 340}
+		TUR = {owns_state = 340}
+		NOT = {TIM = {controls_state = 340}}
+		NOT = {TIM = {owns_state = 340}}
+		340 = {has_state_flag = TIM_claim_1}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		fire_only_once = yes
+		days_remove = 10
+		highlight_state_targets = {
+			state = 340
+		}
+		on_map_mode = map_only
+		cost =  50#2
+		remove_effect = {
+		340 = {set_state_flag = TIM_claim_2}
+		340 = {clr_state_flag = TIM_claim_1}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	TUR_bursa3 = {
+		icon = GFX_dectim2
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 49}
+		TIM = {owns_state = 49}
+		TUR = {controls_state = 340}
+		TUR = {owns_state = 340}
+		NOT = {TIM = {controls_state = 340}}
+		NOT = {TIM = {owns_state = 340}}
+		340 = {has_state_flag = TIM_claim_2}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		
+		highlight_state_targets = {
+			state = 340
+		}
+		on_map_mode = map_only
+		cost =  100#3
+		complete_effect = {
+		340 = {clr_state_flag = TIM_claim_2}
+		TIM = {
+		add_state_core = 340
+		transfer_state = 340
+		}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	TUR_afyon1 = {
+		icon = GFX_dectim0
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 49}
+		TIM = {owns_state = 49}
+		TUR = {controls_state = 830}
+		TUR = {owns_state = 830}
+		NOT = {TIM = {controls_state = 830}}
+		NOT = {TIM = {owns_state = 830}}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		fire_only_once = yes
+		days_remove = 10
+		highlight_state_targets = {
+			state = 830
+		}
+		on_map_mode = map_only
+		cost =  50#1
+		remove_effect = {
+		830 = {set_state_flag = TIM_claim_1}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	TUR_afyon2 = {
+		icon = GFX_dectim1
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 49}
+		TIM = {owns_state = 49}
+		TUR = {controls_state = 830}
+		TUR = {owns_state = 830}
+		NOT = {TIM = {controls_state = 830}}
+		NOT = {TIM = {owns_state = 830}}
+		830 = {has_state_flag = TIM_claim_1}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		fire_only_once = yes
+		days_remove = 10
+		highlight_state_targets = {
+			state = 830
+		}
+		on_map_mode = map_only
+		cost =  50#2
+		remove_effect = {
+		830 = {set_state_flag = TIM_claim_2}
+		830 = {clr_state_flag = TIM_claim_1}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	TUR_afyon3 = {
+		icon = GFX_dectim2
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 49}
+		TIM = {owns_state = 49}
+		TUR = {controls_state = 830}
+		TUR = {owns_state = 830}
+		NOT = {TIM = {controls_state = 830}}
+		NOT = {TIM = {owns_state = 830}}
+		830 = {has_state_flag = TIM_claim_2}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		
+		highlight_state_targets = {
+			state = 830
+		}
+		on_map_mode = map_only
+		cost =  100#3
+		complete_effect = {
+		830 = {clr_state_flag = TIM_claim_2}
+		TIM = {
+		add_state_core = 830
+		transfer_state = 830
+		}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	TUR_konya1 = {
+		icon = GFX_dectim0
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 49}
+		TIM = {owns_state = 49}
+		TUR = {controls_state = 346}
+		TUR = {owns_state = 346}
+		NOT = {TIM = {controls_state = 346}}
+		NOT = {TIM = {owns_state = 346}}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		fire_only_once = yes
+		days_remove = 10
+		highlight_state_targets = {
+			state = 346
+		}
+		on_map_mode = map_only
+		cost =  50#1
+		remove_effect = {
+		346 = {set_state_flag = TIM_claim_1}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	TUR_konya2 = {
+		icon = GFX_dectim1
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 49}
+		TIM = {owns_state = 49}
+		TUR = {controls_state = 346}
+		TUR = {owns_state = 346}
+		NOT = {TIM = {controls_state = 346}}
+		NOT = {TIM = {owns_state = 346}}
+		346 = {has_state_flag = TIM_claim_1}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		fire_only_once = yes
+		days_remove = 10
+		highlight_state_targets = {
+			state = 346
+		}
+		on_map_mode = map_only
+		cost =  50#2
+		remove_effect = {
+		346 = {set_state_flag = TIM_claim_2}
+		346 = {clr_state_flag = TIM_claim_1}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	TUR_konya3 = {
+		icon = GFX_dectim2
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 49}
+		TIM = {owns_state = 49}
+		TUR = {controls_state = 346}
+		TUR = {owns_state = 346}
+		NOT = {TIM = {controls_state = 346}}
+		NOT = {TIM = {owns_state = 346}}
+		346 = {has_state_flag = TIM_claim_2}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		
+		highlight_state_targets = {
+			state = 346
+		}
+		on_map_mode = map_only
+		cost =  100#3
+		complete_effect = {
+		346 = {clr_state_flag = TIM_claim_2}
+		TIM = {
+		add_state_core = 346
+		transfer_state = 346
+		}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	TUR_kayseri1 = {
+		icon = GFX_dectim0
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 349}
+		TIM = {owns_state = 349}
+		TUR = {controls_state = 348}
+		TUR = {owns_state = 348}
+		NOT = {TIM = {controls_state = 348}}
+		NOT = {TIM = {owns_state = 348}}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		fire_only_once = yes
+		days_remove = 10
+		highlight_state_targets = {
+			state = 348
+		}
+		on_map_mode = map_only
+		cost =  50#1
+		remove_effect = {
+		348 = {set_state_flag = TIM_claim_1}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	TUR_kayseri2 = {
+		icon = GFX_dectim1
+		allowed = { 
+		tag = TIM
+		}
+		
+		fire_only_once = yes
+		days_remove = 10
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 349}
+		TIM = {owns_state = 349}
+		TUR = {controls_state = 348}
+		TUR = {owns_state = 348}
+		NOT = {TIM = {controls_state = 348}}
+		NOT = {TIM = {owns_state = 348}}
+		348 = {has_state_flag = TIM_claim_1}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		
+		highlight_state_targets = {
+			state = 348
+		}
+		on_map_mode = map_only
+		cost =  50#2
+		remove_effect = {
+		348 = {set_state_flag = TIM_claim_2}
+		348 = {clr_state_flag = TIM_claim_1}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	TUR_kayseri3 = {
+		icon = GFX_dectim2
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 349}
+		TIM = {owns_state = 349}
+		TUR = {controls_state = 348}
+		TUR = {owns_state = 348}
+		NOT = {TIM = {controls_state = 348}}
+		NOT = {TIM = {owns_state = 348}}
+		348 = {has_state_flag = TIM_claim_2}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		
+		highlight_state_targets = {
+			state = 348
+		}
+		on_map_mode = map_only
+		cost =  100#3
+		complete_effect = {
+		348 = {clr_state_flag = TIM_claim_2}
+		TIM = {
+		add_state_core = 348
+		transfer_state = 348
+		}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	TUR_diyarbakir1 = {
+		icon = GFX_dectim0
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 348}
+		TIM = {owns_state = 348}
+		TUR = {controls_state = 350}
+		TUR = {owns_state = 350}
+		NOT = {TIM = {controls_state = 350}}
+		NOT = {TIM = {owns_state = 350}}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		fire_only_once = yes
+		days_remove = 10
+		highlight_state_targets = {
+			state = 350
+		}
+		on_map_mode = map_only
+		cost =  50#1
+		remove_effect = {
+		350 = {set_state_flag = TIM_claim_1}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	TUR_diyarbakir2 = {
+		icon = GFX_dectim1
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 348}
+		TIM = {owns_state = 348}
+		TUR = {controls_state = 350}
+		TUR = {owns_state = 350}
+		NOT = {TIM = {controls_state = 350}}
+		NOT = {TIM = {owns_state = 350}}
+		350 = {has_state_flag = TIM_claim_1}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		fire_only_once = yes
+		days_remove = 10
+		highlight_state_targets = {
+			state = 350
+		}
+		on_map_mode = map_only
+		cost =  50#2
+		remove_effect = {
+		350 = {set_state_flag = TIM_claim_2}
+		350 = {clr_state_flag = TIM_claim_1}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	TUR_diyarbakir3 = {
+		icon = GFX_dectim2
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 348}
+		TIM = {owns_state = 348}
+		TUR = {controls_state = 350}
+		TUR = {owns_state = 350}
+		NOT = {TIM = {controls_state = 350}}
+		NOT = {TIM = {owns_state = 350}}
+		350 = {has_state_flag = TIM_claim_2}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		
+		highlight_state_targets = {
+			state = 350
+		}
+		on_map_mode = map_only
+		cost =  100#3
+		complete_effect = {
+		350 = {clr_state_flag = TIM_claim_2}
+		TIM = {
+		add_state_core = 350
+		transfer_state = 350
+		}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	TUR_van1 = {
+		icon = GFX_dectim0
+		allowed = { 
+		tag = TIM
+		}
+		
+		fire_only_once = yes
+		days_remove = 10
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 350}
+		TIM = {owns_state = 350}
+		TUR = {controls_state = 352}
+		TUR = {owns_state = 352}
+		NOT = {TIM = {controls_state = 352}}
+		NOT = {TIM = {owns_state = 352}}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		
+		highlight_state_targets = {
+			state = 352
+		}
+		on_map_mode = map_only
+		cost =  50#1
+		remove_effect = {
+		352 = {set_state_flag = TIM_claim_1}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	TUR_van2 = {
+		icon = GFX_dectim1
+		allowed = { 
+		tag = TIM
+		}
+		
+		fire_only_once = yes
+		days_remove = 10
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 350}
+		TIM = {owns_state = 350}
+		TUR = {controls_state = 352}
+		TUR = {owns_state = 352}
+		NOT = {TIM = {controls_state = 352}}
+		NOT = {TIM = {owns_state = 352}}
+		352 = {has_state_flag = TIM_claim_1}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		
+		highlight_state_targets = {
+			state = 352
+		}
+		on_map_mode = map_only
+		cost =  50#2
+		remove_effect = {
+		352 = {set_state_flag = TIM_claim_2}
+		352 = {clr_state_flag = TIM_claim_1}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	TUR_van3 = {
+		icon = GFX_dectim2
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 350}
+		TIM = {owns_state = 350}
+		TUR = {controls_state = 352}
+		TUR = {owns_state = 352}
+		NOT = {TIM = {controls_state = 352}}
+		NOT = {TIM = {owns_state = 352}}
+		352 = {has_state_flag = TIM_claim_2}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		
+		highlight_state_targets = {
+			state = 352
+		}
+		on_map_mode = map_only
+		cost =  100#3
+		complete_effect = {
+		352 = {clr_state_flag = TIM_claim_2}
+		TIM = {
+		add_state_core = 352
+		transfer_state = 352
+		}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	TUR_hakkari1 = {
+		icon = GFX_dectim0
+		allowed = { 
+		tag = TIM
+		}
+		
+		fire_only_once = yes
+		days_remove = 10
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 352}
+		TIM = {owns_state = 352}
+		TUR = {controls_state = 828}
+		TUR = {owns_state = 828}
+		NOT = {TIM = {controls_state = 828}}
+		NOT = {TIM = {owns_state = 828}}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		
+		highlight_state_targets = {
+			state = 828
+		}
+		on_map_mode = map_only
+		cost =  50#1
+		remove_effect = {
+		828 = {set_state_flag = TIM_claim_1}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	TUR_hakkari2 = {
+		icon = GFX_dectim1
+		allowed = { 
+		tag = TIM
+		}
+		
+		fire_only_once = yes
+		days_remove = 10
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 352}
+		TIM = {owns_state = 352}
+		TUR = {controls_state = 828}
+		TUR = {owns_state = 828}
+		NOT = {TIM = {controls_state = 828}}
+		NOT = {TIM = {owns_state = 828}}
+		828 = {has_state_flag = TIM_claim_1}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		
+		highlight_state_targets = {
+			state = 828
+		}
+		on_map_mode = map_only
+		cost =  50#2
+		remove_effect = {
+		828 = {set_state_flag = TIM_claim_2}
+		828 = {clr_state_flag = TIM_claim_1}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	TUR_hakkari3 = {
+		icon = GFX_dectim2
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 352}
+		TIM = {owns_state = 352}
+		TUR = {controls_state = 828}
+		TUR = {owns_state = 828}
+		NOT = {TIM = {controls_state = 828}}
+		NOT = {TIM = {owns_state = 828}}
+		828 = {has_state_flag = TIM_claim_2}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		
+		highlight_state_targets = {
+			state = 828
+		}
+		on_map_mode = map_only
+		cost =  100#3
+		complete_effect = {
+		828 = {clr_state_flag = TIM_claim_2}
+		TIM = {
+		add_state_core = 828
+		transfer_state = 828
+		}
+		}
+		ai_will_do = { factor = 1 }
+	} 
+	
+	
+	
+	
+	
+	TUR_edirne1 = {
+		icon = GFX_dectim0
+		allowed = { 
+		tag = TIM
+		}
+		
+		fire_only_once = yes
+		days_remove = 10
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 341}
+		TIM = {owns_state = 341}
+		TUR = {controls_state = 756}
+		TUR = {owns_state = 756}
+		NOT = {TIM = {controls_state = 756}}
+		NOT = {TIM = {owns_state = 756}}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		
+		highlight_state_targets = {
+			state = 756
+		}
+		on_map_mode = map_only
+		cost =  50#1
+		remove_effect = {
+		756 = {set_state_flag = TIM_claim_1}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	TUR_edirne2 = {
+		icon = GFX_dectim1
+		allowed = { 
+		tag = TIM
+		}
+		
+		fire_only_once = yes
+		days_remove = 10
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 341}
+		TIM = {owns_state = 341}
+		TUR = {controls_state = 756}
+		TUR = {owns_state = 756}
+		NOT = {TIM = {controls_state = 756}}
+		NOT = {TIM = {owns_state = 756}}
+		756 = {has_state_flag = TIM_claim_1}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		
+		highlight_state_targets = {
+			state = 756
+		}
+		on_map_mode = map_only
+		cost =  50#2
+		remove_effect = {
+		756 = {set_state_flag = TIM_claim_2}
+		756 = {clr_state_flag = TIM_claim_1}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	TUR_edirne3 = {
+		icon = GFX_dectim2
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		TIM = {controls_state = 341}
+		TIM = {owns_state = 341}
+		TUR = {controls_state = 756}
+		TUR = {owns_state = 756}
+		NOT = {TIM = {controls_state = 756}}
+		NOT = {TIM = {owns_state = 756}}
+		756 = {has_state_flag = TIM_claim_2}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		
+		highlight_state_targets = {
+			state = 756
+		}
+		on_map_mode = map_only
+		cost =  100#3
+		complete_effect = {
+		756 = {clr_state_flag = TIM_claim_2}
+		TIM = {
+		add_state_core = 756
+		transfer_state = 756
+		}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+
+	TUR_reclaim_izmir = {
+		icon = GFX_decision_category_border_conflicts
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		339 = {has_border_war = no}
+		340 = {has_border_war = no}
+		TIM = {controls_state = 340}
+		TIM = {owns_state = 340}
+		NOT = {TIM = {controls_state = 339}}
+		NOT = {TIM = {owns_state = 339}}
+		NOT = {TUR = {controls_state = 339}}
+		NOT = {TUR = {owns_state = 339}}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		days_re_enable = 7
+		highlight_state_targets = {
+			state = 339
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		add_state_core = 339
+		start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 340 #BURSA
+        num_provinces = 5
+        on_win = RP_TIM_izmir.1
+        on_lose = RP_TIM_izmir.2
+        on_cancel = RP_TIM_izmir.2
+    }
+				
+    defender = {
+        state = 339 #IZMIR
+        num_provinces = 3
+        on_win = RP_TIM_izmir.3
+        on_lose = RP_TIM_izmir.4
+        on_cancel = RP_TIM_izmir.4
+    }
+}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	TUR_reclaim_aydin = {
+		icon = GFX_decision_category_border_conflicts
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		824 = {has_border_war = no}
+		340 = {has_border_war = no}
+		TIM = {controls_state = 340}
+		TIM = {owns_state = 340}
+		NOT = {TIM = {controls_state = 824}}
+		NOT = {TIM = {owns_state = 824}}
+		NOT = {TUR = {controls_state = 824}}
+		NOT = {TUR = {owns_state = 824}}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		days_re_enable = 7
+		highlight_state_targets = {
+			state = 824
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		add_state_core = 824
+		start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 340 #BURSA
+        num_provinces = 2
+        on_win = RP_TIM_aydin.1
+        on_lose = RP_TIM_aydin.2
+        on_cancel = RP_TIM_aydin.2
+    }
+				
+    defender = {
+        state = 824 #AYDIN
+        num_provinces = 1
+        on_win = RP_TIM_aydin.3
+        on_lose = RP_TIM_aydin.4
+        on_cancel = RP_TIM_aydin.4
+    }
+}
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+
+TUR_reclaim_antalya = {
+		icon = GFX_decision_category_border_conflicts
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		342 = {has_border_war = no}
+		340 = {has_border_war = no}
+		TIM = {controls_state = 340}
+		TIM = {owns_state = 340}
+		NOT = {TIM = {controls_state = 342}}
+		NOT = {TIM = {owns_state = 342}}
+		NOT = {TUR = {controls_state = 342}}
+		NOT = {TUR = {owns_state = 342}}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		days_re_enable = 7
+		highlight_state_targets = {
+			state = 342
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		add_state_core = 342
+		start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 340 #BURSA
+        num_provinces = 2
+        on_win = RP_TIM_antalya.1
+        on_lose = RP_TIM_antalya.2
+        on_cancel = RP_TIM_antalya.2
+    }
+				
+    defender = {
+        state = 342 #ANTALYA ITA
+        num_provinces = 4
+        on_win = RP_TIM_antalya.3
+        on_lose = RP_TIM_antalya.4
+        on_cancel = RP_TIM_antalya.4
+    }
+}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	TUR_reclaim_biga = {
+		icon = GFX_decision_category_border_conflicts
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		825 = {has_border_war = no}
+		340 = {has_border_war = no}
+		TIM = {controls_state = 340}
+		TIM = {owns_state = 340}
+		NOT = {TIM = {controls_state = 825}}
+		NOT = {TIM = {owns_state = 825}}
+		NOT = {TUR = {controls_state = 825}}
+		NOT = {TUR = {owns_state = 825}}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		days_re_enable = 7
+		highlight_state_targets = {
+			state = 825
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		add_state_core = 825
+		start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 340 #BURSA
+        num_provinces = 2
+        on_win = RP_TIM_biga.1
+        on_lose = RP_TIM_biga.2
+        on_cancel = RP_TIM_biga.2
+    }
+				
+    defender = {
+        state = 825 #BIGA
+        num_provinces = 4
+        on_win = RP_TIM_biga.3
+        on_lose = RP_TIM_biga.4
+        on_cancel = RP_TIM_biga.4
+    }
+}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	TUR_reclaim_gelibolu = {
+		icon = GFX_decision_category_border_conflicts
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		341 = {has_border_war = no}
+		825 = {has_border_war = no}
+		TIM = {controls_state = 825}
+		TIM = {owns_state = 825}
+		NOT = {TIM = {controls_state = 341}}
+		NOT = {TIM = {owns_state = 341}}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		days_re_enable = 7
+		highlight_state_targets = {
+			state = 341
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		add_state_core = 341
+		start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 825 #BIGA TUR
+        num_provinces = 2
+        on_win = RP_TIM_gelibolu.1
+        on_lose = RP_TIM_gelibolu.2
+        on_cancel = RP_TIM_gelibolu.2
+    }
+				
+    defender = {
+        state = 341 #ENG
+        num_provinces = 2
+        on_win = RP_TIM_gelibolu.3
+        on_lose = RP_TIM_gelibolu.4
+        on_cancel = RP_TIM_gelibolu.4
+    }
+}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	TUR_reclaim_adana = {
+		icon = GFX_decision_category_border_conflicts
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		344 = {has_border_war = no}
+		348 = {has_border_war = no}
+		TIM = {controls_state = 348}
+		TIM = {owns_state = 348}
+		NOT = {TIM = {controls_state = 344}}
+		NOT = {TIM = {owns_state = 344}}
+		NOT = {TUR = {controls_state = 344}}
+		NOT = {TUR = {owns_state = 344}}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		days_re_enable = 7
+		highlight_state_targets = {
+			state = 344
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		add_state_core = 344
+		start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 348 #KAYSERI
+        num_provinces = 2
+        on_win = RP_TIM_adana.1
+        on_lose = RP_TIM_adana.2
+        on_cancel = RP_TIM_adana.2
+    }
+				
+    defender = {
+        state = 344 #ADANA
+        num_provinces = 2
+        on_win = RP_TIM_adana.3
+        on_lose = RP_TIM_adana.4
+        on_cancel = RP_TIM_adana.4
+    }
+}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	TUR_reclaim_urfa = {
+		icon = GFX_decision_category_border_conflicts
+		allowed = { 
+		tag = TIM
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		829 = {has_border_war = no}
+		350 = {has_border_war = no}
+		TIM = {controls_state = 350}
+		TIM = {owns_state = 350}
+		NOT = {TIM = {controls_state = 829}}
+		NOT = {TIM = {owns_state = 829}}
+		NOT = {TUR = {controls_state = 829}}
+		NOT = {TUR = {owns_state = 829}}
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}#₺#
+        }
+		
+		days_re_enable = 7
+		highlight_state_targets = {
+			state = 829
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		add_state_core = 829
+		start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 350 #Dıyarıbekir
+        num_provinces = 2
+        on_win = RP_TIM_urfa.1
+        on_lose = RP_TIM_urfa.2
+        on_cancel = RP_TIM_urfa.2
+    }
+				
+    defender = {
+        state = 829 #Urfa
+        num_provinces = 2
+        on_win = RP_TIM_urfa.3
+        on_lose = RP_TIM_urfa.4
+        on_cancel = RP_TIM_urfa.4
+    }
+}
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+decision_category_turkish_invasion = {
+
+
+
+
+
+
+
+
+
+
+	GRE_conquer_izmir = {
+		icon = GFX_decision_category_border_conflicts
+		allowed = { 
+		
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		790 = {has_border_war = no}
+		339 = {has_border_war = no}
+		owns_state = 790
+		controls_state = 790
+		NOT = {controls_state = 339}
+		NOT = {owns_state = 339}
+		
+		OR = {
+		AND = {
+		TUR = {owns_state = 339}
+		TUR = {controls_state = 339}
+		}
+		AND = {
+		TIM = {owns_state = 339}
+		TIM = {controls_state = 339}
+		}
+		}
+		
+		has_global_flag = great_war_ends
+		has_country_flag = great_war_winner
+        }
+		
+		
+		highlight_state_targets = {
+			state = 339
+		}
+		on_map_mode = map_only
+		cost =  100
+		days_re_enable = 7
+		complete_effect = {
+
+start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 790 #EGE GRE
+        num_provinces = 5
+        on_win = RP_GRE_izmir.3
+        on_lose = RP_GRE_izmir.4
+        on_cancel = RP_GRE_izmir.4
+    }
+				
+    defender = {
+        state = 339 #IZMIR TIM
+        num_provinces = 3
+        on_win = RP_GRE_izmir.1
+        on_lose = RP_GRE_izmir.2
+        on_cancel = RP_GRE_izmir.2
+    }
+}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	GRE_conquer_antalya = {
+		icon = GFX_decision_category_border_conflicts
+		allowed = { 
+		
+		}
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		164 = {has_border_war = no}
+		342 = {has_border_war = no}
+		owns_state = 164
+		controls_state = 164
+		NOT = {controls_state = 342}
+		NOT = {owns_state = 342}
+		
+		OR = {
+		AND = {
+		TUR = {owns_state = 342}
+		TUR = {controls_state = 342}
+		}
+		AND = {
+		TIM = {owns_state = 342}
+		TIM = {controls_state = 342}
+		}
+		}
+		
+		has_global_flag = great_war_ends
+		has_country_flag = great_war_winner
+        }
+		
+		days_re_enable = 7
+		highlight_state_targets = {
+			state = 342
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		
+
+start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 164 #DODE ITA
+        num_provinces = 5
+        on_win = RP_ITA_antalya.3
+        on_lose = RP_ITA_antalya.4
+        on_cancel = RP_ITA_antalya.4
+    }
+				
+    defender = {
+        state = 342 #ANTALYA TUR
+        num_provinces = 3
+        on_win = RP_ITA_antalya.1
+        on_lose = RP_ITA_antalya.2
+        on_cancel = RP_ITA_antalya.2
+    }
+}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	GRE_conquer_aydin = {
+		icon = GFX_decision_category_border_conflicts
+		allowed = { 
+		
+		}
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		342 = {has_border_war = no}
+		824 = {has_border_war = no}
+		owns_state = 342
+		controls_state = 342
+		NOT = {controls_state = 824}
+		NOT = {owns_state = 824}
+		
+		OR = {
+		AND = {
+		TUR = {owns_state = 824}
+		TUR = {controls_state = 824}
+		}
+		AND = {
+		TIM = {owns_state = 824}
+		TIM = {controls_state = 824}
+		}
+		}
+		
+		has_global_flag = great_war_ends
+		has_country_flag = great_war_winner
+        }
+		days_re_enable = 7
+		
+		highlight_state_targets = {
+			state = 824
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		
+
+start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 342 #ANTALYA ITA
+        num_provinces = 5
+        on_win = RP_GRE_aydin.3
+        on_lose = RP_GRE_aydin.4
+        on_cancel = RP_GRE_aydin.4
+    }
+				
+    defender = {
+        state = 824 #AYDIN TUR
+        num_provinces = 3
+        on_win = RP_GRE_aydin.1
+        on_lose = RP_GRE_aydin.2
+        on_cancel = RP_GRE_aydin.2
+    }
+}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	GRE_conquer_gelibolu = {
+		icon = GFX_decision_category_border_conflicts
+		allowed = { 
+		
+		}
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		825 = {has_border_war = no}
+		341 = {has_border_war = no}
+		owns_state = 825
+		controls_state = 825
+		NOT = {controls_state = 341}
+		NOT = {owns_state = 341}
+		
+		OR = {
+		AND = {
+		TUR = {owns_state = 341}
+		TUR = {controls_state = 341}
+		}
+		AND = {
+		TIM = {owns_state = 341}
+		TIM = {controls_state = 341}
+		}
+		}
+		
+		has_global_flag = great_war_ends
+		has_country_flag = great_war_winner
+        }
+		days_re_enable = 7
+		
+		highlight_state_targets = {
+			state = 341
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		
+
+start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 825 #CANAKKALE ASYA ENG
+        num_provinces = 5
+        on_win = RP_ENG_gelibolu.3
+        on_lose = RP_ENG_gelibolu.4
+        on_cancel = RP_ENG_gelibolu.4
+    }
+				
+    defender = {
+        state = 341 #CANAKKALE AVRUPA TUR
+        num_provinces = 3
+        on_win = RP_ENG_gelibolu.1
+        on_lose = RP_ENG_gelibolu.2
+        on_cancel = RP_ENG_gelibolu.2
+    }
+}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	GRE_conquer_adana = {
+		icon = GFX_decision_category_border_conflicts
+		allowed = { 
+		
+		}
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		829 = {has_border_war = no}
+		344 = {has_border_war = no}
+		owns_state = 829
+		controls_state = 829
+		NOT = {controls_state = 344}
+		NOT = {owns_state = 344}
+		
+		OR = {
+		AND = {
+		TUR = {owns_state = 344}
+		TUR = {controls_state = 344}
+		}
+		AND = {
+		TIM = {owns_state = 344}
+		TIM = {controls_state = 344}
+		}
+		}
+		
+		has_global_flag = great_war_ends
+		has_country_flag = great_war_winner
+        }
+		days_re_enable = 7
+		
+		highlight_state_targets = {
+			state = 344
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		
+
+start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 829 #URFA FRA
+        num_provinces = 5
+        on_win = RP_FRA_adana.3
+        on_lose = RP_FRA_adana.4
+        on_cancel = RP_FRA_adana.4
+    }
+				
+    defender = {
+        state = 344 #ADANA TUR
+        num_provinces = 3
+        on_win = RP_FRA_adana.1
+        on_lose = RP_FRA_adana.2
+        on_cancel = RP_FRA_adana.2
+    }
+}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	TIM_peace_with_turkey = {
+		icon = GFX_decision_category_generic_political_actions
+		allowed = { 
+		OR = {
+		tag = ITA
+		tag = ENG
+		tag = FRA
+		tag = GRE
+		tag = KUR
+		tag = ARM
+		}
+		NOT = {tag = TUR}
+		TIM = {exists = yes}
+		}
+		
+		
+		visible = {
+		has_global_flag = great_war_ends
+		has_country_flag = great_war_winner
+		TIM = {NOT = {has_country_flag = great_war_winner}}
+        }
+		available = {
+		NOT = {has_border_war = yes}
+		NOT = {
+		OR = {
+		controls_state = 829
+		controls_state = 828
+		controls_state = 342
+		controls_state = 824
+		controls_state = 825
+		controls_state = 341
+		controls_state = 347
+		controls_state = 354
+		controls_state = 349
+		controls_state = 353
+		controls_state = 352
+		}
+		}
+		}
+		fire_only_once = yes
+		cost =  0#a#
+		complete_effect = {
+		set_country_flag = FLAG_peace_with_turkey
+		}
+		ai_will_do = { factor = 0 }
+	}
+	
+	
+	
+	
+	
+	
+	
+}

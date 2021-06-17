@@ -1,0 +1,1139 @@
+no_one_gets_our_troops = {
+	enable = {
+		original_tag = GER
+		is_historical_focus_on = yes
+	}
+	
+	abort = {
+	is_historical_focus_on = no
+	date > 1914.4.5
+	}
+	
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "QIN"
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "BUL"
+		value = -100
+	}
+}
+big_army_after_moroccan_crisis = {
+	enable = {
+		original_tag = GER
+		has_completed_focus = GER_moroccan_crisis
+	}
+	abort = {
+		date > 1915.5.1
+	}
+	ai_strategy = {
+		type = force_build_armies
+		value = 200
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 90
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 10
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = -10
+	}
+}
+big_navy_after_moroccan_crisis = {
+	enable = {
+		original_tag = GER
+		has_completed_focus = GER_turn_to_asia
+	}
+	abort = {
+		date > 1914.5.1
+	}
+	ai_strategy = {
+		type = force_build_armies
+		value = 100
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bb
+		value = 20
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bc
+		value = 10
+	}
+}
+ready_to_invade_france = {
+	enable = {
+		original_tag = GER
+		date > 1914.1.1
+		NOT = { GER = { has_war_with = FRA } }
+	}
+	abort = {
+		OR = {
+			date > 1915.6.1
+			BEL = { has_capitulated = yes }
+		}
+	}
+	ai_strategy = {
+		type = antagonize
+		id = BEL		
+		value = 200
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = BEL	
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = LUX	
+		value = 100
+	}
+	ai_strategy = {
+		type = consider_weak
+		id = BEL			
+		value = 500
+	}
+	ai_strategy = {
+		type = antagonize
+		id = FRA
+		value = 200
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = FRA	
+		value = 200
+	}
+	ai_strategy = {
+		type = front_unit_request
+		area = africa
+		value = -50
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = BEL
+		value = 20
+	}
+}
+invading_france_through_benelux = {
+	enable = {
+		original_tag = GER
+		date < 1915.8.1
+		OR = {
+			has_global_flag = kis_franzferdinand_murdered
+			has_war_with = FRA
+		}
+	}
+	abort = {
+		OR = {
+			date > 1915.8.1
+			AND = {
+				BEL = { has_capitulated = yes }
+				34 = { is_fully_controlled_by = GER }
+				6 = { is_controlled_by = GER }
+				OR = {
+					785 = { is_controlled_by = GER }
+					17 = { is_controlled_by = GER }
+					18 = { is_controlled_by = GER }
+				}
+			}
+		}
+	}
+	ai_strategy = {
+		type = conquer
+		id = FRA
+		value = 200
+	}
+	ai_strategy = {
+		type = invade
+		id = LUX			
+		value = 1000
+	}
+	ai_strategy = {
+		type = conquer
+		id = BEL
+		value = 1000
+	}
+	ai_strategy = {
+		type = invade
+		id = BEL
+		value = 1000
+	}
+	ai_strategy = {
+		type = consider_weak
+		id = BEL
+		value = 1000
+	}
+	ai_strategy = {
+		type = conquer
+		id = LUX
+		value = 1000
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		
+		order_id = 1
+		
+		# Thourgh Belgium-Luxembourg
+		states = {
+			793
+			6
+			34
+			8
+			29
+			785
+		}
+		ratio = 0.25
+		area = europe
+		subtract_invasions_from_need = no
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = BEL
+		value = 100
+	}
+	ai_strategy = {
+		type = front_control
+		tag = BEL
+		ratio = 0.35
+		
+		priority = 100
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = RUS
+		value = -30
+	}
+	ai_strategy = {
+		type = consider_weak
+		id = RUS
+		value = -200
+	}
+	ai_strategy = {
+		type = conquer
+		id = RUS
+		value = -200
+	}
+	ai_strategy = {
+		type = invade
+		id = RUS
+		value = -200
+	}
+	ai_strategy = {
+		type = ignore
+		id = RUS
+		value = 30
+	}
+}
+GER_agressive_after_1914 = {
+	enable = {
+		tag = GER
+		has_war_with = FRA
+		GER = { casualties < 1000000 }
+		OR = {
+			BEL = { has_capitulated = yes }
+			date > 1915.1.1
+		}
+	}
+	abort = {
+		OR = {
+			date > 1915.6.1
+			GER = { casualties > 1000000 }
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = FRA
+		value = 200
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 100 
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = -50 
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = FRA
+		value = 200
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = RUS
+		value = 100
+	}
+	ai_strategy = {
+		type = front_control
+		tag = FRA
+		ratio = 0.7
+		
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		#execute_order = yes
+	}
+}
+GER_defensive_after_1915 = {
+	enable = {
+		tag = GER
+		has_war_with = FRA
+		FRA = { casualties < 1500000 }
+		date > 1915.6.1
+	}
+	abort = {
+		OR = {
+			date > 1916.6.1
+			FRA = { casualties > 1500000 }
+			NOT = { has_war_with = FRA }
+		}
+	}
+	
+	ai_strategy = {
+		type =invade
+		id = FRA
+		value = -200
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 50 
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -10 
+	}
+	ai_strategy = {
+		type = front_control
+		tag = GER
+		ratio = 0.7
+		
+		priority = 50
+		ordertype = front
+		execution_type = careful
+		#execute_order = yes
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = FRA
+		value = 100
+	}
+}
+GER_agressive_after_1916 = {
+	enable = {
+		tag = GER
+		has_war_with = FRA
+		GER = { casualties < 1500000 }
+		OR = {
+			BEL = { has_capitulated = yes }
+			date > 1916.6.1
+			NOT = { has_war_with = FRA }
+		}
+	}
+	abort = {
+		OR = {
+			date > 1917.6.1
+			GER = { casualties > 1500000 }
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = FRA
+		value = 200
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = -50 
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 100 
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = FRA
+		value = 100
+	}
+	ai_strategy = {
+		type = front_control
+		tag = FRA
+		ratio = 0.7
+		
+		priority = 50
+		ordertype = front
+		execution_type = rush_weak
+		#execute_order = yes
+	}
+}
+GER_dont_help_AUH = {
+	enable = {
+		tag = GER
+		has_war_with = RUS
+		is_in_faction_with = AUH
+		date > 1914.1.1
+		RUS = { has_capitulated = no }
+	}
+	abort = {
+		OR = {
+			date > 1917.1.1
+			SOV = { exists = yes }
+			AUH = { surrender_progress > 0.2 }
+		}		
+	}
+	ai_strategy = {
+		type = ignore
+		id = "AUH"			
+		value = 150 
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "AUH"			
+		value = 100 
+	}
+}
+GER_dont_help_TUR = {
+	enable = {
+		tag = GER
+		is_in_faction_with = TUR
+	}
+	abort = {
+		TUR = { surrender_progress > 0.5 }	
+	}
+	ai_strategy = {
+		type = ignore
+		id = "TUR"			
+		value = 150 
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "TUR"			
+		value = 500 
+	}
+	ai_strategy = {
+		type = ignore
+		id = "JBS"			
+		value = 150 
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "JBS"			
+		value = 500 
+	}
+}
+
+russian_civil_war_ignore_ai = {
+	enable = {
+		original_tag = GER
+	}
+	ai_strategy = {
+		type = alliance
+		id = "TMS"
+		value = -500
+	}
+	ai_strategy = {
+		type = alliance
+		id = "KAZ"
+		value = -500
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SIB"
+		value = -500
+	}
+	ai_strategy = {
+		type = alliance
+		id = "BLR"
+		value = -500
+	}
+	ai_strategy = {
+		type = alliance
+		id = "MOU"
+		value = -500
+	}
+}
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# contain
+# area_priority
+
+
+GER_unit_production = {
+	enable = {
+		original_tag = GER
+	}
+	abort = {
+		always = no
+	}
+	
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 8 #30 to 8
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = 2
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = marines
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = motorized
+		value = -3 #because doctrine this = 2
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized
+		value = -5 #because doctrine this = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 5 #because doctrine this = 10
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 75 #88 to 70
+	}
+	
+	#Air unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 50
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = 15 #because doctrine this = 15
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = 5
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = 5
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = naval_bomber
+		value = 5
+	}
+	
+	
+	# Naval unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 35
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = 10 #because doctrine this = 50
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 30
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 15
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 55 #30 to 50
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 40 #20 to 40
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 20
+	}
+}	
+
+GER_highered_armored_production = {
+	enable = {
+		original_tag = GER
+		num_of_military_factories > 44
+	}
+	abort = {
+		num_of_military_factories < 45
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 10
+	}
+}
+
+GER_dont_waste_xp_until_medium_armor = {
+	enable = {
+		original_tag = GER		
+	}
+
+	abort = {	
+		has_template_majority_unit = medium_armor
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratrooper
+		value = -100
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = mountaineers
+		value = -100
+	}
+}
+
+GER_template_design = {
+	enable = {	
+		original_tag = GER
+		date > 1916.1.1				
+	}
+	abort = { 
+		date > 1920.1.1
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = -50
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 30
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 50
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
+		value = -50
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratroopers
+		value = -50
+	}
+}
+
+GER_area_priority = {
+	enable = {
+		original_tag = GER
+	}
+	ai_strategy = {
+		type = area_priority
+		id = europe
+		value = 120 #more focus here
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = north_america
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = south_america
+		value = 15
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = asia
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = middle_east
+		value = 0
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = -20 #several units
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = pacific
+		value = 20 #less focus here
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = oceania
+		value = 15
+	}
+}
+
+axis_stay_away_from_the_royal_navy = {
+	enable = {
+		has_war_with = ENG
+		date < 1916.1.1
+		
+		OR = {
+			GER = {
+				naval_strength_ratio = {
+					tag = ENG 
+  					ratio < 0.5
+  				}
+  			}
+
+			# if we manage to get a foothold in UK we must do what we can to exploit it! (checks coastal states)
+			divisions_in_state = { state = 127 size > 0 }
+			divisions_in_state = { state = 126 size > 0 }
+			divisions_in_state = { state = 125 size > 0 }
+			divisions_in_state = { state = 129 size > 0 }
+			divisions_in_state = { state = 130 size > 0 }
+			divisions_in_state = { state = 131 size > 0 }
+			divisions_in_state = { state = 123 size > 0 }
+			divisions_in_state = { state = 122 size > 0 }
+			divisions_in_state = { state = 132 size > 0 }
+			divisions_in_state = { state = 121 size > 0 }
+			divisions_in_state = { state = 136 size > 0 }
+			divisions_in_state = { state = 120 size > 0 }
+			divisions_in_state = { state = 133 size > 0 }
+		}		
+	}
+	abort = {
+		OR = {
+			date > 1916.1.1
+			NOT = { has_war_with = ENG }
+			AND = {
+				GER = {
+					naval_strength_ratio = {
+						tag = ENG 
+	  					ratio > 0.5
+	  				}
+	  			}
+
+				divisions_in_state = { state = 127 size < 1 }
+				divisions_in_state = { state = 126 size < 1 }
+				divisions_in_state = { state = 125 size < 1 }
+				divisions_in_state = { state = 129 size < 1 }
+				divisions_in_state = { state = 130 size < 1 }
+				divisions_in_state = { state = 131 size < 1 }
+				divisions_in_state = { state = 123 size < 1 }
+				divisions_in_state = { state = 122 size < 1 }
+				divisions_in_state = { state = 132 size < 1 }
+				divisions_in_state = { state = 121 size < 1 }
+				divisions_in_state = { state = 136 size < 1 }
+				divisions_in_state = { state = 120 size < 1 }
+				divisions_in_state = { state = 133 size < 1 }
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 18 #english channel
+		value = 100
+	}
+}
+
+less_naval_focused_nation = {
+	enable = {
+		tag = GER
+		date < "1936.1.1" #Don't Germany, just dont
+		not = {
+			has_dlc = "Man the Guns"
+		}
+	}
+	abort = {		
+		date > "1943.1.1" #Don't Germany, just dont, if you haven't already won
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = -3
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = -3
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = -3
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = -3
+	}
+}
+
+GER_naval_role_ratios_historical = {
+	enable = {
+		has_dlc = "Man the Guns"
+		original_tag = GER
+		is_historical_focus_on = yes
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bb
+		value = -25
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bc
+		value = -100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_carrier
+		value = -50
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_submarine
+		value = 200
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_screen
+		value = 100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_light
+		value = 50
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_heavy
+		value = 5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_sweeper
+		value = 15
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_layer
+		value = 10
+	}
+}
+
+GER_naval_role_ratios_maximum_kaiser = {
+	enable = {
+		has_dlc = "Man the Guns"
+		original_tag = GER
+		has_completed_focus = GER_naval_supremacy
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bb
+		value = -5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bc
+		value = -20
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_carrier
+		value = 25
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_submarine
+		value = 50
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_screen
+		value = 120
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_light
+		value = 75
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_heavy
+		value = 50
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_sweeper
+		value = 15
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_layer
+		value = 10
+	}
+}
+GER_beware_soviets_if_not_communist = {
+	enable = {
+		original_tag = GER
+		SOV = { exists = yes }
+		NOT = { has_government = communism }
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_unit_request
+		tag = SOV
+		value = 40
+	}
+	ai_strategy = {
+		type = antagonize
+		id = SOV		
+		value = 250
+	}
+}
+GER_no_invasions = {
+	enable = {
+		original_tag = GER
+	}
+	ai_strategy = {
+        type = invasion_unit_request
+        country_trigger = { always = yes }
+        value = -100
+    }
+}	
+ingore_russian_civil_war = {
+	enable = {
+		OR = {
+			original_tag = GER
+			is_in_faction_with = GER
+		}
+		has_war_with = RUS
+		NOT = {
+			has_war_with = SOV
+		}
+		RUS = {
+			has_war_with = SOV
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_unit_request
+		tag = RUS
+		value = -30
+	}
+	ai_strategy = {
+		type = consider_weak
+		id = RUS
+		value = -200
+	}
+	ai_strategy = {
+		type = conquer
+		id = RUS
+		value = -200
+	}
+	ai_strategy = {
+		type = invade
+		id = RUS
+		value = -200
+	}
+	ai_strategy = {
+		type = ignore
+		id = RUS
+		value = 100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = GEO
+		value = -30
+	}
+	ai_strategy = {
+		type = consider_weak
+		id = GEO
+		value = -200
+	}
+	ai_strategy = {
+		type = conquer
+		id = GEO
+		value = -200
+	}
+	ai_strategy = {
+		type = invade
+		id = GEO
+		value = -200
+	}
+	ai_strategy = {
+		type = ignore
+		id = GEO
+		value = 100
+	}
+}
+dont_help_bulgaria_in_balkan_war = {
+	enable = {
+		is_faction_leader = yes
+		NOT = {
+			tag = RUS
+		}
+	}	
+	abort = {
+		OR = {
+			threat > 0.7
+			has_global_flag = kis_war
+			has_global_flag = kis_franzferdinand_murdered
+			has_global_flag = kis_secondbalkanwar_victory
+			has_global_flag = kis_secondbalkanwar_lose
+			has_global_flag = kis_firstbalkanwar_lose
+			is_in_faction_with = BUL
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "BUL"
+		value = -200
+	}
+}
+dont_help_serbia_in_balkan_war = {
+	enable = {
+		is_faction_leader = yes
+		NOT = {
+			tag = RUS
+		}
+	}
+	abort = {
+		OR = {
+			threat > 0.7
+			has_global_flag = kis_war
+			has_global_flag = kis_franzferdinand_murdered
+			has_global_flag = kis_secondbalkanwar_victory
+			has_global_flag = kis_secondbalkanwar_lose
+			has_global_flag = kis_firstbalkanwar_lose
+			SER = {
+				has_war_with = AUH
+			}
+			is_in_faction_with = SER
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SER"
+		value = -200
+	}
+}

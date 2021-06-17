@@ -1,0 +1,29 @@
+on_actions = {
+on_startup = {
+		effect = {
+			FRA = { set_country_flag = FRA_no_elections }
+			FRA = { country_event = { id = fra_event.3 days = 8 } }
+			FRA = { country_event = { id = fra_event.5 } }
+			FRA = {add_research_slot = 1}
+			GER = {add_research_slot = 1}
+			RUS = {add_research_slot = 1}
+			USA = {add_research_slot = 1}
+		}
+	}
+	on_annex = {
+		effect = {
+			every_country = {
+				limit = {
+					FROM = {
+						is_in_array = {
+							array = PREV.embargoed_countries
+							value = THIS.id
+						}
+					}
+				}
+				FROM = { cw_remove_embargo = yes }
+			}
+		}
+	}
+	
+}

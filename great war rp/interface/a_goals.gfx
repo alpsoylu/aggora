@@ -1,0 +1,1244 @@
+spriteTypes = {	
+
+spriteType = {
+		name = "GFX_decision_cat_picture_arab_rebel"
+		texturefile = "gfx/interface/decisions/arab_rebel.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_arm_exile"
+		texturefile = "gfx/event_pictures/news_event_arm_exile.dds"
+	}
+
+
+
+	SpriteType = {
+	name = "GFX_focus_nukleer"
+	texturefile = "gfx/interface/goals/newicons/focus_nukleer.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_civil"
+	texturefile = "gfx/interface/goals/newicons/focus_civil.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_mussolini"
+	texturefile = "gfx/interface/goals/newicons/focus_mussolini.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_tax"
+	texturefile = "gfx/interface/goals/newicons/focus_tax.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_"
+	texturefile = "gfx/interface/goals/newicons/focus_tax.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_nazi_world"
+	texturefile = "gfx/interface/goals/newicons/nazi_world.dds"			
+	}		
+	SpriteType = {
+	name = "GFX_roman"
+	texturefile = "gfx/interface/goals/newicons/roman.dds"			
+	}		
+	SpriteType = {
+	name = "GFX_washington"
+	texturefile = "gfx/interface/goals/newicons/washington.dds"			
+	}		
+	SpriteType = {
+	name = "GFX_stalin"
+	texturefile = "gfx/interface/goals/newicons/stalin.dds"			
+	}		
+	SpriteType = {
+	name = "GFX_rusayısı"
+	texturefile = "gfx/interface/goals/newicons/rusayısı.dds"			
+	}			
+	SpriteType = {
+	name = "GFX_ataturk"
+	texturefile = "gfx/interface/goals/newicons/ataturk.dds"			
+	}			
+	SpriteType = {
+	name = "GFX_purge"
+	texturefile = "gfx/interface/goals/newicons/purge.dds"			
+	}				
+	SpriteType = {
+	name = "GFX_abdulhamid"
+	texturefile = "gfx/interface/goals/newicons/abdulhamid.dds"			
+	}				
+	SpriteType = {
+	name = "GFX_elections1"
+	texturefile = "gfx/interface/goals/newicons/elections1.dds"			
+	}				
+	SpriteType = {
+	name = "GFX_idea_dragoumis"
+	texturefile = "gfx/interface/goals/newicons/dragoumis.dds"			
+	}				
+	SpriteType = {
+	name = "GFX_idea_venizelos"
+	texturefile = "gfx/interface/goals/newicons/venizelos.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_fevzi"
+	texturefile = "gfx/interface/goals/newicons/fevzi.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_hospital"
+	texturefile = "gfx/interface/goals/newicons/hospital.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_inonu"
+	texturefile = "gfx/interface/goals/newicons/inonu.dds"			
+	}						
+	SpriteType = {
+	name = "GFX_mao"
+	texturefile = "gfx/interface/goals/newicons/mao.dds"			
+	}							
+	SpriteType = {
+	name = "GFX_mil_factory"
+	texturefile = "gfx/interface/goals/newicons/mil_factory.dds"			
+	}								
+	SpriteType = {
+	name = "GFX_napoleon"
+	texturefile = "gfx/interface/goals/newicons/napoleon.dds"			
+	}									
+	SpriteType = {
+	name = "GFX_offensive"
+	texturefile = "gfx/interface/goals/newicons/offensive.dds"			
+	}									
+	SpriteType = {
+	name = "GFX_sign_parliement"
+	texturefile = "gfx/interface/goals/newicons/sign_parliement.dds"			
+	}										
+	SpriteType = {
+	name = "GFX_spy"
+	texturefile = "gfx/interface/goals/newicons/spy.dds"			
+	}										
+	SpriteType = {
+	name = "GFX_wilhelm_2"
+	texturefile = "gfx/interface/goals/newicons/wilhelm_2.dds"			
+	}											
+	SpriteType = {
+	name = "GFX_purge2"
+	texturefile = "gfx/interface/goals/newicons/purge2.dds"			
+	}		
+
+
+
+
+
+#SURIYE	
+	SpriteType = {
+	name = "GFX_syr"
+	texturefile = "gfx/interface/goals/newicons/syr.dds"			
+	}											
+	SpriteType = {
+	name = "GFX_syr2"
+	texturefile = "gfx/interface/goals/newicons/syr2.dds"			
+	}												
+	SpriteType = {
+	name = "GFX_syr3"
+	texturefile = "gfx/interface/goals/newicons/syr3.dds"			
+	}												
+	SpriteType = {
+	name = "GFX_alawiti"
+	texturefile = "gfx/interface/goals/newicons/alawiti.dds"			
+	}																																			
+	SpriteType = {
+	name = "GFX_alawiti_2"
+	texturefile = "gfx/interface/goals/newicons/alawiti_2.dds"			
+	}	
+
+	
+	SpriteType = {
+	name = "GFX_druzes"
+	texturefile = "gfx/interface/goals/newicons/druzes.dds"			
+	}																								
+	SpriteType = {
+	name = "GFX_druzes_2"
+	texturefile = "gfx/interface/goals/newicons/druzes_2.dds"			
+	}
+
+	
+	SpriteType = {
+	name = "GFX_hatay_1"
+	texturefile = "gfx/interface/goals/newicons/hatay_1.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_hatay_2"
+	texturefile = "gfx/interface/goals/newicons/hatay_2.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_hatay_3"
+	texturefile = "gfx/interface/goals/newicons/hatay_3.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_faisal"
+	texturefile = "gfx/interface/goals/newicons/faisal.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_syr_democracy"
+	texturefile = "gfx/interface/goals/newicons/syr_democracy.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_syr_fascism"
+	texturefile = "gfx/interface/goals/newicons/syr_fascism.dds"			
+	}
+	SpriteType = {
+	name = "GFX_irq_syr1"
+	texturefile = "gfx/interface/goals/newicons/irq_syr1.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_irq_syr2"
+	texturefile = "gfx/interface/goals/newicons/irq_syr2.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_lebannon_war"
+	texturefile = "gfx/interface/goals/newicons/lebannon_war.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_guarantee_leb"
+	texturefile = "gfx/interface/goals/newicons/guarantee_leb.dds"			
+	}		
+	SpriteType = {
+	name = "GFX_greater_syr"
+	texturefile = "gfx/interface/goals/newicons/greater_syr.dds"			
+	}			
+	SpriteType = {
+	name = "GFX_syr_ger"
+	texturefile = "gfx/interface/goals/newicons/syr_ger.dds"			
+	}			
+	SpriteType = {
+	name = "GFX_mongolia1"
+	texturefile = "gfx/interface/goals/newicons/mongolia1.dds"			
+	}			
+	SpriteType = {
+	name = "GFX_mongolia2"
+	texturefile = "gfx/interface/goals/newicons/mongolia2.dds"			
+	}				
+	SpriteType = {
+	name = "GFX_mongolia3"
+	texturefile = "gfx/interface/goals/newicons/mongolia3.dds"			
+	}				
+	SpriteType = {
+	name = "GFX_mongolia4"
+	texturefile = "gfx/interface/goals/newicons/mongolia4.dds"			
+	}				
+	SpriteType = {
+	name = "GFX_mongolia5"
+	texturefile = "gfx/interface/goals/newicons/mongolia5.dds"			
+	}				
+	SpriteType = {
+	name = "GFX_mongolia6"
+	texturefile = "gfx/interface/goals/newicons/mongolia6.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_mongolia7"
+	texturefile = "gfx/interface/goals/newicons/mongolia7.dds"			
+	}				
+	SpriteType = {
+	name = "GFX_mongolia8"
+	texturefile = "gfx/interface/goals/newicons/mongolia8.dds"			
+	}
+
+
+	
+	SpriteType = {
+		name = "GFX_FRA_basic_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/FRA_ww1_armored_car_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_early_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/FRA_ww1_armored_car_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_improved_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/FRA_ww1_armored_car_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_advanced_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/FRA_ww1_armored_car_4.dds"
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	SpriteType = {
+		name = "GFX_FRA_gwtank_medium"
+		texturefile = "gfx/interface/technologies/gwtank.dds"
+	}
+	
+	
+	
+	
+	SpriteType = {
+		name = "GFX_FRA_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/FRA_ww1_light_tank_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/FRA_ww1_light_tank_1.dds"
+	}	
+	
+	
+	
+
+	SpriteType = {
+		name = "GFX_FRA_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/FRA_ww1_light_tank_2.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_FRA_advanced_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/FRA_ww1_light_tank_2.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_FRA_basic_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/basic_medium_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/basic_medium_tank.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_FRA_improved_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/improved_medium_tank.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_FRA_advanced_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/advanced_medium_tank.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_FRA_main_battle_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/main_battle_tank.dds"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_FRA_basic_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/FRA_ww1_heavy_tank_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/FRA_ww1_heavy_tank_1.dds"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_FRA_improved_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/FRA_ww1_heavy_tank_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_FRA_advanced_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/FRA_ww1_heavy_tank_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_FRA_super_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/FRA_ww1_super_heavy_tank.dds"
+	}
+	
+	
+	
+	SpriteType = {
+		name = "GFX_GER_basic_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/GER_ww1_armored_car_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_early_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/GER_ww1_armored_car_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_improved_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/GER_ww1_armored_car_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_advanced_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/GER_ww1_armored_car_4.dds"
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	SpriteType = {
+		name = "GFX_GER_gwtank_medium"
+		texturefile = "gfx/interface/technologies/gwtank.dds"
+	}
+	
+	
+	
+	
+	SpriteType = {
+		name = "GFX_GER_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/GER_ww1_light_tank_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/GER_ww1_light_tank_1.dds"
+	}	
+	
+	
+	
+
+	SpriteType = {
+		name = "GFX_GER_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/GER_ww1_light_tank_2.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_GER_advanced_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/GER_ww1_light_tank_2.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_GER_basic_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/basic_medium_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/basic_medium_tank.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_GER_improved_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/improved_medium_tank.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_advanced_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/advanced_medium_tank.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_main_battle_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/main_battle_tank.dds"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_GER_basic_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/GER_ww1_heavy_tank_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/GER_ww1_heavy_tank_1.dds"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_GER_improved_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/GER_ww1_heavy_tank_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_advanced_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/GER_ww1_heavy_tank_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_super_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/GER_ww1_super_heavy_tank.dds"
+	}
+	
+	
+	
+	
+	
+	SpriteType = {
+		name = "GFX_ENG_basic_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/ENG_ww1_armored_car_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_ENG_early_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/ENG_ww1_armored_car_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_ENG_improved_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/ENG_ww1_armored_car_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_ENG_advanced_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/ENG_ww1_armored_car_4.dds"
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	SpriteType = {
+		name = "GFX_ENG_gwtank_medium"
+		texturefile = "gfx/interface/technologies/gwtank.dds"
+	}
+	
+	
+	
+	
+	SpriteType = {
+		name = "GFX_ENG_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/ENG_ww1_light_tank_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_ENG_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/ENG_ww1_light_tank_1.dds"
+	}	
+	
+	
+	
+
+	SpriteType = {
+		name = "GFX_ENG_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/ENG_ww1_light_tank_2.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_ENG_advanced_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/ENG_ww1_light_tank_2.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_ENG_basic_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/basic_medium_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_ENG_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/basic_medium_tank.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_ENG_improved_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/improved_medium_tank.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_advanced_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/advanced_medium_tank.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_main_battle_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/main_battle_tank.dds"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_ENG_basic_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/ENG_ww1_heavy_tank_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_ENG_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/ENG_ww1_heavy_tank_1.dds"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_ENG_improved_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/ENG_ww1_heavy_tank_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_advanced_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/ENG_ww1_heavy_tank_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_super_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/ENG_ww1_super_heavy_tank.dds"
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	SpriteType = {
+		name = "GFX_USA_basic_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/USA_ww1_armored_car_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_early_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/USA_ww1_armored_car_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_improved_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/USA_ww1_armored_car_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_advanced_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/USA_ww1_armored_car_4.dds"
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	SpriteType = {
+		name = "GFX_ITA_basic_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/ITA_ww1_armored_car_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_ITA_early_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/ITA_ww1_armored_car_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_ITA_improved_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/ITA_ww1_armored_car_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_ITA_advanced_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/ITA_ww1_armored_car_4.dds"
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	SpriteType = {
+		name = "GFX_ITA_gwtank_medium"
+		texturefile = "gfx/interface/technologies/gwtank.dds"
+	}
+	
+	
+	
+	
+	SpriteType = {
+		name = "GFX_ITA_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/ITA_ww1_light_tank_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_ITA_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/ITA_ww1_light_tank_2.dds"
+	}	
+	
+	
+	
+
+	SpriteType = {
+		name = "GFX_ITA_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/ITA_ww1_light_tank_2.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_ITA_advanced_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/ITA_ww1_light_tank_2.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_ITA_basic_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/basic_medium_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_ITA_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/basic_medium_tank.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_ITA_improved_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/improved_medium_tank.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ITA_advanced_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/improved_medium_tank.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ITA_main_battle_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/improved_medium_tank.dds"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_ITA_basic_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/ITA_ww1_heavy_tank_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_ITA_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/ITA_ww1_heavy_tank_1.dds"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_ITA_improved_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/ITA_ww1_heavy_tank_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ITA_advanced_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/ITA_ww1_heavy_tank_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ITA_super_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/ITA_ww1_super_heavy_tank.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_RUS_basic_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/RUS_ww1_armored_car_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_early_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/RUS_ww1_armored_car_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_improved_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/RUS_ww1_armored_car_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_advanced_armored_car_medium"
+		texturefile = "gfx/interface/technologies/armor/RUS_ww1_armored_car_4.dds"
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	SpriteType = {
+		name = "GFX_RUS_gwtank_medium"
+		texturefile = "gfx/interface/technologies/gwtank.dds"
+	}
+	
+	
+	
+	
+	SpriteType = {
+		name = "GFX_RUS_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/RUS_ww1_light_tank_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/RUS_ww1_light_tank_1.dds"
+	}	
+	
+	
+	
+
+	SpriteType = {
+		name = "GFX_RUS_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/RUS_ww1_light_tank_2.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_RUS_advanced_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/RUS_ww1_light_tank_2.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_RUS_basic_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/basic_medium_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/basic_medium_tank.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_RUS_improved_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/improved_medium_tank.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_RUS_advanced_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/advanced_medium_tank.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_RUS_main_battle_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/main_battle_tank.dds"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_RUS_basic_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/RUS_ww1_heavy_tank_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/RUS_ww1_heavy_tank_2.dds"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_RUS_improved_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/RUS_ww1_heavy_tank_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_RUS_advanced_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/RUS_ww1_heavy_tank_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_RUS_super_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/RUS_ww1_super_heavy_tank.dds"
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    spriteType = {
+		name = "GFX_FOCUS_FILTER_ANTI_GERMAN"
+		texturefile = "gfx/interface/focusview/filter/anti_german.dds"
+	}	
+    spriteType = {
+		name = "GFX_FOCUS_FILTER_ANTI_ENG"
+		texturefile = "gfx/interface/focusview/filter/anti_eng.dds"
+	}		
+    spriteType = {
+		name = "GFX_FOCUS_FILTER_FRA_AFRICA"
+		texturefile = "gfx/interface/focusview/filter/fra_africa.dds"
+	}		
+    spriteType = {
+		name = "GFX_FOCUS_FILTER_FRA_OTTOMAN"
+		texturefile = "gfx/interface/focusview/filter/fra_ottoman.dds"
+	}
+    spriteType = {
+		name = "GFX_FOCUS_FILTER_FRA_MONARCHY"
+		texturefile = "gfx/interface/focusview/filter/fra_monarchy.dds"
+	}	
+    spriteType = {
+		name = "GFX_FOCUS_FILTER_FRA_NAPOLEON"
+		texturefile = "gfx/interface/focusview/filter/fra_napoleon.dds"
+	}
+    spriteType = {
+		name = "GFX_FOCUS_FILTER_FRA_BOURBON"
+		texturefile = "gfx/interface/focusview/filter/fra_bourbon.dds"
+	}
+    spriteType = {
+		name = "GFX_FOCUS_FILTER_FRA_READY_COUNTRY"
+		texturefile = "gfx/interface/focusview/filter/fra_ready_country_a.dds"
+	}
+    spriteType = {
+		name = "GFX_FOCUS_FILTER_FRA_PEACE"
+		texturefile = "gfx/interface/focusview/filter/fra_peace_rev.dds"
+	}
+    spriteType = {
+		name = "GFX_FOCUS_FILTER_FRA_SPREAD"
+		texturefile = "gfx/interface/focusview/filter/fra_spread.dds"
+	}
+    spriteType = {
+		name = "GFX_FOCUS_FILTER_FRA_ready_country_ww1"
+		texturefile = "gfx/interface/focusview/filter/fra_ready_country_a.dds"
+	}
+	SpriteType = {
+	name = "GFX_mongolia9"
+	texturefile = "gfx/interface/goals/newicons/mongolia9.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_moneconomic"
+	texturefile = "gfx/interface/goals/newicons/moneconomic.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_monsov1"
+	texturefile = "gfx/interface/goals/newicons/monsov1.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_monsov2"
+	texturefile = "gfx/interface/goals/newicons/monsov2.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_mon_deal_with_jap"
+	texturefile = "gfx/interface/goals/newicons/mon_deal_with_jap.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_big_germany"
+	texturefile = "gfx/interface/goals/newicons/big_germany.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_big_ottoman1"
+	texturefile = "gfx/interface/goals/newicons/big_ottoman1.dds"			
+	}						
+	SpriteType = {
+	name = "GFX_big_ottoman2"
+	texturefile = "gfx/interface/goals/newicons/big_ottoman2.dds"			
+	}						
+	SpriteType = {
+	name = "GFX_por_rus"
+	texturefile = "gfx/interface/goals/newicons/por_rus.dds"			
+	}							
+	SpriteType = {
+	name = "GFX_por_eng"
+	texturefile = "gfx/interface/goals/newicons/por_eng.dds"			
+	}
+	SpriteType = {
+	name = "GFX_por_fra"
+	texturefile = "gfx/interface/goals/newicons/por_fra.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_por_bra"
+	texturefile = "gfx/interface/goals/newicons/por_bra.dds"			
+	}									
+	SpriteType = {
+	name = "GFX_ikili_cengiz"
+	texturefile = "gfx/interface/goals/newicons/ikili/cengiz.dds"			
+	}						
+	SpriteType = {
+	name = "GFX_ikili_atli"
+	texturefile = "gfx/interface/goals/newicons/ikili/atli.dds"			
+	}
+SpriteType = {
+		name = "GFX_idea_sarikamis"
+		texturefile = "gfx/interface/ideas/TUR/new_sarikamis.dds"
+	}
+SpriteType = {
+		name = "GFX_idea_hejaz_rebel_idea"
+		texturefile = "gfx/interface/goals/newicons/hejaz_rebel_idea.dds"
+	}
+SpriteType = {
+		name = "GFX_idea_agora_kural_idea"
+		texturefile = "gfx/interface/goals/newicons/agora_kural_idea.dds"
+	}	
+	
+	
+	#ARAB
+	spriteType = {
+		name = "GFX_dec_arab2"
+		texturefile = "gfx/interface/decisions/dec_arab2.dds"
+	}
+	spriteType = {
+		name = "GFX_dec_arab1"
+		texturefile = "gfx/interface/decisions/dec_arab1.dds"
+	}
+	spriteType = {
+		name = "GFX_dec_arab0"
+		texturefile = "gfx/interface/decisions/dec_arab0.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_EGY_neutrality"
+		texturefile = "gfx/interface/ideologies/EGY_neutrality.dds"
+	}
+	
+	#ARAB
+	
+	
+	spriteType = {
+		name = "GFX_dectim0"
+		texturefile = "gfx/interface/decisions/dectim0.dds"
+	}
+	spriteType = {
+		name = "GFX_dectim1"
+		texturefile = "gfx/interface/decisions/dectim1.dds"
+	}
+	spriteType = {
+		name = "GFX_dectim2"
+		texturefile = "gfx/interface/decisions/dectim2.dds"
+	}
+
+
+
+
+
+
+#SPR
+SpriteType = {
+	name = "GFX_liberals"
+	texturefile = "gfx/interface/goals/newicons/liberal.dds"			
+	}
+	#DYN MODIFIER
+	spriteType = {
+		name = "GFX_modifiers_catalan_resistance"
+		textureFile = "gfx/interface/state_modifiers/catalan_resistance.dds"
+	}
+	#DYN END
+SpriteType = {
+	name = "GFX_cons"
+	texturefile = "gfx/interface/goals/newicons/cons.dds"			
+	}
+SpriteType = {
+	name = "GFX_alfonso"
+	texturefile = "gfx/interface/goals/newicons/alfonso.dds"			
+	}
+SpriteType = {
+	name = "GFX_alfonso2"
+	texturefile = "gfx/interface/goals/newicons/alfonso2.dds"			
+	}
+SpriteType = {
+	name = "GFX_Army_March"
+	texturefile = "gfx/interface/goals/TUR/Army_March.dds"			
+	}
+SpriteType = {
+	name = "GFX_anti_christ"
+	texturefile = "gfx/interface/goals/newicons/anti_christ.dds"			
+	}
+SpriteType = {
+	name = "GFX_por_republic"
+	texturefile = "gfx/interface/goals/newicons/por_republic.dds"			
+	}
+SpriteType = {
+	name = "GFX_por_monarchy"
+	texturefile = "gfx/interface/goals/newicons/por_monarchy.dds"			
+	}
+SpriteType = {
+	name = "GFX_prp"
+	texturefile = "gfx/interface/goals/newicons/prp.dds"			
+	}
+SpriteType = {
+	name = "GFX_psp"
+	texturefile = "gfx/interface/goals/newicons/psp.dds"			
+	}
+SpriteType = {
+	name = "GFX_por_monarch"
+	texturefile = "gfx/interface/goals/newicons/por_monarch.dds"			
+	}
+SpriteType = {
+	name = "GFX_Communist_Discourse"
+	texturefile = "gfx/interface/goals/newicons/Communist_Discourse.dds"			
+	}
+SpriteType = {
+	name = "GFX_comisar"
+	texturefile = "gfx/interface/goals/newicons/comisar.dds"			
+	}
+SpriteType = {
+	name = "GFX_Communist_Pride"
+	texturefile = "gfx/interface/goals/newicons/Communist_Pride.dds"			
+	}
+SpriteType = {
+	name = "GFX_demir_yumruk"
+	texturefile = "gfx/interface/goals/newicons/demir_yumruk.dds"			
+	}
+SpriteType = {
+	name = "GFX_sarikamis"
+	texturefile = "gfx/interface/goals/newicons/sarikamis.dds"			
+	}
+	
+	#FRA
+SpriteType = {
+	name = "GFX_vivelafrance"
+	texturefile = "gfx/interface/goals/newicons/vivelafrance.dds"			
+	}
+SpriteType = {
+	name = "GFX_srr"
+	texturefile = "gfx/interface/goals/newicons/srr.dds"			
+	}
+SpriteType = {
+	name = "GFX_sfio"
+	texturefile = "gfx/interface/goals/newicons/sfio.dds"			
+	}
+SpriteType = {
+	name = "GFX_iberia"
+	texturefile = "gfx/interface/goals/newicons/iberia.dds"			
+	}
+SpriteType = {
+	name = "GFX_brbrazil"
+	texturefile = "gfx/interface/goals/newicons/brbrazil.dds"			
+	}
+SpriteType = {
+	name = "GFX_spr_fra1"
+	texturefile = "gfx/interface/goals/newicons/spr_fra1.dds"			
+	}
+SpriteType = {
+	name = "GFX_spr_fra2"
+	texturefile = "gfx/interface/goals/newicons/spr_fra2.dds"			
+	}
+SpriteType = {
+	name = "GFX_fra_anti_german"
+	texturefile = "gfx/interface/goals/newicons/fra_anti_german.dds"			
+	}
+SpriteType = {
+	name = "GFX_protect_morocco"
+	texturefile = "gfx/interface/goals/newicons/protect_morocco.dds"			
+	}
+SpriteType = {
+	name = "GFX_fra_cons"
+	texturefile = "gfx/interface/goals/newicons/fra_cons.dds"			
+	}
+SpriteType = {
+	name = "GFX_maurras"
+	texturefile = "gfx/interface/goals/newicons/maurras.dds"			
+	}
+SpriteType = {
+	name = "GFX_fra_anti_eng"
+	texturefile = "gfx/interface/goals/newicons/fra_anti_eng.dds"			
+	}
+SpriteType = {
+	name = "GFX_goal_generic_support_socialism"
+	texturefile = "gfx/interface/goals/newicons/generic_support_socialism.dds"			
+	}
+SpriteType = {
+	name = "GFX_modifiers_kuvayimilliye_dyn"
+	texturefile = "gfx/interface/goals/newicons/kuvayimilliye_dyn.dds"			
+	}
+SpriteType = {
+	name = "GFX_benelux"
+	texturefile = "gfx/interface/goals/newicons/benelux.dds"			
+	}
+SpriteType = {
+	name = "GFX_cumhuriyet"
+	texturefile = "gfx/interface/goals/newicons/cumhuriyet.dds"
+	}
+SpriteType = {
+	name = "GFX_tur_sivas"
+	texturefile = "gfx/interface/goals/newicons/tur_sivas.dds"
+	}
+SpriteType = {
+	name = "GFX_tur_amasya"
+	texturefile = "gfx/interface/goals/newicons/tur_amasya.dds"
+	}
+SpriteType = {
+	name = "GFX_tur_erzurum"
+	texturefile = "gfx/interface/goals/newicons/tur_erzurum.dds"
+	}
+SpriteType = {
+	name = "GFX_kazım_karabekir_gumru"
+	texturefile = "gfx/interface/goals/newicons/kazım_karabekir_gumru.dds"
+	}
+SpriteType = {
+	name = "GFX_stop_the_armenians"
+	texturefile = "gfx/interface/goals/newicons/stop_the_armenians.dds"
+	}
+SpriteType = {
+	name = "GFX_bosnia"
+	texturefile = "gfx/interface/goals/newicons/bosnia.dds"
+	}
+SpriteType = {
+	name = "GFX_fra_army"
+	texturefile = "gfx/interface/goals/newicons/fra_army.dds"
+	}
+SpriteType = {
+	name = "GFX_fra_navy"
+	texturefile = "gfx/interface/goals/newicons/fra_navy.dds"
+	}
+SpriteType = {
+	name = "GFX_fra_air"
+	texturefile = "gfx/interface/goals/newicons/fra_air.dds"
+	}
+SpriteType = {
+	name = "GFX_veni1"
+	texturefile = "gfx/interface/goals/newicons/veni1.dds"
+	}
+SpriteType = {
+	name = "GFX_veni2"
+	texturefile = "gfx/interface/goals/newicons/veni2.dds"
+	}
+SpriteType = {
+	name = "GFX_ger_army"
+	texturefile = "gfx/interface/goals/newicons/ger_army.dds"
+	}
+SpriteType = {
+	name = "GFX_smyrni"
+	texturefile = "gfx/interface/goals/newicons/smyrni.dds"
+	}
+SpriteType = {
+	name = "GFX_idea_education"
+	texturefile = "gfx/interface/goals/newicons/education.dds"
+	}
+SpriteType = {
+	name = "GFX_GRE_in"
+	texturefile = "gfx/interface/goals/newicons/GRE_in.dds"
+	}
+SpriteType = {
+	name = "GFX_GRE_out"
+	texturefile = "gfx/interface/goals/newicons/GRE_out.dds"
+	}
+SpriteType = {
+	name = "GFX_constantine"
+	texturefile = "gfx/interface/goals/newicons/constantine.dds"
+	}
+
+
+	
+}

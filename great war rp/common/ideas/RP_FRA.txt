@@ -1,0 +1,44 @@
+ideas = {
+	
+		country = {
+
+		RP_champagne_riot = {
+
+
+			picture = generic_goods_red_bonus
+
+			allowed = {
+				tag = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			consumer_goods_factor = 0.15
+			stability_factor = -0.1
+			}
+		}
+
+		RP_apchampagne_riot = {
+
+
+			picture = generic_goods_red_bonus
+
+			allowed = {
+				tag = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			consumer_goods_factor = 0.30
+			stability_factor = -0.25
+			}
+		}
+
+	}
+}

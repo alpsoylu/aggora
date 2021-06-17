@@ -1,0 +1,1031 @@
+focus_tree = {
+	id = RP_france_sfio
+	default = no
+	country = { factor=0 modifier = { add = 9 tag = FRA} }
+	country = { factor=0 modifier = { add = 100 has_country_flag = FRA_sfio} }
+
+	focus = {
+		id = FRA_sfio_victory #SFIO KOMUNIST
+		icon = GFX_sfio
+		completion_reward = {
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		available = {
+		has_country_flag = FRA_sfio
+		}
+		allow_branch = {
+        has_country_flag = FRA_sfio
+        }
+		completion_reward = {
+		add_popularity = {
+		ideology = communism
+		popularity = 0.35
+		}
+		create_country_leader = { 
+	name = "Louis Frossard" 
+	picture = "gfx/leaders/FRA/FRA_louis_frossard.dds" 
+	expire = "1935.1.1" 
+	ideology = marxism
+	traits = { trait_marxism }  
+}
+		set_politics = {
+	ruling_party = communism
+        elections_allowed = yes
+        last_election = "1935.12.17"
+        election_frequency = 48
+}
+hidden_effect = {
+set_cosmetic_tag = FRA_start
+}
+		}
+		x = 10
+		y = 0
+		
+	}
+	
+	focus = {
+		id = FRA_revolution_in_france
+		icon = GFX_goal_generic_support_socialism
+		search_filters = { FOCUS_FILTER_FRA_PEACE }
+		prerequisite = {
+			focus = FRA_sfio_victory
+		}
+		mutually_exclusive = {focus = FRA_spread_revolution}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		drop_cosmetic_tag = yes
+		add_war_support = -0.05
+		add_stability = 0.05
+		}
+		cost = 10
+		x = 2
+		y = 1
+		relative_position_id = FRA_sfio_victory
+	}
+	
+	focus = {
+		id = FRA_nationalize_factories
+		icon = GFX_focus_communist_urbanization
+		search_filters = { FOCUS_FILTER_FRA_PEACE }
+		prerequisite = {
+			focus = FRA_revolution_in_france
+		}
+		mutually_exclusive = {focus = FRA_spread_revolution}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		random_owned_state = {
+		limit = { is_core_of = FRA }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+}
+}
+		random_owned_state = {
+		limit = { is_core_of = FRA }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+}
+}
+		random_owned_state = {
+		limit = { is_core_of = FRA }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+    type = arms_factory
+    level = 1
+    instant_build = yes
+}
+}
+		random_owned_state = {
+		limit = { is_core_of = FRA }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+    type = arms_factory
+    level = 1
+    instant_build = yes
+}
+}
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_revolution_in_france
+	}
+	
+	focus = {
+		id = FRA_decrease_work_hours
+		icon = GFX_focus_communist_heavy_industry
+		search_filters = { FOCUS_FILTER_FRA_PEACE }
+		prerequisite = {
+			focus = FRA_nationalize_factories
+		}
+		mutually_exclusive = {focus = FRA_spread_revolution}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		add_ideas = RP_FRA_decreased_working_times
+		}
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = FRA_nationalize_factories
+	}
+	
+	focus = {
+		id = FRA_increase_worker_rights
+		icon = GFX_focus_otto_socialist_idenity
+		search_filters = { FOCUS_FILTER_FRA_PEACE }
+		prerequisite = {
+			focus = FRA_nationalize_factories
+		}
+		mutually_exclusive = {focus = FRA_spread_revolution}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		add_ideas = RP_FRA_increased_working_rights
+		}
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = FRA_nationalize_factories
+	}
+	
+	focus = {
+		id = FRA_socialist_education
+		icon = GFX_focus_communist_science
+		search_filters = { FOCUS_FILTER_FRA_PEACE }
+		prerequisite = {
+			focus = FRA_increase_worker_rights
+		}
+		prerequisite = {
+			focus = FRA_decrease_work_hours
+		}
+		mutually_exclusive = {focus = FRA_spread_revolution}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		add_ideas = RP_FRA_socialist_education
+		}
+		cost = 10
+		x = -1
+		y = 2
+		relative_position_id = FRA_nationalize_factories
+	}
+	
+	focus = {
+		id = FRA_promote_agriculture
+		icon = GFX_focus_agrarian_socialism
+		search_filters = { FOCUS_FILTER_FRA_PEACE }
+		prerequisite = {
+			focus = FRA_increase_worker_rights
+		}
+		prerequisite = {
+			focus = FRA_decrease_work_hours
+		}
+		mutually_exclusive = {focus = FRA_spread_revolution}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		add_ideas = RP_FRA_agricultural_economy
+		}
+		cost = 10
+		x = 1
+		y = 2
+		relative_position_id = FRA_nationalize_factories
+	}
+	
+	focus = {
+		id = FRA_establish_neutrality
+		icon = GFX_focus_red_comisar
+		search_filters = { FOCUS_FILTER_FRA_PEACE }
+		prerequisite = {
+			focus = FRA_promote_agriculture
+		}
+		prerequisite = {
+			focus = FRA_socialist_education
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		set_rule = {
+    can_create_factions = no
+    can_join_factions = no
+    can_not_declare_war = yes
+    can_send_volunteers = yes
+}
+		}
+		cost = 10
+		x = 0
+		y = 3
+		relative_position_id = FRA_nationalize_factories
+	}
+	
+	focus = {
+		id = FRA_for_fatherland
+		icon = GFX_focus_tur_socialist_parliament
+		search_filters = { FOCUS_FILTER_FRA_PEACE }
+		prerequisite = {
+			focus = FRA_establish_neutrality
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		add_ideas = RP_FRA_for_fatherland
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_establish_neutrality
+	}
+	
+	focus = {
+		id = FRA_spread_revolution
+		icon = GFX_purge
+		prerequisite = {
+			focus = FRA_sfio_victory
+		}
+		search_filters = { FOCUS_FILTER_FRA_SPREAD }
+		mutually_exclusive = {focus = FRA_revolution_in_france}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		drop_cosmetic_tag = yes
+		add_war_support = 0.05
+		add_stability = -0.05
+		if = {limit = {is_faction_leader = yes}dismantle_faction = yes}
+		if = {limit = {AND = {is_in_faction = yes is_faction_leader = no}}leave_faction = yes}
+		create_faction = FRA_INTERNATIONAL
+		}
+		cost = 10
+		x = -6
+		y = 1
+		relative_position_id = FRA_sfio_victory
+	}
+	
+	focus = {
+		id = FRA_contact_psi
+		icon = GFX_Communist_Discourse
+		prerequisite = {
+			focus = FRA_spread_revolution
+		}
+		search_filters = { FOCUS_FILTER_FRA_SPREAD }
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		set_country_flag = FRA_contact_ITA_socialism
+		ITA = {add_popularity = { ideology = communism popularity = 0.05}}
+		}
+		cost = 10
+		x = -4
+		y = 1
+		relative_position_id = FRA_spread_revolution
+	}
+	
+	focus = {
+		id = FRA_spread_communism_ita
+		icon = GFX_focus_communist_science
+		prerequisite = {
+			focus = FRA_contact_psi
+		}
+		search_filters = { FOCUS_FILTER_FRA_SPREAD }
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		unlock_decision_tooltip = RP_FRA_spread_communism_italy
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_contact_psi
+	}
+	
+	focus = {
+		id = FRA_communist_uprising_ita
+		icon = GFX_focus_ottoman_comie_flag
+		prerequisite = {
+			focus = FRA_spread_communism_ita
+		}
+		search_filters = { FOCUS_FILTER_FRA_SPREAD }
+		available = {
+		ITA = {communism > 0.50}
+		}
+		bypass = {
+		}
+		completion_reward = {
+		ITA = {
+		start_civil_war = {
+	ideology = communism
+    size = ITA.party_popularity@communism
+    only_own_territory = yes
+    keep_political_leader = yes
+}
+	}
+	hidden_effect = {
+	random_other_country = {
+		limit = {
+			original_tag = ITA
+			has_government = communism
+		}
+		FRA = {add_to_faction = PREV}
+		load_focus_tree = { tree = generic_focus }
+	}
+	}
+	custom_effect_tooltip = FRA_uprising_ita
+	#declare_war_on = {type = take_state_focus target = ITA generator = {}}
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_spread_communism_ita
+	}
+	
+	
+	
+	focus = {
+		id = FRA_contact_crs
+		icon = GFX_Communist_Discourse
+		prerequisite = {
+			focus = FRA_spread_revolution
+		}
+		search_filters = { FOCUS_FILTER_FRA_SPREAD }
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		set_country_flag = FRA_contact_SPR_socialism
+		SPR = {add_popularity = { ideology = communism popularity = 0.05}}
+		}
+		cost = 10
+		x = -2
+		y = 1
+		relative_position_id = FRA_spread_revolution
+	}
+	
+	focus = {
+		id = FRA_spread_communism_spr
+		icon = GFX_focus_communist_science
+		prerequisite = {
+			focus = FRA_contact_crs
+		}
+		search_filters = { FOCUS_FILTER_FRA_SPREAD }
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		unlock_decision_tooltip = RP_FRA_spread_communism_spain
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_contact_crs
+	}
+	
+	focus = {
+		id = FRA_communist_uprising_spr
+		icon = GFX_focus_ottoman_comie_flag
+		prerequisite = {
+			focus = FRA_spread_communism_spr
+		}
+		search_filters = { FOCUS_FILTER_FRA_SPREAD }
+		available = {
+		SPR = {communism > 0.50}
+		}
+		bypass = {
+		}
+		completion_reward = {
+		SPR = {
+		start_civil_war = {
+	ideology = communism
+    size = SPR.party_popularity@communism
+    only_own_territory = yes
+    keep_political_leader = yes
+}
+	}
+	hidden_effect = {
+	random_other_country = {
+		limit = {
+			original_tag = SPR
+			has_government = communism
+		}
+		FRA = {add_to_faction = PREV}
+		load_focus_tree = { tree = generic_focus }
+	}
+	}
+	
+	custom_effect_tooltip = FRA_uprising_spr
+	#declare_war_on = {type = take_state_focus target = SPR generator = {}}
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_spread_communism_spr
+	}
+	
+	
+	
+	
+	focus = {
+		id = FRA_contact_fs
+		icon = GFX_Communist_Discourse
+		prerequisite = {
+			focus = FRA_spread_revolution
+		}
+		search_filters = { FOCUS_FILTER_FRA_SPREAD }
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		set_country_flag = FRA_contact_ENG_socialism
+		ENG = {add_popularity = { ideology = communism popularity = 0.05}}
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_spread_revolution
+	}
+	
+	focus = {
+		id = FRA_spread_communism_eng
+		icon = GFX_focus_communist_science
+		prerequisite = {
+			focus = FRA_contact_fs
+		}
+		search_filters = { FOCUS_FILTER_FRA_SPREAD }
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		unlock_decision_tooltip = RP_FRA_spread_communism_eng
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_contact_fs
+	}
+	
+	focus = {
+		id = FRA_communist_uprising_eng
+		icon = GFX_focus_ottoman_comie_flag
+		prerequisite = {
+			focus = FRA_spread_communism_eng
+		}
+		search_filters = { FOCUS_FILTER_FRA_SPREAD }
+		available = {
+		ENG = {communism > 0.50}
+		}
+		bypass = {
+		}
+		completion_reward = {
+		ENG = {
+		start_civil_war = {
+	ideology = communism
+    size = ENG.party_popularity@communism
+    only_own_territory = yes
+    keep_political_leader = yes
+}
+	}
+	hidden_effect = {
+	random_other_country = {
+		limit = {
+			original_tag = ENG
+			has_government = communism
+		}
+		FRA = {add_to_faction = PREV}
+		load_focus_tree = { tree = generic_focus }
+		
+	}
+	}
+	custom_effect_tooltip = FRA_uprising_eng
+	#declare_war_on = {type = take_state_focus target = ENG generator = {}}
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_spread_communism_eng
+	}
+	
+	focus = {
+		id = FRA_conquer_highlands
+		icon = GFX_benelux
+		prerequisite = {
+			focus = FRA_communist_uprising_eng
+		}
+		prerequisite = {
+			focus = FRA_communist_uprising_spr
+		}
+		prerequisite = {
+			focus = FRA_communist_uprising_ita
+		}
+		search_filters = { FOCUS_FILTER_FRA_SPREAD }
+		available = {
+		date > 1913.6.1
+		}
+		bypass = {
+		}
+		completion_reward = {
+		create_wargoal = {type = annex_everything target = BEL }
+		create_wargoal = {type = annex_everything target = LUX }
+		create_wargoal = {type = annex_everything target = HOL }
+		}
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = FRA_communist_uprising_spr
+	}
+	
+	focus = {
+		id = FRA_attack_switzerland
+		icon = GFX_focus_attack_switzerland
+		prerequisite = {
+			focus = FRA_communist_uprising_eng
+		}
+		prerequisite = {
+			focus = FRA_communist_uprising_spr
+		}
+		prerequisite = {
+			focus = FRA_communist_uprising_ita
+		}
+		search_filters = { FOCUS_FILTER_FRA_SPREAD }
+		available = {
+		date > 1913.1.1
+		}
+		bypass = {
+		}
+		completion_reward = {
+		create_wargoal = {type = annex_everything target = SWI }
+		}
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = FRA_communist_uprising_spr
+	}
+	
+	focus = {
+		id = FRA_conquer_germany
+		icon = GFX_focus_attack_germany
+		prerequisite = {
+			focus = FRA_conquer_highlands
+		}
+		prerequisite = {
+			focus = FRA_attack_switzerland
+		}
+		search_filters = { FOCUS_FILTER_FRA_SPREAD }
+		available = {
+		date > 1914.1.1
+		}
+		bypass = {
+		}
+		completion_reward = {
+		create_wargoal = {type = annex_everything target = GER }
+		}
+		cost = 10
+		x = 0
+		y = 2
+		relative_position_id = FRA_communist_uprising_spr
+	}
+	
+	
+	
+	focus = {
+		id = FRA_anti_colonialism
+		icon = GFX_goal_CAN_france_demands
+		prerequisite = {
+			focus = FRA_revolution_in_france
+		}
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		mutually_exclusive = {focus = FRA_colonialism}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		remove_ideas = ww1_Scramble_for_Africa
+		}
+		cost = 10
+		x = -1
+		y = 2
+		relative_position_id = FRA_sfio_victory
+	}
+	
+	focus = {
+		id = FRA_release_equat_africa
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		prerequisite = {
+			focus = FRA_anti_colonialism
+		}
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		add_stability = 0.05
+		if = {
+		limit = {
+		OR = {
+		752 = {is_owned_and_controlled_by = FRA}
+		}
+		}
+		release = GAB
+		}
+		if = {
+		limit = {
+		OR = {
+		772 = {is_owned_and_controlled_by = FRA}
+		815 = {is_owned_and_controlled_by = FRA}
+		}
+		}
+		release = RCG
+		}
+		if = {
+		limit = {
+		OR = {
+		769 = {is_owned_and_controlled_by = FRA}
+		}
+		}
+		release = CAM
+		}
+		if = {
+		limit = {
+		OR = {
+		814 = {is_owned_and_controlled_by = FRA}
+		660 = {is_owned_and_controlled_by = FRA}
+		}
+		}
+		release = CAR
+		}
+		if = {
+		limit = {
+		OR = {
+		774 = {is_owned_and_controlled_by = FRA}
+		}
+		}
+		release = CHA
+		}
+		if = {
+		limit = {
+		OR = {
+		543 = {is_owned_and_controlled_by = FRA}
+		}
+		}
+		release = MAD
+		}
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_anti_colonialism
+	}
+	
+	focus = {
+		id = FRA_release_west_africa
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		prerequisite = {
+			focus = FRA_release_equat_africa
+		}
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		add_stability = 0.05
+		
+		
+		if = {
+		limit = {
+		OR = {
+		781 = {is_owned_and_controlled_by = FRA}
+		515 = {is_owned_and_controlled_by = FRA}
+		}
+		}
+		release = NGR
+		}
+		
+		if = {
+		limit = {
+		OR = {
+		776 = {is_owned_and_controlled_by = FRA}
+		}
+		}
+		release = DAH
+		}
+		
+		if = {
+		limit = {
+		OR = {
+		556 = {is_owned_and_controlled_by = FRA}
+		782 = {is_owned_and_controlled_by = FRA}
+		}
+		}
+		release = MLI
+		}
+		
+		if = {
+		limit = {
+		OR = {
+		780 = {is_owned_and_controlled_by = FRA}
+		}
+		}
+		release = GNA
+		}
+		
+		if = {
+		limit = {
+		OR = {
+		272 = {is_owned_and_controlled_by = FRA}
+		}
+		}
+		release = SEN
+		}
+		
+		if = {
+		limit = {
+		OR = {
+		557 = {is_owned_and_controlled_by = FRA}
+		786 = {is_owned_and_controlled_by = FRA}
+		782 = {is_owned_and_controlled_by = FRA}
+		}
+		}
+		release = MRT
+		}
+		
+		if = {
+		limit = {
+		OR = {
+		779 = {is_owned_and_controlled_by = FRA}
+		}
+		}
+		release = IVO
+		}
+		
+		
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_release_equat_africa
+	}
+	
+	focus = {
+		id = FRA_release_north_africa
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		prerequisite = {
+			focus = FRA_release_west_africa
+		}
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		add_stability = 0.05	
+		if = {
+		limit = {
+		OR = {
+		514 = {is_owned_and_controlled_by = FRA}
+		459 = {is_owned_and_controlled_by = FRA}
+		460 = {is_owned_and_controlled_by = FRA}
+		}
+		}
+		release = ALG
+		}
+		if = {
+		limit = {
+		OR = {
+		458 = {is_owned_and_controlled_by = FRA}
+		665 = {is_owned_and_controlled_by = FRA}
+		}
+		}
+		release = TUN
+		}
+		if = {
+		limit = {
+		OR = {
+		462 = {is_owned_and_controlled_by = FRA}
+		461 = {is_owned_and_controlled_by = FRA}
+		290 = {is_owned_and_controlled_by = FRA}
+		807 = {is_owned_and_controlled_by = FRA}
+		108 = {is_owned_and_controlled_by = FRA}
+		}
+		}
+		release = MOR
+		}
+		if = {
+		limit = {
+		OR = {
+		812 = {is_owned_and_controlled_by = FRA}
+		567 = {is_owned_and_controlled_by = FRA}
+		273 = {is_owned_and_controlled_by = FRA}
+		}
+		}
+		release = LBA
+		}
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_release_west_africa
+	}
+	
+	focus = {
+		id = FRA_colonialism
+		icon = GFX_purge2
+		prerequisite = {
+			focus = FRA_spread_revolution
+			focus = FRA_revolution_in_france
+		}
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		mutually_exclusive = {focus = FRA_anti_colonialism}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		add_stability = -0.05
+		add_war_support = 0.05
+		}
+		cost = 10
+		x = -3
+		y = 2
+		relative_position_id = FRA_sfio_victory
+	}
+	
+	focus = {
+		id = FRA_conquer_portugeese_colonies_socialism
+		icon = GFX_focus_generic_attack_portugal
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_colonialism
+		}
+		available = {
+		POR = {exists = yes}
+		date > 1913.6.1
+		}
+		completion_reward = {
+		every_state = {
+		limit = {
+		AND = {
+		is_on_continent = africa
+		is_owned_by = POR
+		}
+		}
+		add_claim_by = FRA
+		}
+		create_wargoal = { type = take_claimed_state target = POR }
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_colonialism
+	}
+	
+	
+	
+	
+	focus = {
+		id = FRA_claim_syria_socialism
+		icon = GFX_focus_otto_investment
+		available = {
+		}
+		prerequisite = {
+		focus = FRA_conquer_portugeese_colonies_socialism
+		}
+		ai_will_do = { factor = 0 }
+		search_filters = { FOCUS_FILTER_FRA_OTTOMAN }
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		cost = 10
+		available = {
+		}
+		completion_reward = {
+		add_state_claim = 677			#Syria/Lebanon
+			add_state_claim = 680
+			add_state_claim = 553
+			add_state_claim = 554
+			add_state_claim = 831
+			add_state_claim = 829
+			add_state_claim = 344	
+			add_state_claim = 454	
+			add_state_claim = 455
+			unlock_decision_tooltip = RP_FRA_create_syrian_mandate
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRA_conquer_portugeese_colonies_socialism
+	}
+	
+
+	focus = {
+		id = FRA_ottoman_campaign_socialism
+		icon = GFX_focus_tur_son_kalan
+		available = {
+		TUR = {exists = yes}
+		}
+		search_filters = { FOCUS_FILTER_FRA_OTTOMAN }
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+		focus = FRA_claim_syria_socialism
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		available = {
+		}
+		completion_reward = {
+		create_wargoal = {target = TUR type = take_claimed_state expire = 0}
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRA_claim_syria_socialism
+	}
+	
+	
+	focus = {
+		id = FRA_ww111_agadir_crisis
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_sfio_victory
+		}
+		available = {
+		has_completed_focus = FRA_colonialism
+		}
+		icon = GFX_protect_morocco
+		available = {
+			is_puppet = no
+			has_war = no
+			MOR = {
+				OR = {
+					is_subject = no
+					is_subject_of = FRA
+				}
+			}
+			date > 1911.4.1
+		}
+		bypass = {
+			OR = {
+				has_global_flag = agadir_crisis_ends
+				has_global_flag = kis_war
+			}
+		}
+		completion_reward = {
+			add_named_threat = {
+				threat = 5
+				name = FRA_ww1_agadir_crisis
+			}
+			MOR = {
+				country_event = {
+					id = ww1_morocco.1
+					days = 2
+				}
+			}
+		}
+		cost = 5
+		x = 6
+		y = 1
+		relative_position_id = FRA_sfio_victory
+	}
+	shared_focus = FRA_ww111_bureau_colonies
+	
+	
+	shared_focus = GEN_GEN_FRA_aviation_effort
+	shared_focus = GEN_GEN_FRA_naval_effort
+	shared_focus = GEN_GEN_army_effort
+	shared_focus = FRA_ww11_ready_country
+
+	
+}

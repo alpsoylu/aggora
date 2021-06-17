@@ -1,0 +1,922 @@
+shared_focus = {
+		id = FRA_ww11_bureau_colonies
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_ww11_agadir_crisis
+		}
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_ww11_agadir_crisis
+	}
+	#----- Africa
+	shared_focus = {
+		id = FRA_ww11_french_algeria_infra
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_ww11_bureau_colonies
+		}
+		icon = GFX_focus_generic_africa_infrastructure
+		available = {
+			OR = {
+				FRA = {
+					controls_state = 459
+					controls_state = 460
+				}
+				ALG = {
+					is_subject_of = ROOT
+					controls_state = 459
+					controls_state = 460
+				}
+			}
+		}
+		completion_reward = {
+			459 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			460 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = FRA_ww11_bureau_colonies
+	}
+	shared_focus = {
+		id = FRA_ww11_french_algeria_civ
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_ww11_french_algeria_infra
+		}
+		icon = GFX_focus_generic_africa_factory
+		available = {
+			OR = {
+				FRA = {
+					controls_state = 459
+					controls_state = 460
+				}
+				ALG = {
+					is_subject_of = ROOT
+					controls_state = 459
+					controls_state = 460
+				}
+			}
+		}
+		completion_reward = {
+			459 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			460 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_ww11_french_algeria_infra
+	}
+	shared_focus = {
+		id = FRA_ww11_french_algeria_mil
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_ww11_french_algeria_civ
+		}
+		icon = GFX_focus_generic_africa_production
+		available = {
+			OR = {
+				FRA = {
+					controls_state = 459
+					controls_state = 460
+				}
+				ALG = {
+					is_subject_of = ROOT
+					controls_state = 459
+					controls_state = 460
+				}
+			}
+		}
+		completion_reward = {
+			459 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			460 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_ww11_french_algeria_civ
+	}
+	shared_focus = {
+		id = FRA_ww11_french_algeria_mobilization
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_ww11_french_algeria_mil
+		}
+		icon = GFX_goal_generic_military_sphere
+		available = {
+			OR = {
+				FRA = {
+					controls_state = 459
+					controls_state = 460
+				}
+				ALG = {
+					is_subject_of = ROOT
+					controls_state = 459
+					controls_state = 460
+				}
+			}
+		}
+		completion_reward = {
+			# load_oob = "FRA_AfricanRegiments"
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_ww11_french_algeria_mil
+	}
+	#----- Indochina
+	shared_focus = {
+		id = FRA_ww11_french_indochina_infra
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_ww11_bureau_colonies
+		}
+		icon = GFX_goal_generic_construct_infrastructure
+		available = {
+			OR = {
+				FRA = {
+					controls_state = 286
+					controls_state = 671
+				}
+				VIN = {
+					is_subject_of = ROOT
+					controls_state = 286
+					controls_state = 671
+				}
+			}
+		}
+		completion_reward = {
+			286 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			671 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = FRA_ww11_bureau_colonies
+	}
+	shared_focus = {
+		id = FRA_ww11_french_indochina_civ
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_ww11_french_indochina_infra
+		}
+		icon = GFX_goal_generic_construct_infrastructure
+		available = {
+			OR = {
+				FRA = {
+					controls_state = 286
+					controls_state = 671
+				}
+				VIN = {
+					is_subject_of = ROOT
+					controls_state = 286
+					controls_state = 671
+				}
+			}
+		}
+		completion_reward = {
+			286 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			671 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_ww11_french_indochina_infra
+	}
+	shared_focus = {
+		id = FRA_ww11_french_indochina_mil
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_ww11_french_indochina_civ
+		}
+		icon = GFX_goal_generic_construct_mil_factory
+		available = {
+			OR = {
+				FRA = {
+					controls_state = 286
+					controls_state = 671
+				}
+				VIN = {
+					is_subject_of = ROOT
+					controls_state = 286
+					controls_state = 671
+				}
+			}
+		}
+		completion_reward = {
+			286 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			671 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_ww11_french_indochina_civ
+	}
+	shared_focus = {
+		id = FRA_ww11_french_indochina_mobilization
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_ww11_french_indochina_mil
+		}
+		icon = GFX_goal_generic_military_sphere
+		available = {
+			OR = {
+				FRA = {
+					controls_state = 286
+					controls_state = 671
+				}
+				VIN = {
+					is_subject_of = ROOT
+					controls_state = 286
+					controls_state = 671
+				}
+			}
+		}
+		completion_reward = {
+			# load_oob = "FRA_AsianRegiments"
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_ww11_french_indochina_mil
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+shared_focus = {
+		id = FRA_ww11_ready_country
+		search_filters = { FOCUS_FILTER_FRA_READY_COUNTRY }
+		prerequisite = {
+			#aa#focus = FRA_ww11_agadir_crisis
+		}
+		icon = GFX_goal_demand_sudetenland
+		available = {
+			threat > 0.25
+		}
+		completion_reward = {
+			add_manpower = 100000
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 8
+		y = 6
+		#x = 20
+		#y = 0
+	}
+	shared_focus = {
+		id = FRA_ww11_defense_border
+		search_filters = { FOCUS_FILTER_FRA_READY_COUNTRY }
+		prerequisite = {
+			focus = FRA_ww11_ready_country
+		}
+		icon = GFX_goal_generic_fortify_city
+		completion_reward = {
+			17 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 521
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 11516
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 698
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 3666
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 3646
+					instant_build = yes
+				}
+			}
+			18 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 3560
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 5291
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 2
+		y = 1
+		relative_position_id = FRA_ww11_ready_country
+	}
+	shared_focus = {
+		id = FRA_ww11_fortify_city
+		search_filters = { FOCUS_FILTER_FRA_READY_COUNTRY }
+		prerequisite = {
+			focus = FRA_ww11_ready_country
+		}
+		icon = GFX_goal_generic_fortify_city
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					#province = 12299
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		x = -2
+		y = 1
+		relative_position_id = FRA_ww11_ready_country
+		cost = 10
+	}
+	shared_focus = {
+		id = FRA_ww11_plan_VXII
+		search_filters = { FOCUS_FILTER_FRA_READY_COUNTRY }
+		prerequisite = {
+			focus = FRA_ww11_ready_country
+		}
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		completion_reward = {
+			add_war_support = 0.15
+			add_ideas = Franch_Staff
+			hidden_effect = {
+				add_named_threat = {
+   					threat = 5 
+    				name = FRA_plan_VXII
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRA_ww11_ready_country
+	}
+	shared_focus = {
+		id = FRA_ww11_alsaceloreaine_war
+		search_filters = { FOCUS_FILTER_FRA_READY_COUNTRY }
+		prerequisite = {
+			focus = FRA_ww11_plan_VXII
+		}
+		available = {
+			is_puppet = no
+			OR = {
+				threat > 0.5
+				date > 1914.6.1
+			}
+			has_army_manpower = {
+				size > 1500000
+			}
+		}
+		bypass = {
+			OR = {
+				has_war_with = GER
+				owns_state = 28
+			}
+		}
+		icon = GFX_goal_generic_major_war
+		completion_reward = {
+			add_named_threat = {
+				threat = 10
+				name = "FRA_ww1_alsaceloreaine_war"
+			}
+			declare_war_on = {
+				target = GER
+				type = take_state
+				generator = {
+					28
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 2000
+		}
+		x = 0
+		y = 2
+		relative_position_id = FRA_ww11_ready_country
+		cost = 10
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	shared_focus = {
+		id = FRA_ww111_bureau_colonies
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_ww111_agadir_crisis
+		}
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_ww111_agadir_crisis
+	}
+	#----- Africa
+	shared_focus = {
+		id = FRA_ww111_french_algeria_infra
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_ww111_bureau_colonies
+		}
+		icon = GFX_focus_generic_africa_infrastructure
+		available = {
+			OR = {
+				FRA = {
+					controls_state = 459
+					controls_state = 460
+				}
+				ALG = {
+					is_subject_of = ROOT
+					controls_state = 459
+					controls_state = 460
+				}
+			}
+		}
+		completion_reward = {
+			459 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			460 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = FRA_ww111_bureau_colonies
+	}
+	shared_focus = {
+		id = FRA_ww111_french_algeria_civ
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_ww111_french_algeria_infra
+		}
+		icon = GFX_focus_generic_africa_factory
+		available = {
+			OR = {
+				FRA = {
+					controls_state = 459
+					controls_state = 460
+				}
+				ALG = {
+					is_subject_of = ROOT
+					controls_state = 459
+					controls_state = 460
+				}
+			}
+		}
+		completion_reward = {
+			459 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			460 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_ww111_french_algeria_infra
+	}
+	shared_focus = {
+		id = FRA_ww111_french_algeria_mil
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_ww111_french_algeria_civ
+		}
+		icon = GFX_focus_generic_africa_production
+		available = {
+			OR = {
+				FRA = {
+					controls_state = 459
+					controls_state = 460
+				}
+				ALG = {
+					is_subject_of = ROOT
+					controls_state = 459
+					controls_state = 460
+				}
+			}
+		}
+		completion_reward = {
+			459 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			460 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_ww111_french_algeria_civ
+	}
+	shared_focus = {
+		id = FRA_ww111_french_algeria_mobilization
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_ww111_french_algeria_mil
+		}
+		icon = GFX_goal_generic_military_sphere
+		available = {
+			OR = {
+				FRA = {
+					controls_state = 459
+					controls_state = 460
+				}
+				ALG = {
+					is_subject_of = ROOT
+					controls_state = 459
+					controls_state = 460
+				}
+			}
+		}
+		completion_reward = {
+			# load_oob = "FRA_AfricanRegiments"
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_ww111_french_algeria_mil
+	}
+	#----- Indochina
+	shared_focus = {
+		id = FRA_ww111_french_indochina_infra
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_ww111_bureau_colonies
+		}
+		icon = GFX_goal_generic_construct_infrastructure
+		available = {
+			OR = {
+				FRA = {
+					controls_state = 286
+					controls_state = 671
+				}
+				VIN = {
+					is_subject_of = ROOT
+					controls_state = 286
+					controls_state = 671
+				}
+			}
+		}
+		completion_reward = {
+			286 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			671 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = FRA_ww111_bureau_colonies
+	}
+	shared_focus = {
+		id = FRA_ww111_french_indochina_civ
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_ww111_french_indochina_infra
+		}
+		icon = GFX_goal_generic_construct_infrastructure
+		available = {
+			OR = {
+				FRA = {
+					controls_state = 286
+					controls_state = 671
+				}
+				VIN = {
+					is_subject_of = ROOT
+					controls_state = 286
+					controls_state = 671
+				}
+			}
+		}
+		completion_reward = {
+			286 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			671 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_ww111_french_indochina_infra
+	}
+	shared_focus = {
+		id = FRA_ww111_french_indochina_mil
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_ww111_french_indochina_civ
+		}
+		icon = GFX_goal_generic_construct_mil_factory
+		available = {
+			OR = {
+				FRA = {
+					controls_state = 286
+					controls_state = 671
+				}
+				VIN = {
+					is_subject_of = ROOT
+					controls_state = 286
+					controls_state = 671
+				}
+			}
+		}
+		completion_reward = {
+			286 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			671 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_ww111_french_indochina_civ
+	}
+	shared_focus = {
+		id = FRA_ww111_french_indochina_mobilization
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
+		prerequisite = {
+			focus = FRA_ww111_french_indochina_mil
+		}
+		icon = GFX_goal_generic_military_sphere
+		available = {
+			OR = {
+				FRA = {
+					controls_state = 286
+					controls_state = 671
+				}
+				VIN = {
+					is_subject_of = ROOT
+					controls_state = 286
+					controls_state = 671
+				}
+			}
+		}
+		completion_reward = {
+			# load_oob = "FRA_AsianRegiments"
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FRA_ww111_french_indochina_mil
+		
+	}

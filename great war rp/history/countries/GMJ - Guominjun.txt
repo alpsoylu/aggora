@@ -1,0 +1,23 @@
+﻿capital = 608
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1910.1.1" 
+	election_frequency = 48 
+	elections_allowed = no
+}	
+set_popularities = {
+	fascism = 10
+	communism = 0
+	democratic = 17
+	neutrality = 73
+}
+create_country_leader = {
+	name = "Feng Yuhsiang"
+	picture = "gfx/leaders/CHI/CHI_Feng_Yuhsiang.dds"
+	expire = "1935.1.1"
+	ideology = despotism
+	traits = {
+		trait_despotism
+	} 
+}

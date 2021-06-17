@@ -1,0 +1,155 @@
+
+
+
+
+
+
+
+
+
+
+
+
+#decision_category_armenian_exile = {
+
+	RP_arm_trabzon = {
+		icon = GFX_decarm
+		allowed = { 
+		TUR = {controls_state = 354}
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+		has_war = yes
+		TUR = {controls_state = 354}
+		TUR = {controls_state = 829}
+		tag = TUR
+		ARM = {has_state_core = 354}
+		NOT = {354 = {is_core_of = TUR}}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 354
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+354 = {add_core_of = TUR}		
+354 = {remove_core_of = ARM}	
+354 = {add_manpower = -300000}
+829 = {add_manpower = 100000}
+354 = {
+			remove_dynamic_modifier = { modifier = TUR_hincak_tasnak }
+		}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	RP_arm_erzurum = {
+		icon = GFX_decarm
+		allowed = { 
+		TUR = {controls_state = 353}
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+		has_war = yes
+		TUR = {controls_state = 353}
+		TUR = {controls_state = 344}
+		tag = TUR
+		ARM = {has_state_core = 353}
+		NOT = {353 = {is_core_of = TUR}}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 353
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+353 = {add_core_of = TUR}		
+353 = {remove_core_of = ARM}	
+353 = {add_manpower = -300000}
+344 = {add_manpower = 100000}
+353 = {
+			remove_dynamic_modifier = { modifier = TUR_hincak_tasnak }
+		}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	RP_arm_bitlis = {
+		icon = GFX_decarm
+		allowed = { 
+		TUR = {controls_state = 826}
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+		has_war = yes
+		TUR = {controls_state = 826}
+		TUR = {controls_state = 677}
+		tag = TUR
+		ARM = {has_state_core = 826}
+		NOT = {826 = {is_core_of = TUR}}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 826
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+826 = {add_core_of = TUR}		
+826 = {remove_core_of = ARM}	
+826 = {add_manpower = -300000}
+677 = {add_manpower = 100000}
+826 = {
+			remove_dynamic_modifier = { modifier = TUR_hincak_tasnak }
+		}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	RP_arm_van = {
+		icon = GFX_decarm
+		allowed = { 
+		TUR = {controls_state = 352}
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+		has_war = yes
+		TUR = {controls_state = 352}
+		TUR = {controls_state = 680}
+		tag = TUR
+		ARM = {has_state_core = 352}
+		NOT = {352 = {is_core_of = TUR}}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 352
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+352 = {add_core_of = TUR}		
+352 = {remove_core_of = ARM}	
+352 = {add_manpower = -300000}
+680 = {add_manpower = 100000}
+352 = {
+			remove_dynamic_modifier = { modifier = TUR_hincak_tasnak }
+		}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	
+}

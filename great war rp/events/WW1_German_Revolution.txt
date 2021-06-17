@@ -1,0 +1,467 @@
+add_namespace = freikorps
+
+#Spartakist Revolution starts
+country_event = {
+	id = freikorps.1
+	title = freikorps.1.t
+	desc = freikorps.1.d
+	picture = GFX_report_event_german_reichstag_gathering
+	fire_only_once = yes
+	trigger = {
+		tag = GER
+		has_global_flag = weimar_republic
+		has_country_flag = great_war_loser
+		has_global_flag = versallies_treaty
+		has_global_flag = russian_revolution #Prevent Prussian Blue
+		NOT = { has_global_flag = prussian_blue }
+		NOT = { has_government = communism }
+	}
+	mean_time_to_happen = { days = 50 }
+	immediate = {
+	    hidden_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			add_stability = -0.05
+		}
+	}
+	option = {
+		name = freikorps.1.a
+		ai_chance = { factor = 100 }
+		country_event = { id = freikorps.2 days = 3 }
+	}
+}
+
+#Spartakist Revolution put down
+country_event = {
+	id = freikorps.2
+	title = freikorps.2.t
+	desc = freikorps.2.d
+	picture = GFX_report_event_german_reichstag_gathering
+	is_triggered_only = yes
+	trigger = {
+	    NOT = { has_government = communism }
+	}
+	#The Spartakists are captured and killed
+	option = {
+		name = freikorps.2.a
+		ai_chance = { factor = 10 }
+		add_stability = -0.03
+		add_popularity = {
+			ideology = communism
+			popularity = -0.03
+		}
+		add_manpower = -500
+	}
+	#The Spartakists escape to Bavaria Soviet Republic
+	option = {
+		name = freikorps.2.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+			modifier = {
+				NOT = { has_global_flag = russian_revolution }
+				add = 100
+			}
+		}
+		add_manpower = -750
+		hidden_effect = { country_event = { id = freikorps.3 days = 65 } }
+		trigger = {
+			has_global_flag = wait_need_to_check_triggers_from_ww1_germany
+		}
+	}
+}
+#Germany Collapses to Spartakists
+country_event = {
+	id = freikorps.3
+	title = freikorps.3.t
+	desc = freikorps.3.d
+	picture = GFX_report_event_german_reichstag_gathering
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			release = HAN
+			release = BAY
+			release = SAX
+			release = WUR
+			release = SHL
+			BAY = {
+				add_popularity = {
+    				ideology = communism
+    				popularity = 0.50
+				}
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+				set_cosmetic_tag = BAY_germany
+				add_state_core = 50
+				add_state_core = 55
+				add_state_core = 57
+				add_state_core = 56
+				add_state_core = 59
+				add_state_core = 60
+				add_state_core = 64
+				add_state_core = 61
+				add_state_core = 62
+				add_state_core = 68
+				add_state_core = 66
+				add_state_core = 63
+				add_state_claim = 51
+				add_state_claim = 42
+				add_state_claim = 793
+				add_state_claim = 28
+				add_state_claim = 85
+			}
+			WUR = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.50
+				}
+				set_politics = {
+					ruling_party = democratic
+				}
+			}
+			SHL = {
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.50
+				}
+				set_politics = {
+					ruling_party = fascism
+				}
+				add_ideas = SHL_kiel_canal_profits
+			}
+			transfer_units_fraction= {
+			    target = BAY
+			    size = 0.3
+			    stockpile_ratio = 0.4
+			    army_ratio = 0.3
+			    navy_ratio = 0.0
+			    air_ratio = 0.1
+			}
+			transfer_units_fraction= {
+			    target = WUR
+			    size = 0.1
+			    stockpile_ratio = 0.1
+			    army_ratio = 0.1
+			    navy_ratio = 0.0
+			    air_ratio = 0.1
+			}
+			transfer_units_fraction= {
+			    target = HAN
+			    size = 0.2
+			    stockpile_ratio = 0.5
+			    army_ratio = 0.4
+			    navy_ratio = 0.4
+			    air_ratio = 0.3
+			}
+			country_event = { id = freikorps.4 days = 1 }
+			country_event = { id = freikorps.8 days = 365 }
+			HAN = { country_event = { id = freikorps.6 hours = 15 } }
+			news_event = { id = freikorps.5 hours = 2 }
+		}
+	}
+	#stay as Germany
+	option = {
+		name = freikorps.3.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+	#play as Hanover
+	option = {
+		name = freikorps.3.b
+		ai_chance = {
+			factor = 0
+		}
+		HAN = { change_tag_from = ROOT }
+	}
+	#play as bavaria
+	option = {
+		name = freikorps.3.c
+		ai_chance = {
+			factor = 0
+		}
+		BAY = { change_tag_from = ROOT }
+	}
+}
+#Battle for Frankfurt
+country_event = {
+	id = freikorps.4
+	title = freikorps.4.t
+	desc = freikorps.4.d
+	picture = GFX_report_event_german_reichstag_gathering
+	is_triggered_only = yes
+	fire_only_once = yes
+	#Hanoverians win
+	option = {
+		name = freikorps.4.a
+		ai_chance = { factor = 50 }
+		HAN = { transfer_state = 55 }
+		hidden_effect = {
+			BAY = {
+				create_wargoal = {
+    				type = annex_everything
+    				target = WUR
+				}
+			}
+		}
+	}
+	#Wurretemburgians win
+	option = {
+		name = freikorps.4.b
+		ai_chance = { factor = 10 }
+		WUR = { transfer_state = 55 }
+		hidden_effect = {
+			BAY = {
+				create_wargoal = {
+    				type = annex_everything
+    				target = WUR
+				}
+			}
+		}
+	}
+	#Spartakists win
+	option = {
+		name = freikorps.4.c
+		ai_chance = { factor = 40 }
+		BAY = { transfer_state = 55 }
+	}
+}
+#German collapse news event
+news_event = {
+	id = freikorps.5
+	title = freikorps.5.t
+	desc = freikorps.5.d
+	picture = GFX_news_event_ger_civil_war
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = freikorps.5.a
+		ai_chance = { factor = 100 }
+	}
+}
+#King of Hannover assassiinated
+country_event = {
+	id = freikorps.6
+	title = freikorps.6.t
+	desc = freikorps.6.d
+	picture = GFX_report_event_german_reichstag_gathering
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = freikorps.6.a
+		hidden_effect = { news_event = { id = freikorps.7 hours = 1 } }
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Victoria II"
+			desc = "POLITICS_VICTORIA_DESC"
+			picture = GFX_portrait_ger_victoria_louise
+			expire = "1935.1.1"
+			ideology = autocracy
+			female = yes
+			traits = {
+				kaiserin_of_the_people
+				trait_autocracy
+			}
+		}
+		set_cosmetic_tag = HAN_germany
+		hidden_effect = {
+				add_state_core = 55
+				add_state_core = 50
+				add_state_core = 64
+				add_state_core = 61
+				add_state_core = 62
+				add_state_core = 68
+				add_state_core = 66
+				add_state_core = 63
+				add_state_core = 54
+				add_state_core = 53
+				add_state_core = 52
+				add_state_claim = 51
+				add_state_claim = 42
+				add_state_claim = 793
+				add_state_claim = 28
+				add_state_claim = 85
+		}
+	}
+}
+#King of Hannover assassinated- News event
+news_event = {
+	id = freikorps.7
+	title = freikorps.7.t
+	desc = freikorps.7.d
+	picture = GFX_news_event_ger_civil_war
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = freikorps.7.a
+		ai_chance = { factor = 100 }
+	}
+}
+#Reunification wars
+country_event = {
+	id = freikorps.8
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		news_event = { id = freikorps.9 days = 1 }
+		BAY = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = WUR
+			}
+			create_wargoal = {
+    			type = annex_everything
+    			target = HAN
+			}
+			create_wargoal = {
+    			type = annex_everything
+    			target = GER
+			}
+		}
+		HAN = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = WUR
+			}
+			create_wargoal = {
+    			type = annex_everything
+    			target = BAY
+			}
+			create_wargoal = {
+    			type = annex_everything
+    			target = GER
+			}
+		}
+		GER = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = HAN
+			}
+			create_wargoal = {
+    			type = annex_everything
+    			target = BAY
+			}
+		}
+	}
+}
+#reunification wars news event
+news_event = {
+	id = freikorps.9
+	title = freikorps.9.t
+	desc = freikorps.9.d
+	picture = GFX_news_event_ger_civil_war
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = freikorps.9.a
+		ai_chance = { factor = 100 }
+	}
+}
+#Backstab Germany Austrian collapse
+country_event = {
+	id = freikorps.10
+	title = freikorps.10.t
+	desc = freikorps.10.d
+	picture = GFX_report_event_ger_civil_war
+
+	trigger = {
+		original_tag = GER
+		has_country_flag = great_war_loser
+		has_completed_focus = GER_backstab
+		NOT = { country_exists = AUH }
+		NOT = { country_exists = AUS }
+		has_global_flag = interbellum
+	}
+	fire_only_once = yes
+	mean_time_to_happen = { days = 7 }
+
+	immediate = {
+		hidden_effect = {
+			AUS = {
+				add_state_core = 4
+				add_state_core = 152
+				add_state_core = 153
+				add_state_core = 736
+				add_state_core = 39
+				set_party_name = { 
+				    ideology = fascism
+				    long_name = AUS_vaterland_party
+				    name = AUS_vaterland_party
+				}
+				create_country_leader = {
+					name = "Engelbert Dollfuss"
+					picture = "gfx/leaders/AUS/AUS_Engelbert_Dollfuss.dds"
+					expire = "1935.1.1"
+					ideology = fascism_ideology
+					traits = {
+						trait_fascism
+					}
+				}
+				create_field_marshal = {
+					name = "Engelbert Dollfuss"  
+					portrait_path="gfx/leaders/AUS/AUS_Engelbert_Dollfuss_general.dds"
+					traits={ media_personality politically_connected guerilla_fighter trait_mountaineer } 
+					skill = 2
+					attack_skill = 2
+					defense_skill = 1
+					planning_skill = 2
+					logistics_skill = 2
+				}
+				add_popularity = {
+				    ideology = fascism
+				    popularity = 0.55
+				}
+				set_politics = {
+					ruling_party = fascism
+				}
+				set_cosmetic_tag = AUS_vaterland
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = AUS
+						is_core_of = SLV
+						state = 244
+					}
+				}
+				AUS = {
+					transfer_state = PREV
+				}
+				remove_core_of = ROOT
+			}						
+		}
+	}
+	#ok
+	option = {
+		name = freikorps.10.a
+		ai_chance = { factor = 100 }
+		news_event = { id = freikorps.11 }
+	}
+	#play as austria
+	option = {
+		name = freikorps.10.b
+		ai_chance = { factor = 0 }
+		news_event = { id = freikorps.11 }
+		AUS = { change_tag_from = ROOT }
+	}
+}
+news_event = {
+	id = freikorps.11
+	title = freikorps.11.t
+	desc = freikorps.11.d
+	picture = GFX_news_event_ger_civil_war
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = freikorps.11.a
+	}
+}

@@ -1,0 +1,329 @@
+﻿l_english:
+ TUR_FOCUS_RULE:0 "Ottoman Focus Tree"
+ RULE_GROUP_RP:0 "GREAT WAR RP RULES."
+ TUR_NEW_TREE:0 "New Ottoman Focus Tree"
+ TUR_NEW_TREE_TEXT:0 "New Ottoman Focus Tree"
+ TUR_NEW_TREE_DESC:0 "This is the new reworked Ottoman Tree in the Great War Redux.It was released in 8 May 2021"
+ 
+ TUR_OLD_TREE:0 "Old Ottoman Focus Tree"
+ TUR_OLD_TREE_TEXT:0 "Old Ottoman Focus Tree"
+ TUR_OLD_TREE_DESC:0 "This is the old Ottoman Tree in the Great War Redux.The new one was released in 8 May 2021 DOESNT WORK!!!"
+ social_democracy:0 "Social Democracy"
+ RP_optimizasyon:0 "Neutral Country"
+ 
+ 
+ SPR_elections:0 "Elections"
+ SPR_elections_desc:0 "Election time has come!We will select our prime minister in this elections."
+ SPR_liberals_wins:0 "Liberals win!"
+ SPR_liberals_wins_desc:0 "Liberal Fusionist Party (PLF) has won the elections."
+ SPR_conservatists_wins:0 "Conservatists win!"
+ SPR_conservatists_wins_desc:0 "Conservative Party (PLC) has won the elections."
+ SPR_gain_the_trust_of_the_king:0 "Gain the Trust of the King"
+ SPR_long_live_king_alfonso:0 "Long Live the King"
+ SPR_bourbon_pact:0 "The Franco-Spanish Pact"
+ SPR_deal_for_gibraltar:0 "Deal for Gibraltar"
+ SPR_spanish_army:0 "Spanish Army"
+ RP_spanish_army:0 "Spanish Army"
+ SPR_increase_power_of_parliement:0 "Increase the Power of the Parliement"
+ SPR_lower_power_church:0 "Lower the Power of the Church"
+ RP_power_church_low:0 "Power of the Church Decreased"
+ SPR_establish_the_republic:0 "Establish the Republic"
+ 
+ 
+ 
+ SPR_democracy_deal_for_gibraltar:0 "Deal for Gibraltar"
+ 
+ SPR_willpower_tt:0 "§WThis will §Yremove§! the effects of the legacy of the §OAmerican-Spanish war§! §CPARTIALLY§!.But it will take no time.If you are in a war,this is the best choice.§!"
+ SPR_learn_tt:0 "§WThis will §Yremove§! the effects of the legacy of the §OAmerican-Spanish war§! §CFULLY§!.But it will take time and it will be §Rpainfull§!.If you are not going to go to the war soon or you will stay neutral,this is the best choice.§!"
+ SPR_republic_tt:0 "§YWe will establish a Spanish Republic!§!"
+ 
+ spr_liberal_flag:0 "§YLiberals have won the elections§!"
+ spr_cons_flag:0 "§YLiberals have won the elections§!"
+ 
+ spr_event.1:0 "Spanish 1910 Elections"
+ spr_event.1.t:0 "Spanish 1910 Elections"
+ spr_event.1.desc:0 "The Spanish people just voted for the seats in the parliement and their prime minister."
+ spr_event.1.a:0 "Liberals won the elections!"
+ spr_event.1.b:0 "Conservatists won the elections!"
+ 
+ 
+ spr_event.4:0 "[FRA.GetName] rejects the Franco-Spanish Pact"
+ spr_event.4.t:0 "[FRA.GetName] rejects the Franco-Spanish Pact"
+ spr_event.4.desc:0 "[FRA.GetAdjective] goverment rejects our offer to sign a non aggresion pact along with a guarantee of independence."
+ spr_event.4.a:0 "No!"
+ 
+ spr_event.2:0 "[SPR.GetName] wants to sign Franco-Spanish Pact"
+ spr_event.2.t:0 "[SPR.GetName] wants to sign Franco-Spanish Pact"
+ spr_event.2.desc:0 "[SPR.GetAdjective] goverment offered us to sign a non aggresion pact along with a guarantee of independence."
+ spr_event.2.a:0 "We accept!"
+ spr_event.2.b:0 "We reject!"
+ 
+ 
+ RP_legacy_of_american_spanish_war_will:0 "Willpower over Technology"
+ RP_legacy_of_american_spanish_war2:0 "Learning from our Mistakes"
+ RP_legacy_of_american_spanish_war_good:0 "Legacy of American-Spanish War"
+ 
+ SPR_willpower_over_technology:0 "Willpower over Technology"
+ SPR_learn_from_our_mistakes:0 "Learn from our Mistakes"
+ SPR_democracy_willpower_over_technology:0 "Willpower over Technology"
+ SPR_democracy_learn_from_our_mistakes:0 "Learn from our Mistakes"
+ 
+ spr_event.3:0 "[FRA.GetName] agrees the Franco-Spanish Pact"
+ spr_event.3.t:0 "[FRA.GetName] agrees the Franco-Spanish Pact"
+ spr_event.3.desc:0 "[FRA.GetAdjective] goverment agrees to sign a non aggresion pact along with a guarantee of independence."
+ spr_event.3.a:0 "YES!"
+ 
+ SPR_liberalism:0 "Liberalism"
+ SPR_radicalism:0 "Radicalism"
+ SPR_liberalism_cons:0 "Autarky"
+ SPR_radicalism_cons:0 "Radical Nationalism"
+ 
+ POR_crush_republicans:0 "Crush the Republicans"
+ 
+ 
+ 
+ 
+ 
+ #GIBRALTAR#
+ spr_event.5:0 "[SPR.GetName] wants to make a deal for Gibraltar"
+ spr_event.5.t:0 "[SPR.GetName] wants to make a deal for Gibraltar"
+ spr_event.5.desc:0 "[SPR.GetAdjective] goverment offered us to sign a non aggresion pact for the control of Gibraltar."
+ spr_event.5.a:0 "We accept!"
+ spr_event.5.b:0 "We reject!"
+ 
+ 
+ spr_event.6:0 "[ENG.GetName] agrees our deal for Gibraltar"
+ spr_event.6.t:0 "[ENG.GetName] agrees our deal for Gibraltar"
+ spr_event.6.desc:0 "[ENG.GetAdjective] goverment agrees to sign a non aggresion pact for the control of Gibraltar."
+ spr_event.6.a:0 "NO!"
+ 
+ 
+ spr_event.7:0 "[ENG.GetName] rejects our deal for Gibraltar"
+ spr_event.7.t:0 "[ENG.GetName] rejects our deal for Gibraltar"
+ spr_event.7.desc:0 "[ENG.GetAdjective] goverment rejects our offer to sign a non aggresion pact for the control of Gibraltar."
+ spr_event.7.a:0 "YES!"
+ #GIBRALTAR#
+ 
+ 
+ SPR_crisis_in_europe:0 "Crisis in Europe"
+ SPR_crisis_in_europe_desc:0 "We should pick our role in the Great War"
+ 
+ SPR_neutral_foreign_policy:0 "Neutral Foreign Policy"
+ SPR_neutral_foreign_policy_desc:0 "There are no winners in these kind of wars.We should stay out of it!"
+ SPR_join_the_central_powers:0 "Join the Central Powers"
+ SPR_join_the_central_powers_desc:0 "We have to side with the Central Powers to win this war.They will be the winners of the Great War!"
+ SPR_join_the_entente:0 "Join the Entente"
+ SPR_join_the_entente_desc:0 "We have to side with the Entente to win this war.They will be the winners of the Great War!"
+ 
+ SPR_industrial_sit:0 "Industrial Situation"
+ 
+ SPR_heavy_industry:0 "Heavy Industry"
+ SPR_agricultural_industry:0 "Agricultural Industry"
+ 
+ 
+ 
+ RP_agricultur_idea:0 "Agricultural Economy"
+ RP_heavy_idea:0 "Heavy Industrial Economy"
+ SPR_improve_railways:0 "Improve the Railways"
+ 
+ SPR_focus_on_war_economy:0 "Focus on Military Industry"
+ SPR_focus_on_civ_industry:0 "Focus on Civilian Industry"
+ 
+ SPR_parliementary_monarchy:0 "Parliementary Monarchy"
+ SPR_down_with_the_king:0 "Down with the King"
+ 
+ SPR_power_to_the_conservatists:0 "Power to the Conservatists"
+ SPR_right_to_rule:0 "The Right to Rule"
+ SPR_right_to_rule_desc:0 ""
+ POR_side_with_republicans:0 "Side with the Republicans"
+ POR_side_with_monarchists:0 "Side with the Monarchists"
+ POR_side_with_republicans_desc:0 ""
+ POR_side_with_monarchists_desc:0 ""
+ POR_conquer_iberia:0 "Conquer Iberia"
+ RP_parl_mon:0 "Parliementary Monarchy"
+ RP_long_live_king_alfonso:0 "Long Live King Alfonso VIII"
+ RP_legacy_of_american_spanish_war:0 "Legacy of the American-Spanish War"
+ SPR_king_and_parliement:0 "The King and the Parliement"
+ SPR_king_parliement:0 "The King and the Parliement"
+ SPR_for_democracy:0 "For Democracy!"
+ RP_for_democracy:0 "For Democracy"
+ SPR_establish_secularism:0 "Establish Secularism"
+ 
+ SPR_bourbon_long:0 "House of Bourbon"
+ SPR_bourbon:0 "House of Bourbon"
+ 
+ SPR_kingdom:0 "Kingdom of Spain"
+ SPR_kingdom_DEF:0 "the Kingdom of Spain"
+ 
+ 
+ SPR_close_the_parliement:0 "Close the Parliement"
+ SPR_increase_the_power_of_church:0 "Increase the Power of the Church"
+ RP_power_church:0 "Power of the Church Increased"
+ RP_closed_parliement:0 "Closed Parliement"
+ 
+ RP_never_surrender:0 "NEVER SURRENDER!"
+ 
+ POR_absoloute_monarchy:0 "Absoloute Monarchy"
+ POR_parliementary_monarchy:0 "Parliementary Monarchy"
+ 
+ POR_sharing_power:0 "Sharing Power"
+ POR_republicanism:0 "Republicanism"
+ POR_full_democracy:0 "Full Democracy"
+ POR_increase_power_church:0 "Increase the Power of the Catholic Church"
+ POR_embrace_secularism:0 "Embrace Secularism"
+ POR_close_radical_parties:0 "Close Radical Parties"
+ 
+ 
+ RP_rebel_crushed:0 "Rebellion Crushed!"
+ 
+ RP_legacy_revolution:0 "Legacy of the 1910 Revolution"
+ 
+ SPR_catolonian_resistance:0 "Catalan Resistance"
+ POR_liberal_democracy:0 "Liberal Democracy"
+ POR_authotorian_democracy:0 "Authatorian Democracy"
+ RP_liberal_democracy:0 "Liberal Democracy"
+ RP_auth_democracy:0 "Authatorian Democracy"
+ 
+ POR_workers_unite:0 "Workers of Portugal,Unite!"
+ POR_socialism_is_peace:0 "Socialism is Peace"
+ POR_socialism_is_war:0 "Socialism is War"
+ POR_nationalize_factories:0 "Nationalize Factories"
+ POR_decrease_working_times:0 "Decrease Working Times"
+ POR_iberian_union:0 "Iberian Union"
+ POR_attack_spain:0 "Attack Spain"
+ 
+ por_event.1:0 "[POR.GetName] wants to unite"
+ por_event.1.t:0 "[POR.GetName] wants to unite"
+ por_event.1.d:0 "[POR.GetName] wants to unite as an Iberian Union"
+ por_event.1.a:0 "We shall unite with our Iberian Brothers"
+ por_event.1.b:0 "No.Spain shall always be independent"
+ 
+ por_event.2:0 "Spain Accepts the Iberian Union"
+ por_event.2.t:0 "Spain Accepts the Iberian Union"
+ por_event.2.d:0 "Spain Accepts the Iberian Union"
+ por_event.2.a:0 "For Iberia"
+ 
+ por_event.3:0 "Spain rejects the Iberian Union"
+ por_event.3.t:0 "Spain rejects the Iberian Union"
+ por_event.3.d:0 "Spain rejects the Iberian Union"
+ por_event.3.a:0 "We will crush them"
+ 
+ 
+ 
+ por_event.5:0 "[POR.GetName] wants to unite"
+ por_event.5.t:0 "[POR.GetName] wants to unite"
+ por_event.5.d:0 "[POR.GetName] wants to unite as an Porto-Brazilian Union"
+ por_event.5.a:0 "We shall unite with our Portugese Brothers"
+ por_event.5.b:0 "No.Brazil shall always be independent"
+ 
+ por_event.6:0 "Brazil Accepts the Porto-Brazilian Union"
+ por_event.6.t:0 "Brazil Accepts the Porto-Brazilian Union"
+ por_event.6.d:0 "Brazil Accepts the Porto-Brazilian Union"
+ por_event.6.a:0 "For Greater Portugal...and brazil"
+ 
+ por_event.7:0 "Brazil rejects the Porto-Brazilian Union"
+ por_event.7.t:0 "Brazil rejects the Porto-Brazilian Union"
+ por_event.7.d:0 "Brazil rejects the Porto-Brazilian Union"
+ por_event.7.a:0 "We will crush them"
+ 
+ por_event.4:0 "A wedding is organized between Portugese and Brazilian royal families"
+ por_event.4.t:0 "A wedding is organized between Portugese and Brazilian royal families"
+ por_event.4.d:0 "A wedding is organized between Portugese and Brazilian royal families.This will strenghten relations between two countries."
+ por_event.4.a:0 "Delightfull."
+ 
+ por_event.8:0 "We have cored Catalonia"
+ por_event.8.t:0 "We have cored Catalonia"
+ por_event.8.d:0 "We have cored Catalonia."
+ por_event.8.a:0 "Good."
+ 
+ por_event.9:0 "British Protectarate of Cyprus is dismantled"
+ por_event.9.t:0 "British Protectarate of Cyprus is dismantled"
+ por_event.9.d:0 "British Protectarate of Cyprus is dismantled"
+ por_event.9.a:0 "Good."
+ 
+ TUR_abdulhamid:0 "Lift the Home Prison of Abdulhamid II"
+ TUR_abdulhamid3:0 "Reassure Trust to the Empire"
+ TUR_abdulhamid2:0 "Destroy the supporters of Nationalist Pashas"
+ el_muzaffer:0 "El Muzaffer Daima"
+ TUR_el_muzaffer_daima:0 "El Muzaffer Daima"
+ 
+ 
+ 
+ IBR_union:0 "Iberian Union"
+ IBR_union_DEF:0 "Iberian Union"
+ IBR_union_ADJ:0 "Iberian"
+ 
+ IBR_union_communism:0 "Iberian Socialist Union"
+ IBR_union_communism_DEF:0 "Iberian Socialist Union"
+ IBR_union_communism_ADJ:0 "Iberian"
+ RP_spread_rev:0 "Spread the Revolution"
+ POR_spread_revolution:0 "Spread the Revolution"
+ POR_spread_marxism:0 "Spread Marxism"
+ POR_communist_manifesto:0 "Communist Manifesto"
+ 
+ 
+ POR_investments_from_france:0 "Investments from [FRA.GetName]"
+ POR_investments_from_england:0 "Investments from [ENG.GetName]"
+ POR_investments_from_russia:0 "Investments from [RUS.GetName]"
+ POR_closer_relations_with_entente:0 "Closer Relations with the [FRA.GetFactionName]"
+ POR_join_entente_1:0 "Join the [FRA.GetFactionName]"
+ POR_neutral_foreign_policy1:0 "Neutral Foreign Policy"
+ POR_neutral_foreign_policy2:0 "Neutral Foreign Policy"
+ POR_allign_with_red_russia:0 "Allign with [SOV.GetName]"
+ POR_our_own_way:0 "Our Own Way"
+ POR_exile_republicans:0 "Exile the Republicans"
+ POR_closer_entente:0 "Closer Relitions with [FRA.GetFactionName]"
+ POR_closer_central:0 "Closer Relitions with [GER.GetFactionName]"
+ POR_german_investors:0 "[GER.GetAdjective] Investors"
+ POR_french_investors:0 "[FRA.GetAdjective] Investors"
+ POR_organize_brazil_wedding:0 "Organize a royal wedding"
+ POR_closer_ties_between_families:0 "Closer ties between Royal Families"
+ 
+ 
+ POR_integrate_brazilian_military:0 "Integrate Brazilian Military"
+ POR_integrate_brazilian_politics:0 "Integrate Brazilian Politics"
+ POR_integrate_brazilian_economy:0 "Integrate Brazilian Economy"
+ POR_power_of_porto_brazilian_empire:0 "Porto-Brazilian Empire"
+ RP_porto_brazilian_empire:0 "Porto-Brazilian Empire"
+ 
+ POR_join_entente_5:0 "Join Entente"
+ POR_neutral_foreign_policy4:0 "[POR.GetName] Leads the Way"
+ POR_join_central_3:0 "Join Central Powers"
+ 
+ POR_suggest_a_union_with_brazil:0 "Suggest a union between Brazil and us"
+ 
+ 
+ 
+ POR_neutral_foreign_policy3:0 "Neutral Foreign Policy"
+ POR_join_entente_2:0 "Join the [FRA.GetFactionName]"
+ POR_join_central_2:0 "Join the [GER.GetFactionName]"
+ BRA_abc_conferance:0 "ABC Conferance"
+ BRA_abc_conferance_desc:0 "Argentine Brazil Chile Conferance"
+ 
+ 
+ 
+ POR_com_Faction:0 "Lisbon Socialist Pact"
+ POR_central_investment_tt:0 "We will gain §Y1 civilian and 1 military factories§! for every member of the §YCentral Powers§!"
+ POR_entente_investment_tt:0 "We will gain §Y1 civilian and 1 military factories§! for every member of the §YEntente§!"
+ 
+ 
+ 
+ 
+ SPR_POWDERKEG_DESC:0 "Spain is in fire since the 1898 American Spanish war.Spain has lost its empire and is going bankrupt.We have to fix this political and economic situation!"
+ POR_POWDERKEG_DESC:0 "Portugal is ruled by a monarch.But the republicans are opposing this.A revolution is coming."
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ POR_victory_in_the_rebellion:0 "Victory in the Rebellion"
+ POR_revolution_succeeds:0 "Revolution Succeeds"
+ POR_prepare_for_1911_elections:0 "Prepare for 1911 Elections"
+ POR_republicans_win:0 "PRP Victory"
+ POR_communist_win:0 "PSP Victory"
+ POR_republicans_win_desc:0 ""
+ POR_communist_win_desc:0 ""

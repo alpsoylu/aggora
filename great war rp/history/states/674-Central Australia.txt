@@ -1,0 +1,19 @@
+
+state={
+	id=674
+	name="STATE_674"
+	history={
+		owner = AST
+		add_core_of = AST
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces={
+		2205 2221 2223 5138 7623 8206 8237 10336 10955 10991 11013 12906 12992 13132 1498 2133 2177 2186 5170 8134 8155 10473 12904 12912 12926
+	}
+	manpower=30000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	impassable = yes
+}

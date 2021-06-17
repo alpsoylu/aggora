@@ -1,0 +1,1012 @@
+﻿###########################
+# KURTULUŞ SAVAŞI EVENTS
+###########################
+
+add_namespace = RP_TIM_izmir
+add_namespace = RP_GRE_izmir
+add_namespace = RP_GRE_aydin
+add_namespace = RP_TIM_aydin
+add_namespace = RP_ITA_antalya
+add_namespace = RP_TIM_antalya
+add_namespace = RP_ENG_gelibolu
+add_namespace = RP_FRA_adana
+add_namespace = RP_TIM_biga
+add_namespace = RP_TIM_gelibolu
+add_namespace = RP_TIM_adana
+add_namespace = RP_TIM_urfa
+
+	
+	
+
+	
+
+
+
+
+country_event = { #TR WIN IZMIR #event RP_TIM_izmir.1 TUR
+	id = RP_TIM_izmir.1
+	title = RP_TIM_izmir.1.t
+	desc = RP_TIM_izmir.1.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_izmir.1.a
+		339 = {set_state_name = "Izmir"}
+		transfer_state = 339
+		add_war_support = 0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #TR LOSE IZMIR
+	id = RP_TIM_izmir.2
+	title = RP_TIM_izmir.2.t
+	desc = RP_TIM_izmir.2.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_izmir.2.a
+		add_war_support = -0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+country_event = { #GRE WIN IZMIR
+	id = RP_TIM_izmir.3
+	title = RP_TIM_izmir.3.t
+	desc = RP_TIM_izmir.3.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_izmir.3.a
+		add_war_support = 0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #GRE LOSE IZMIR
+	id = RP_TIM_izmir.4
+	title = RP_TIM_izmir.4.t
+	desc = RP_TIM_izmir.4.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_izmir.4.a
+		add_war_support = -0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+
+
+country_event = { #TR WIN IZMIR 
+	id = RP_GRE_izmir.1
+	title = RP_GRE_izmir.1.t
+	desc = RP_GRE_izmir.1.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_GRE_izmir.1.a
+		add_war_support = 0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #TR LOSE IZMIR
+	id = RP_GRE_izmir.2
+	title = RP_GRE_izmir.2.t
+	desc = RP_GRE_izmir.2.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_GRE_izmir.2.a
+		add_war_support = -0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+country_event = { #GRE WIN IZMIR
+	id = RP_GRE_izmir.3
+	title = RP_GRE_izmir.3.t
+	desc = RP_GRE_izmir.3.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_GRE_izmir.3.a
+		transfer_state = 339
+		add_war_support = 0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #GRE LOSE IZMIR
+	id = RP_GRE_izmir.4
+	title = RP_GRE_izmir.4.t
+	desc = RP_GRE_izmir.4.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_GRE_izmir.4.a
+		add_war_support = -0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+country_event = { #TR WIN AYDIN 
+	id = RP_GRE_aydin.1
+	title = RP_GRE_aydin.1.t
+	desc = RP_GRE_aydin.1.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_GRE_aydin.1.a
+		add_war_support = 0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #TR LOSE AYDIN
+	id = RP_GRE_aydin.2
+	title = RP_GRE_aydin.2.t
+	desc = RP_GRE_aydin.2.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_GRE_aydin.2.a
+		add_war_support = -0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+country_event = { #GRE WIN AYDIN
+	id = RP_GRE_aydin.3
+	title = RP_GRE_aydin.3.t
+	desc = RP_GRE_aydin.3.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_GRE_aydin.3.a
+		transfer_state = 824
+		add_war_support = 0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #GRE LOSE AYDIN
+	id = RP_GRE_aydin.4
+	title = RP_GRE_aydin.4.t
+	desc = RP_GRE_aydin.4.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_GRE_aydin.4.a
+		add_war_support = -0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = { #TR WIN ANTALYA
+	id = RP_ITA_antalya.1
+	title = RP_ITA_antalya.1.t
+	desc = RP_ITA_antalya.1.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_ITA_antalya.1.a
+		add_war_support = 0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #TR LOSE ANTALYA
+	id = RP_ITA_antalya.2
+	title = RP_ITA_antalya.2.t
+	desc = RP_ITA_antalya.2.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_ITA_antalya.2.a
+		add_war_support = -0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+country_event = { #ITA WIN ANTALYA
+	id = RP_ITA_antalya.3
+	title = RP_ITA_antalya.3.t
+	desc = RP_ITA_antalya.3.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_ITA_antalya.3.a
+		transfer_state = 342
+		add_war_support = 0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #ITA LOSE ANTALYA
+	id = RP_ITA_antalya.4
+	title = RP_ITA_antalya.4.t
+	desc = RP_ITA_antalya.4.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_ITA_antalya.4.a
+		add_war_support = -0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+country_event = { #TR WIN GELIBOLU
+	id = RP_ENG_gelibolu.1
+	title = RP_ENG_gelibolu.1.t
+	desc = RP_ENG_gelibolu.1.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_ENG_gelibolu.1.a
+		add_war_support = 0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #TR LOSE GELIBOLU
+	id = RP_ENG_gelibolu.2
+	title = RP_ENG_gelibolu.2.t
+	desc = RP_ENG_gelibolu.2.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_ENG_gelibolu.2.a
+		add_war_support = -0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+country_event = { #ENG WIN GELIBOLU
+	id = RP_ENG_gelibolu.3
+	title = RP_ENG_gelibolu.3.t
+	desc = RP_ENG_gelibolu.3.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_ENG_gelibolu.3.a
+		transfer_state = 341
+		add_war_support = 0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #ENG LOSE GELIBOLU
+	id = RP_ENG_gelibolu.4
+	title = RP_ENG_gelibolu.4.t
+	desc = RP_ENG_gelibolu.4.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_ENG_gelibolu.4.a
+		add_war_support = -0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+
+country_event = { #TR WIN ADANA
+	id = RP_FRA_adana.1
+	title = RP_FRA_adana.1.t
+	desc = RP_FRA_adana.1.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_FRA_adana.1.a
+		add_war_support = 0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #TR LOSE ADANA
+	id = RP_FRA_adana.2
+	title = RP_FRA_adana.2.t
+	desc = RP_FRA_adana.2.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_FRA_adana.2.a
+		add_war_support = -0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+country_event = { #FRA WIN ADANA
+	id = RP_FRA_adana.3
+	title = RP_FRA_adana.3.t
+	desc = RP_FRA_adana.3.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_FRA_adana.3.a
+		transfer_state = 344
+		add_war_support = 0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #FRA LOSE ADANA
+	id = RP_FRA_adana.4
+	title = RP_FRA_adana.4.t
+	desc = RP_FRA_adana.4.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_FRA_adana.4.a
+		add_war_support = -0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+country_event = { #TR WIN AYDIN #event RP_TIM_aydin.1 TUR
+	id = RP_TIM_aydin.1
+	title = RP_TIM_aydin.1.t
+	desc = RP_TIM_aydin.1.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_aydin.1.a
+		transfer_state = 824
+		add_war_support = 0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #TR LOSE AYDIN
+	id = RP_TIM_aydin.2
+	title = RP_TIM_aydin.2.t
+	desc = RP_TIM_aydin.2.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_aydin.2.a
+		add_war_support = -0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+country_event = { #GRE WIN AYDIN
+	id = RP_TIM_aydin.3
+	title = RP_TIM_aydin.3.t
+	desc = RP_TIM_aydin.3.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_aydin.3.a
+		add_war_support = 0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #GRE LOSE AYDIN
+	id = RP_TIM_aydin.4
+	title = RP_TIM_aydin.4.t
+	desc = RP_TIM_aydin.4.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_aydin.4.a
+		add_war_support = -0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+country_event = { #TR WIN ANTALYA #event RP_TIM_antalya.1 TUR
+	id = RP_TIM_antalya.1
+	title = RP_TIM_antalya.1.t
+	desc = RP_TIM_antalya.1.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_antalya.1.a
+		transfer_state = 342
+		add_war_support = 0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #TR LOSE ANTALYA
+	id = RP_TIM_antalya.2
+	title = RP_TIM_antalya.2.t
+	desc = RP_TIM_antalya.2.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_antalya.2.a
+		add_war_support = -0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+country_event = { #ITA WIN ANTALYA
+	id = RP_TIM_antalya.3
+	title = RP_TIM_antalya.3.t
+	desc = RP_TIM_antalya.3.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_antalya.3.a
+		add_war_support = 0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #ITA LOSE ANTALYA
+	id = RP_TIM_antalya.4
+	title = RP_TIM_antalya.4.t
+	desc = RP_TIM_antalya.4.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_antalya.4.a
+		add_war_support = -0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+
+
+
+
+
+country_event = { #TR WIN ANTALYA #event RP_TIM_biga.1 TUR
+	id = RP_TIM_biga.1
+	title = RP_TIM_biga.1.t
+	desc = RP_TIM_biga.1.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_biga.1.a
+		transfer_state = 825
+		add_war_support = 0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #TR LOSE ANTALYA
+	id = RP_TIM_biga.2
+	title = RP_TIM_biga.2.t
+	desc = RP_TIM_biga.2.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_biga.2.a
+		add_war_support = -0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+country_event = { #ITA WIN ANTALYA
+	id = RP_TIM_biga.3
+	title = RP_TIM_biga.3.t
+	desc = RP_TIM_biga.3.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_biga.3.a
+		add_war_support = 0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #ITA LOSE ANTALYA
+	id = RP_TIM_biga.4
+	title = RP_TIM_biga.4.t
+	desc = RP_TIM_biga.4.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_biga.4.a
+		add_war_support = -0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+
+country_event = { #TR WIN GELIBOLU #event RP_TIM_gelibolu.1 TUR
+	id = RP_TIM_gelibolu.1
+	title = RP_TIM_gelibolu.1.t
+	desc = RP_TIM_gelibolu.1.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_gelibolu.1.a
+		transfer_state = 341
+		add_war_support = 0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #TR LOSE GELIBOLU
+	id = RP_TIM_gelibolu.2
+	title = RP_TIM_gelibolu.2.t
+	desc = RP_TIM_gelibolu.2.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_gelibolu.2.a
+		add_war_support = -0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+country_event = { #ITA WIN GELIBOLU
+	id = RP_TIM_gelibolu.3
+	title = RP_TIM_gelibolu.3.t
+	desc = RP_TIM_gelibolu.3.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_gelibolu.3.a
+		add_war_support = 0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #ITA LOSE GELIBOLU
+	id = RP_TIM_gelibolu.4
+	title = RP_TIM_gelibolu.4.t
+	desc = RP_TIM_gelibolu.4.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_gelibolu.4.a
+		add_war_support = -0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+country_event = { #TR WIN ADANA #event RP_TIM_adana.1 TUR
+	id = RP_TIM_adana.1
+	title = RP_TIM_adana.1.t
+	desc = RP_TIM_adana.1.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_adana.1.a
+		transfer_state = 344
+		add_war_support = 0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #TR LOSE ADANA
+	id = RP_TIM_adana.2
+	title = RP_TIM_adana.2.t
+	desc = RP_TIM_adana.2.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_adana.2.a
+		add_war_support = -0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+country_event = { #FRA WIN ADANA
+	id = RP_TIM_adana.3
+	title = RP_TIM_adana.3.t
+	desc = RP_TIM_adana.3.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_adana.3.a
+		add_war_support = 0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #FRA LOSE ADANA
+	id = RP_TIM_adana.4
+	title = RP_TIM_adana.4.t
+	desc = RP_TIM_adana.4.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_adana.4.a
+		add_war_support = -0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+
+
+
+
+country_event = { #TR WIN ADANA #event RP_TIM_urfa.1 TUR
+	id = RP_TIM_urfa.1
+	title = RP_TIM_urfa.1.t
+	desc = RP_TIM_urfa.1.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_urfa.1.a
+		transfer_state = 829
+		add_war_support = 0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #TR LOSE ADANA
+	id = RP_TIM_urfa.2
+	title = RP_TIM_urfa.2.t
+	desc = RP_TIM_urfa.2.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_urfa.2.a
+		add_war_support = -0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
+country_event = { #FRA WIN ADANA
+	id = RP_TIM_urfa.3
+	title = RP_TIM_urfa.3.t
+	desc = RP_TIM_urfa.3.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_urfa.3.a
+		add_war_support = 0.025
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #FRA LOSE ADANA
+	id = RP_TIM_urfa.4
+	title = RP_TIM_urfa.4.t
+	desc = RP_TIM_urfa.4.d
+	picture = GFX_report_event_soldiers_in_france
+	#fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = RP_TIM_urfa.4.a
+		add_war_support = -0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+

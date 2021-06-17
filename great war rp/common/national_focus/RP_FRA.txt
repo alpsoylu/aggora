@@ -1,0 +1,39 @@
+focus_tree = {
+	id = RP_france_focus
+	default = no
+	country = { factor=0 modifier = { add = 20 tag = FRA} }
+
+	
+
+	
+	
+	shared_focus = GEN_FRA_aviation_effort
+	shared_focus = GEN_FRA_naval_effort
+	shared_focus = GEN_army_effort
+	
+	
+	focus = {
+		id = FRA_1910_election
+		icon = GFX_focus_generic_strike_at_democracy1
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		allow_branch = {
+        always = no
+        }
+		visible = {
+        always = no
+        }
+        
+		mutually_exclusive = {
+		focus = FRA_postpone_1910_elections
+		}
+		completion_reward = {
+		FRA = { country_event = { id = fra_event.3 } }
+		}
+		x = 1
+		y = 0
+	}
+	
+}

@@ -1,0 +1,13 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			
+			every_country = {
+				set_variable = {
+						var = NWO_defensive_espionage
+						value = 2
+				}
+			}
+		}
+	}
+}

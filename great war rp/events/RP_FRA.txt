@@ -1,0 +1,145 @@
+﻿###########################
+# FREBCG Events
+###########################
+
+add_namespace = fra_event
+
+	
+	
+
+	
+
+
+
+
+
+
+
+
+#ELECTIONS
+country_event = {
+	id = fra_event.3 #event fra_event.3 FRA
+	title = fra_event.3.t
+	desc = fra_event.3.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_trigfraed_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = FRA
+	date > 1910.4.24
+	}
+	#DEMOCRATIC
+	option = {
+	ai_chance = {base = 500000}
+		name = fra_event.3.a
+		set_country_flag = FRA_prrr
+		clr_country_flag = FRA_sfio
+		clr_country_flag = FRA_cons
+		load_focus_tree = { tree = RP_france_prrrs }
+	}
+	#COMMUNIST
+	option = {
+	ai_chance = {base = 0}
+		name = fra_event.3.b
+		trigger = {
+		#always = no
+		}
+		set_country_flag = FRA_sfio
+		clr_country_flag = FRA_prrr
+		clr_country_flag = FRA_cons
+		load_focus_tree = { tree = RP_france_sfio }
+	}
+	#ACTION FRANÇAISE
+	option = {
+	ai_chance = {base = 0}
+		name = fra_event.3.c
+		trigger = {
+		#always = no
+		}
+		set_country_flag = FRA_cons
+		clr_country_flag = FRA_prrr
+		clr_country_flag = FRA_sfio
+		load_focus_tree = { tree = RP_france_cons }
+	}
+	
+	}
+
+
+
+
+#SPR REQUEST CATALONIA
+country_event = {
+	id = fra_event.6 #event fra_event.6 TUR
+	title = fra_event.6.t
+	desc = fra_event.6.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_trigfraed_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = SPR
+	has_completed_focus = FRA_demand_catalonia
+	}
+	#YES
+	option = {
+	ai_chance = {base = 0}
+		name = fra_event.6.a
+		set_country_flag = FRA_spr_accepted_cat
+		FRA = { country_event = { id = fra_event.7 hours = 6 } }
+	}
+	#NO
+	option = {
+	ai_chance = {base = 10}
+		name = fra_event.6.b
+		set_country_flag = FRA_spr_rejected_cat
+		FRA = { country_event = { id = fra_event.8 hours = 6 } }
+	}
+	
+}
+
+
+#SPR ACCEPT
+country_event = {
+	id = fra_event.7 #event fra_event.7 TUR
+	title = fra_event.7.t
+	desc = fra_event.7.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_trigfraed_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = FRA
+	has_country_flag = FRA_spr_accepted_cat
+	}
+	#YES
+	option = {
+	ai_chance = {base = 0}
+		name = fra_event.7.a
+		transfer_state = 165
+	}
+	
+}
+
+
+#SPR REJECT
+country_event = {
+	id = fra_event.8 #event fra_event.8 TUR
+	title = fra_event.8.t
+	desc = fra_event.8.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_trigfraed_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = FRA
+	has_country_flag = FRA_spr_rejected_cat
+	}
+	#NO
+	option = {
+	ai_chance = {base = 0}
+		name = fra_event.8.a
+	create_wargoal = { type = annex_everything target = SPR }
+	}
+	
+}

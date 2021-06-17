@@ -1,0 +1,122 @@
+﻿add_namespace = ww1_persia
+
+# Surrender to Allies
+country_event = {
+	id = ww1_persia.5 
+	title = ww1_persia.5.t
+	desc = ww1_persia.5.d
+	picture = GFX_report_event_american_hunger_march
+
+	is_triggered_only = yes
+	option = {
+		name = ww1_persia.5.a
+		RUS = {
+			if = {
+				limit = {
+					OR = {
+						has_dlc = "Together for Victory"
+						has_dlc = "Waking the Tiger"
+					}
+				}
+				PER = { set_country_flag = protectorate }
+				set_autonomy = {
+					target = PER
+					autonomous_state = autonomy_tgwr_protectorate
+					freedom_level = 0.90
+				}
+				else = {
+					puppet = PER
+					PER = { add_ideas = protectorate }
+				}
+			}
+		}
+		hidden_effect = {
+			set_popularities = {
+				democratic = 18
+				neutrality = 75
+				fascism = 0
+				communism = 7
+			}
+			set_politics = { ruling_party = neutrality }
+		}
+		start_civil_war = {
+			ideology = fascism 
+			size = 0.6
+			capital = 411
+			states = all		
+			only_own_territory = yes
+			states_filter = {
+				NOT = {
+					state = 266
+					state = 416
+					state = 418
+				}
+			}
+			keep_political_leader = yes
+			hidden_effect = {
+				create_country_leader = {
+					name = "Persian Central Government"
+					picture = "gfx/leaders/PER/PER_gendarmerie.dds"
+					expire = "1935.1.1"
+					ideology = stratocracy
+					traits = {
+						trait_stratocracy
+					}
+				}
+				set_popularities = {
+					democratic = 35
+					neutrality = 10
+					fascism = 55
+					communism = 0
+				}
+				set_cosmetic_tag = PER_gendarmerie
+				set_country_flag = PER_gendarmerie_flag
+				every_other_country = {
+					add_ai_strategy = {
+						type = protect
+						id = PREV
+						value = -200
+					}
+					add_ai_strategy = {
+						type = alliance
+						id = PREV
+						value = -200
+					}
+				}
+				declare_war_on = {
+					target = ENG
+					type = take_core_state
+				}
+				declare_war_on = {
+					target = RUS
+					type = take_core_state
+				}
+			}
+		}
+		set_global_flag = persian_gendarmerie_revolt
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = ww1_persia.5.b
+		declare_war_on = {
+			target = ENG
+			type = take_core_state
+		}
+		declare_war_on = {
+			target = RUS
+			type = take_core_state
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}
+		add_war_support = 0.1
+		ai_chance = { 
+			base = 10 
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+	}
+}

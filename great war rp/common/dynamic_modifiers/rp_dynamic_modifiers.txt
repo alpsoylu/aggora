@@ -1,0 +1,7 @@
+TUR_kuvayimilliye_resistance = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_kuvayimilliye_dyn
+	
+	custom_effect_tooltip = TUR_kuvayimilliye_tt
+}

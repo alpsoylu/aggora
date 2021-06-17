@@ -1,0 +1,1658 @@
+decision_category_arabian_rebels = {
+
+	RP_arab_hejaz1 = {
+		icon = GFX_dec_arab0
+		allowed = { 
+		TUR = {controls_state = 679}
+		TUR = {owns_state = 679}
+		}
+		
+		
+		visible = {
+        679 = {has_state_flag = RP_arab_0}
+		has_war_with = TUR
+		TUR = {controls_state = 679}
+		TUR = {owns_state = 679}
+		
+        }
+		
+		
+		highlight_state_targets = {
+			state = 679
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		679 = {set_state_flag = RP_arab_1}	
+		679 = {clr_state_flag = RP_arab_0}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_hejaz2 = {
+		icon = GFX_dec_arab1
+		allowed = { 
+		TUR = {controls_state = 679}
+		TUR = {owns_state = 679}
+		
+		}
+		
+		
+
+		visible = {
+        679 = {has_state_flag = RP_arab_1}
+		has_war_with = TUR
+		TUR = {controls_state = 679}
+		TUR = {owns_state = 679}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 679
+		}
+		on_map_mode = map_only
+		cost =  150
+		complete_effect = {
+		679 = {set_state_flag = RP_arab_2}	
+		679 = {clr_state_flag = RP_arab_1}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_hejazrevolt = {
+		icon = GFX_dec_arab2
+		allowed = { 
+		TUR = {controls_state = 679}
+		TUR = {owns_state = 679}
+		
+		}
+		
+		
+		visible = {
+        679 = {has_state_flag = RP_arab_2}
+		has_war_with = TUR
+		TUR = {controls_state = 679}
+		TUR = {owns_state = 679}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 679
+		}
+		on_map_mode = map_only
+		cost =  150
+		complete_effect = {
+		679 = {set_state_flag = RP_arab_3}	
+		679 = {clr_state_flag = RP_arab_2}	
+		HJZ = {
+		transfer_state = 679
+		#division = { 
+		#name = "Hejaz Arabianaaa Revolt"
+		#location = 12758
+		#division_template = "Arabian Rebellion Division"
+		#start_experience_factor = 0.3
+	#}
+	hidden_effect = {
+	load_oob = HJZ_1910
+	add_ideas = RP_hejaz_rebellion
+	delete_unit_template_and_units = {
+    division_template = "Piyade Fırkası"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Süvari Tugayı"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Piyade Tümeni"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Mühendis Alayı"
+    disband = yes
+}
+}
+	679 = {
+	create_unit = {
+    division = "name = \"Hejaz Arabian Revolt\" 
+	division_template = \"Arabian Rebellion Division\" 
+	start_experience_factor = 0.5 
+	start_equipment_factor = 0.75"
+    owner = HJZ
+}
+}
+	
+	
+		declare_war_on = {
+    target = TUR
+    type = take_state_focus
+    generator = { 679 } 
+}
+		}
+		ENG = {add_to_faction = HJZ}
+		TUR = {remove_state_core = 679}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	#Palestine#
+	RP_arab_palestine1 = {
+		icon = GFX_dec_arab0
+		allowed = { 
+		TUR = {controls_state = 454}
+		TUR = {owns_state = 454}
+		
+		}
+		
+		
+		visible = {
+        454 = {has_state_flag = RP_arab_0}
+		has_war_with = TUR
+		TUR = {controls_state = 454}
+		TUR = {owns_state = 454}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 454
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		454 = {set_state_flag = RP_arab_1}	
+		454 = {clr_state_flag = RP_arab_0}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_palestine2 = {
+		icon = GFX_dec_arab1
+		allowed = { 
+		TUR = {controls_state = 454}
+		TUR = {owns_state = 454}
+		
+		}
+		
+		
+
+		visible = {
+        454 = {has_state_flag = RP_arab_1}
+		has_war_with = TUR
+		TUR = {controls_state = 454}
+		TUR = {owns_state = 454}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 454
+		}
+		on_map_mode = map_only
+		cost =  150
+		complete_effect = {
+		454 = {set_state_flag = RP_arab_2}	
+		454 = {clr_state_flag = RP_arab_1}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_palestinerevolt = {
+		icon = GFX_dec_arab2
+		allowed = { 
+		TUR = {controls_state = 454}
+		TUR = {owns_state = 454}
+		
+		}
+		
+		
+		visible = {
+        454 = {has_state_flag = RP_arab_2}
+		has_war_with = TUR
+		TUR = {controls_state = 454}
+		TUR = {owns_state = 454}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 454
+		}
+		on_map_mode = map_only
+		cost =  150
+		complete_effect = {
+		454 = {set_state_flag = RP_arab_3}	
+		454 = {clr_state_flag = RP_arab_2}	
+		HJZ = {
+		transfer_state = 454
+		
+		
+		hidden_effect = {
+	load_oob = HJZ_pal
+	add_ideas = RP_hejaz_rebellion
+	delete_unit_template_and_units = {
+    division_template = "Piyade Fırkası"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Süvari Tugayı"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Piyade Tümeni"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Mühendis Alayı"
+    disband = yes
+}
+}
+
+
+		
+		declare_war_on = {
+    target = TUR
+    type = take_state_focus
+    generator = { 454 } 
+}
+add_state_core = 454
+		}
+		ENG = {add_to_faction = HJZ} 
+		TUR = {remove_state_core = 454}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	#JORDAN#
+	RP_arab_jordan1 = {
+		icon = GFX_dec_arab0
+		allowed = { 
+		TUR = {controls_state = 455}
+		TUR = {owns_state = 455}
+		
+		}
+		
+		
+		visible = {
+        455 = {has_state_flag = RP_arab_0}
+		has_war_with = TUR
+		TUR = {controls_state = 455}
+		TUR = {owns_state = 455}
+		
+        }
+		
+		
+		highlight_state_targets = {
+			state = 455
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		455 = {set_state_flag = RP_arab_1}	
+		455 = {clr_state_flag = RP_arab_0}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_jordan2 = {
+		icon = GFX_dec_arab1
+		allowed = { 
+		TUR = {controls_state = 455}
+		TUR = {owns_state = 455}
+		
+		}
+		
+		
+
+		visible = {
+        455 = {has_state_flag = RP_arab_1}
+		has_war_with = TUR
+		TUR = {controls_state = 455}
+		TUR = {owns_state = 455}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 455
+		}
+		on_map_mode = map_only
+		cost =  150
+		complete_effect = {
+		455 = {set_state_flag = RP_arab_2}	
+		455 = {clr_state_flag = RP_arab_1}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_jordanrevolt = {
+		icon = GFX_dec_arab2
+		allowed = { 
+		TUR = {controls_state = 455}
+		TUR = {owns_state = 455}
+
+		}
+		
+		
+		visible = {
+        455 = {has_state_flag = RP_arab_2}
+		has_war_with = TUR
+		TUR = {controls_state = 455}
+		TUR = {owns_state = 455}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 455
+		}
+		on_map_mode = map_only
+		cost =  150
+		complete_effect = {
+		455 = {set_state_flag = RP_arab_3}	
+		455 = {clr_state_flag = RP_arab_2}	
+		HJZ = {
+		transfer_state = 455
+		
+		hidden_effect = {
+	load_oob = HJZ_jor
+	add_ideas = RP_hejaz_rebellion
+	delete_unit_template_and_units = {
+    division_template = "Piyade Fırkası"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Süvari Tugayı"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Piyade Tümeni"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Mühendis Alayı"
+    disband = yes
+}
+}
+	455 = {
+	create_unit = {
+    division = "name = \"Jordan Arabian Revolt\" 
+	division_template = \"Arabian Rebellion Division\" 
+	start_experience_factor = 0.5 
+	start_equipment_factor = 0.75"
+    owner = HJZ
+}
+}
+		
+		declare_war_on = {
+    target = TUR
+    type = take_state_focus
+    generator = { 455 } 
+}
+add_state_core = 455
+		}
+		ENG = {add_to_faction = HJZ} 
+		TUR = {remove_state_core = 455}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	#asir#
+	RP_arab_asir1 = {
+		icon = GFX_dec_arab0
+		allowed = { 
+		TUR = {controls_state = 747}
+		TUR = {owns_state = 747}
+		
+		}
+		
+		
+		visible = {
+        747 = {has_state_flag = RP_arab_0}
+		has_war_with = TUR
+		TUR = {controls_state = 747}
+		TUR = {owns_state = 747}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 747
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		747 = {set_state_flag = RP_arab_1}	
+		747 = {clr_state_flag = RP_arab_0}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_asir2 = {
+		icon = GFX_dec_arab1
+		allowed = { 
+		TUR = {controls_state = 747}
+		TUR = {owns_state = 747}
+		
+		}
+		
+		
+
+		visible = {
+        747 = {has_state_flag = RP_arab_1}
+		has_war_with = TUR
+		TUR = {controls_state = 747}
+		TUR = {owns_state = 747}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 747
+		}
+		on_map_mode = map_only
+		cost =  150
+		complete_effect = {
+		747 = {set_state_flag = RP_arab_2}	
+		747 = {clr_state_flag = RP_arab_1}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_asirrevolt = {
+		icon = GFX_dec_arab2
+		allowed = { 
+		TUR = {controls_state = 747}
+		TUR = {owns_state = 747}
+		
+		}
+		
+		
+		visible = {
+        747 = {has_state_flag = RP_arab_2}
+		has_war_with = TUR
+		TUR = {controls_state = 747}
+		TUR = {owns_state = 747}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 747
+		}
+		on_map_mode = map_only
+		cost =  150
+		complete_effect = {
+		747 = {set_state_flag = RP_arab_3}	
+		747 = {clr_state_flag = RP_arab_2}	
+		HJZ = {
+		transfer_state = 747
+		
+		hidden_effect = {
+	load_oob = HJZ_asir
+	add_ideas = RP_hejaz_rebellion
+	delete_unit_template_and_units = {
+    division_template = "Piyade Fırkası"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Süvari Tugayı"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Piyade Tümeni"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Mühendis Alayı"
+    disband = yes
+}
+}
+	455 = {
+	create_unit = {
+    division = "name = \"Asir Arabian Revolt\" 
+	division_template = \"Arabian Rebellion Division\" 
+	start_experience_factor = 0.5 
+	start_equipment_factor = 0.75"
+    owner = HJZ
+}
+}
+		
+		declare_war_on = {
+    target = TUR
+    type = take_state_focus
+    generator = { 747 } 
+}
+add_state_core = 747
+		}
+		ENG = {add_to_faction = HJZ} 
+		TUR = {remove_state_core = 747}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	#yemen#
+	RP_arab_yemen1 = {
+		icon = GFX_dec_arab0
+		allowed = { 
+		TUR = {controls_state = 293}
+		TUR = {owns_state = 293}
+		
+		}
+		
+		
+		visible = {
+        293 = {has_state_flag = RP_arab_0}
+		has_war_with = TUR
+		TUR = {controls_state = 293}
+		TUR = {owns_state = 293}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 293
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		293 = {set_state_flag = RP_arab_1}	
+		293 = {clr_state_flag = RP_arab_0}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_yemen2 = {
+		icon = GFX_dec_arab1
+		allowed = { 
+		TUR = {controls_state = 293}
+		TUR = {owns_state = 293}
+		
+		}
+		
+		
+
+		visible = {
+        293 = {has_state_flag = RP_arab_1}
+		has_war_with = TUR
+		TUR = {controls_state = 293}
+		TUR = {owns_state = 293}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 293
+		}
+		on_map_mode = map_only
+		cost =  150
+		complete_effect = {
+		293 = {set_state_flag = RP_arab_2}	
+		293 = {clr_state_flag = RP_arab_1}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_yemenrevolt = {
+		icon = GFX_dec_arab2
+		allowed = { 
+		TUR = {controls_state = 293}
+		TUR = {owns_state = 293}
+		
+		}
+		
+		
+		visible = {
+        293 = {has_state_flag = RP_arab_2}
+		has_war_with = TUR
+		TUR = {controls_state = 293}
+		TUR = {owns_state = 293}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 293
+		}
+		on_map_mode = map_only
+		cost =  150
+		complete_effect = {
+		293 = {set_state_flag = RP_arab_3}	
+		293 = {clr_state_flag = RP_arab_2}	
+		HJZ = {
+		transfer_state = 293
+		hidden_effect = {
+	load_oob = HJZ_yemen
+	add_ideas = RP_hejaz_rebellion
+	delete_unit_template_and_units = {
+    division_template = "Piyade Fırkası"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Süvari Tugayı"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Piyade Tümeni"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Mühendis Alayı"
+    disband = yes
+}
+}
+	293 = {
+	create_unit = {
+    division = "name = \"Yemen Arabian Revolt\" 
+	division_template = \"Arabian Rebellion Division\" 
+	start_experience_factor = 0.5 
+	start_equipment_factor = 0.75"
+    owner = HJZ
+}
+}
+		declare_war_on = {
+    target = TUR
+    type = take_state_focus
+    generator = { 293 } 
+}
+add_state_core = 293
+		}
+		ENG = {add_to_faction = HJZ} 
+		TUR = {remove_state_core = 293}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	#damascus#
+	RP_arab_damascus1 = {
+		icon = GFX_dec_arab0
+		allowed = { 
+		TUR = {controls_state = 554}
+		TUR = {owns_state = 554}
+		
+		}
+		
+		
+		visible = {
+        554 = {has_state_flag = RP_arab_0}
+		has_war_with = TUR
+		TUR = {controls_state = 554}
+		TUR = {owns_state = 554}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 554
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		554 = {set_state_flag = RP_arab_1}	
+		554 = {clr_state_flag = RP_arab_0}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_damascus2 = {
+		icon = GFX_dec_arab1
+		allowed = { 
+		TUR = {controls_state = 554}
+		TUR = {owns_state = 554}
+		
+		}
+		
+		
+
+		visible = {
+        554 = {has_state_flag = RP_arab_1}
+		has_war_with = TUR
+		TUR = {controls_state = 554}
+		TUR = {owns_state = 554}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 554
+		}
+		on_map_mode = map_only
+		cost =  150
+		complete_effect = {
+		554 = {set_state_flag = RP_arab_2}	
+		554 = {clr_state_flag = RP_arab_1}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_damascusrevolt = {
+		icon = GFX_dec_arab2
+		allowed = { 
+		TUR = {controls_state = 554}
+		TUR = {owns_state = 554}
+		
+		}
+		
+		
+		visible = {
+        554 = {has_state_flag = RP_arab_2}
+		has_war_with = TUR
+		TUR = {controls_state = 554}
+		TUR = {owns_state = 554}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 554
+		}
+		on_map_mode = map_only
+		cost =  150
+		complete_effect = {
+		554 = {set_state_flag = RP_arab_3}	
+		554 = {clr_state_flag = RP_arab_2}	
+		HJZ = {
+		transfer_state = 554
+		
+		hidden_effect = {
+	load_oob = HJZ_damascus
+	add_ideas = RP_hejaz_rebellion
+	delete_unit_template_and_units = {
+    division_template = "Piyade Fırkası"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Süvari Tugayı"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Piyade Tümeni"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Mühendis Alayı"
+    disband = yes
+}
+}
+	554 = {
+	create_unit = {
+    division = "name = \"Damascus Arabian Revolt\" 
+	division_template = \"Arabian Rebellion Division\" 
+	start_experience_factor = 0.5 
+	start_equipment_factor = 0.75"
+    owner = HJZ
+}
+}
+
+		declare_war_on = {
+    target = TUR
+    type = take_state_focus
+    generator = { 554 } 
+}
+add_state_core = 554
+		}
+		ENG = {add_to_faction = HJZ} 
+		TUR = {remove_state_core = 554}
+		TUR = {
+		set_province_controller = 7140
+		set_province_controller = 1072
+		set_province_controller = 1056
+		set_province_controller = 12442
+		}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	#lebanon#
+	RP_arab_lebanon1 = {
+		icon = GFX_dec_arab0
+		allowed = { 
+		TUR = {controls_state = 553}
+		TUR = {owns_state = 553}
+		
+		}
+		
+		
+		visible = {
+        553 = {has_state_flag = RP_arab_0}
+		has_war_with = TUR
+		TUR = {controls_state = 553}
+		TUR = {owns_state = 553}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 553
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		553 = {set_state_flag = RP_arab_1}	
+		553 = {clr_state_flag = RP_arab_0}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_lebanon2 = {
+		icon = GFX_dec_arab1
+		allowed = { 
+		TUR = {controls_state = 553}
+		TUR = {owns_state = 553}
+		
+		}
+		
+		
+
+		visible = {
+        553 = {has_state_flag = RP_arab_1}
+		has_war_with = TUR
+		TUR = {controls_state = 553}
+		TUR = {owns_state = 553}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 553
+		}
+		on_map_mode = map_only
+		cost =  150
+		complete_effect = {
+		553 = {set_state_flag = RP_arab_2}	
+		553 = {clr_state_flag = RP_arab_1}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_lebanonrevolt = {
+		icon = GFX_dec_arab2
+		allowed = { 
+		TUR = {controls_state = 553}
+		TUR = {owns_state = 553}
+		
+		}
+		
+		
+		visible = {
+        553 = {has_state_flag = RP_arab_2}
+		has_war_with = TUR
+		TUR = {controls_state = 553}
+		TUR = {owns_state = 553}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 553
+		}
+		on_map_mode = map_only
+		cost =  150
+		complete_effect = {
+		553 = {set_state_flag = RP_arab_3}	
+		553 = {clr_state_flag = RP_arab_2}	
+		
+		HJZ = {
+		transfer_state = 553
+		
+		hidden_effect = {
+	load_oob = HJZ_leb
+	add_ideas = RP_hejaz_rebellion
+	delete_unit_template_and_units = {
+    division_template = "Piyade Fırkası"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Süvari Tugayı"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Piyade Tümeni"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Mühendis Alayı"
+    disband = yes
+}
+}
+	553 = {
+	create_unit = {
+    division = "name = \"Lebanon Arabian Revolt\" 
+	division_template = \"Arabian Rebellion Division\" 
+	start_experience_factor = 0.5 
+	start_equipment_factor = 0.75"
+    owner = HJZ
+}
+}
+		declare_war_on = {
+    target = TUR
+    type = take_state_focus
+    generator = { 553 } 
+}
+add_state_core = 553
+		}
+		ENG = {add_to_faction = HJZ} 
+		TUR = {remove_state_core = 553}
+		TUR = {
+		set_province_controller = 12029
+		set_province_controller = 1088
+		set_province_controller = 10087
+		}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	#elhajara#
+	RP_arab_elhajara1 = {
+		icon = GFX_dec_arab0
+		allowed = { 
+		TUR = {controls_state = 675}
+		TUR = {owns_state = 675}
+		
+		}
+		
+		
+		visible = {
+        675 = {has_state_flag = RP_arab_0}
+		has_war_with = TUR
+		TUR = {controls_state = 675}
+		TUR = {owns_state = 675}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 675
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		675 = {set_state_flag = RP_arab_1}	
+		675 = {clr_state_flag = RP_arab_0}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_elhajara2 = {
+		icon = GFX_dec_arab1
+		allowed = { 
+		TUR = {controls_state = 675}
+		TUR = {owns_state = 675}
+		
+		}
+		
+		
+
+		visible = {
+        675 = {has_state_flag = RP_arab_1}
+		has_war_with = TUR
+		TUR = {controls_state = 675}
+		TUR = {owns_state = 675}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 675
+		}
+		on_map_mode = map_only
+		cost =  150
+		complete_effect = {
+		675 = {set_state_flag = RP_arab_2}	
+		675 = {clr_state_flag = RP_arab_1}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_elhajararevolt = {
+		icon = GFX_dec_arab2
+		allowed = { 
+		TUR = {controls_state = 675}
+		TUR = {owns_state = 675}
+		
+		}
+		
+		
+		visible = {
+        675 = {has_state_flag = RP_arab_2}
+		has_war_with = TUR
+		TUR = {controls_state = 675}
+		TUR = {owns_state = 675}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 675
+		}
+		on_map_mode = map_only
+		cost =  150
+		complete_effect = {
+		675 = {set_state_flag = RP_arab_3}	
+		675 = {clr_state_flag = RP_arab_2}	
+		HJZ = {
+		transfer_state = 675
+		hidden_effect = {
+	load_oob = HJZ_hajara
+	add_ideas = RP_hejaz_rebellion
+	delete_unit_template_and_units = {
+    division_template = "Piyade Fırkası"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Süvari Tugayı"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Piyade Tümeni"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Mühendis Alayı"
+    disband = yes
+}
+}
+	675 = {
+	create_unit = {
+    division = "name = \"Al-Hajara Arabian Revolt\" 
+	division_template = \"Arabian Rebellion Division\" 
+	start_experience_factor = 0.5 
+	start_equipment_factor = 0.75"
+    owner = HJZ
+}
+}
+		declare_war_on = {
+    target = TUR
+    type = take_state_focus
+    generator = { 675 } 
+}
+add_state_core = 675
+		}
+		ENG = {add_to_faction = HJZ} 
+		TUR = {remove_state_core = 675}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	#alhasa#
+	RP_arab_alhasa1 = {
+		icon = GFX_dec_arab0
+		allowed = { 
+		TUR = {controls_state = 804}
+		TUR = {owns_state = 804}
+		
+		
+		}
+		
+		
+		visible = {
+        804 = {has_state_flag = RP_arab_0}
+		has_war_with = TUR
+		TUR = {controls_state = 804}
+		TUR = {owns_state = 804}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 804
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		804 = {set_state_flag = RP_arab_1}	
+		804 = {clr_state_flag = RP_arab_0}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_alhasa2 = {
+		icon = GFX_dec_arab1
+		allowed = { 
+		TUR = {controls_state = 804}
+		TUR = {owns_state = 804}
+		
+		}
+		
+		
+
+		visible = {
+        804 = {has_state_flag = RP_arab_1}
+		has_war_with = TUR
+		TUR = {controls_state = 804}
+		TUR = {owns_state = 804}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 804
+		}
+		on_map_mode = map_only
+		cost =  150
+		complete_effect = {
+		804 = {set_state_flag = RP_arab_2}	
+		804 = {clr_state_flag = RP_arab_1}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_alhasarevolt = {
+		icon = GFX_dec_arab2
+		allowed = { 
+		TUR = {controls_state = 804}
+		TUR = {owns_state = 804}
+		
+		}
+		
+		
+		visible = {
+        804 = {has_state_flag = RP_arab_2}
+		has_war_with = TUR
+		TUR = {controls_state = 804}
+		TUR = {owns_state = 804}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 804
+		}
+		on_map_mode = map_only
+		cost =  150
+		complete_effect = {
+		804 = {set_state_flag = RP_arab_3}	
+		804 = {clr_state_flag = RP_arab_2}	
+		HJZ = {
+		transfer_state = 804
+		hidden_effect = {
+	load_oob = HJZ_hasa
+	add_ideas = RP_hejaz_rebellion
+	delete_unit_template_and_units = {
+    division_template = "Piyade Fırkası"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Süvari Tugayı"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Piyade Tümeni"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Mühendis Alayı"
+    disband = yes
+}
+}
+	804 = {
+	create_unit = {
+    division = "name = \"Al-Hasa Arabian Revolt\" 
+	division_template = \"Arabian Rebellion Division\" 
+	start_experience_factor = 0.5 
+	start_equipment_factor = 0.75"
+    owner = HJZ
+}
+}
+		declare_war_on = {
+    target = TUR
+    type = take_state_focus
+    generator = { 804 } 
+}
+add_state_core = 804
+		}
+		ENG = {add_to_faction = HJZ} 
+		TUR = {remove_state_core = 804}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	#baghdad#
+	RP_arab_baghdad1 = {
+		icon = GFX_dec_arab0
+		allowed = { 
+		TUR = {controls_state = 291}
+		TUR = {owns_state = 291}
+		
+		}
+		
+		
+		visible = {
+        291 = {has_state_flag = RP_arab_0}
+		has_war_with = TUR
+		TUR = {controls_state = 291}
+		TUR = {owns_state = 291}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 291
+		}
+		on_map_mode = map_only
+		cost =  100
+		complete_effect = {
+		291 = {set_state_flag = RP_arab_1}	
+		291 = {clr_state_flag = RP_arab_0}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_baghdad2 = {
+		icon = GFX_dec_arab1
+		allowed = { 
+		TUR = {controls_state = 291}
+		TUR = {owns_state = 291}
+		
+		}
+		
+		
+
+		visible = {
+        291 = {has_state_flag = RP_arab_1}
+		has_war_with = TUR
+		TUR = {controls_state = 291}
+		TUR = {owns_state = 291}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 291
+		}
+		on_map_mode = map_only
+		cost =  150
+		complete_effect = {
+		291 = {set_state_flag = RP_arab_2}	
+		291 = {clr_state_flag = RP_arab_1}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_baghdadrevolt = {
+		icon = GFX_dec_arab2
+		allowed = { 
+		TUR = {controls_state = 291}
+		TUR = {owns_state = 291}
+		
+		}
+		
+		
+		visible = {
+        291 = {has_state_flag = RP_arab_2}
+		has_war_with = TUR
+		TUR = {controls_state = 291}
+		TUR = {owns_state = 291}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 291
+		}
+		on_map_mode = map_only
+		cost =  150
+		complete_effect = {
+		291 = {set_state_flag = RP_arab_3}	
+		291 = {clr_state_flag = RP_arab_2}	
+		HJZ = {
+		transfer_state = 291
+		hidden_effect = {
+	load_oob = HJZ_baghdad
+	add_ideas = RP_hejaz_rebellion
+	delete_unit_template_and_units = {
+    division_template = "Piyade Fırkası"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Süvari Tugayı"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Piyade Tümeni"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Mühendis Alayı"
+    disband = yes
+}
+}
+	291 = {
+	create_unit = {
+    division = "name = \"Baghdad Arabian Revolt\" 
+	division_template = \"Arabian Rebellion Division\" 
+	start_experience_factor = 0.5 
+	start_equipment_factor = 0.75"
+    owner = HJZ
+}
+}
+		declare_war_on = {
+    target = TUR
+    type = take_state_focus
+    generator = { 291 } 
+}
+add_state_core = 291
+		}
+		ENG = {add_to_faction = HJZ} 
+		TUR = {remove_state_core = 291}
+		TUR = {
+		set_province_controller = 12413
+		set_province_controller = 12372
+		set_province_controller = 3795
+		}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+political_actions = {
+
+	RP_SPR_core_france = {
+		icon = GFX_decision_category_eng_appeal_to_imperial_loyalists
+		allowed = { 
+		tag = SPR
+		}
+		
+		
+		available = {
+        controls_state = 16
+        controls_state = 14
+        controls_state = 18
+        controls_state = 19
+        controls_state = 22
+		owns_state = 16
+        owns_state = 14
+        owns_state = 18
+        owns_state = 19
+        owns_state = 22
+		has_completed_focus = SPR_bourbon_union
+        }
+		visible = {
+		has_completed_focus = SPR_bourbon_union
+		}
+		
+
+		cost =  150
+		complete_effect = {
+		every_state = {
+		limit = {is_core_of = FRA}
+		add_core_of = SPR
+		}
+		}
+		ai_will_do = { factor = 100 }
+	}
+
+	RP_SPR_core_portugal = {
+		icon = GFX_decision_category_eng_appeal_to_imperial_loyalists
+		allowed = { 
+		tag = SPR
+		}
+		
+		
+		available = {
+        controls_state = 112
+        controls_state = 181
+        controls_state = 179
+        controls_state = 180
+		owns_state = 112
+        owns_state = 181
+        owns_state = 179
+        owns_state = 180
+		has_completed_focus = SPR_focus1
+        }
+		visible = {
+		has_completed_focus = SPR_focus1
+		}
+		
+
+		cost =  150
+		complete_effect = {
+		every_state = {
+		limit = {is_core_of = POR}
+		add_core_of = SPR
+		}
+		}
+		ai_will_do = { factor = 100 }
+	}
+	
+	RP_FRA_create_syrian_mandate = {
+		icon = GFX_decision_category_intervention_overseas
+		allowed = { 
+		tag = FRA
+		}
+		
+		
+		available = {
+        controls_state = 553
+		controls_state = 554
+		controls_state = 677
+		controls_state = 680
+        }
+		visible = {
+		OR = {
+		has_completed_focus = FRA_claim_syria
+		has_completed_focus = FRA_claim_syria_monarchy
+		has_completed_focus = FRA_claim_syria_socialism
+		}
+		}
+		
+
+		cost = 0
+		complete_effect = {
+		SYR = {
+		add_state_core = 553
+		transfer_state = 553
+		
+		add_state_core = 554
+		transfer_state = 554
+		
+		add_state_core = 677
+		transfer_state = 677
+		
+		add_state_core = 680
+		transfer_state = 680
+		set_cosmetic_tag = SYR_mandate
+		}
+		FRA = {
+		set_autonomy = {
+		target = SYR
+		autonomy_state = autonomy_tgwr_protectorate
+		}
+		}
+		}
+		ai_will_do = { factor = 100 }
+	}
+}
+FRA_spreading_communism_cat = {
+	
+	RP_FRA_spread_communism_italy = {
+		icon = GFX_decision_category_generic_propaganda
+		allowed = { 
+		tag = FRA
+		ITA = {exists = yes}
+		}
+		
+		
+		available = {
+        has_completed_focus = FRA_contact_psi
+        }
+		visible = {
+		has_completed_focus = FRA_spread_communism_ita
+		NOT = {has_completed_focus = FRA_communist_uprising_ita}
+		}
+		
+		cost = 50
+		complete_effect = {
+		ITA = {add_popularity = { ideology = communism popularity = 0.05}}
+		}
+		ai_will_do = { factor = 100 }
+	}
+	
+	RP_FRA_spread_communism_spain = {
+		icon = GFX_decision_category_generic_propaganda
+		allowed = { 
+		tag = FRA
+		SPR = {exists = yes}
+		}
+		
+		
+		available = {
+        has_completed_focus = FRA_contact_crs
+        }
+		visible = {
+		has_completed_focus = FRA_spread_communism_spr
+		NOT = {has_completed_focus = FRA_communist_uprising_spr}
+		}
+		
+		cost = 50
+		complete_effect = {
+		SPR = {add_popularity = { ideology = communism popularity = 0.05}}
+		}
+		ai_will_do = { factor = 100 }
+	}
+	
+	RP_FRA_spread_communism_eng = {
+		icon = GFX_decision_category_generic_propaganda
+		allowed = { 
+		tag = FRA
+		ENG = {exists = yes}
+		}
+		
+		
+		available = {
+        has_completed_focus = FRA_contact_fs
+        }
+		visible = {
+		has_completed_focus = FRA_spread_communism_eng
+		NOT = {has_completed_focus = FRA_communist_uprising_eng}
+		}
+		
+		cost = 50
+		complete_effect = {
+		ENG = {add_popularity = { ideology = communism popularity = 0.05}}
+		}
+		ai_will_do = { factor = 100 }
+	}
+	
+	RP_FRA_anti_socialism = {
+		icon = GFX_decision_category_generic_propaganda
+		allowed = { 
+		OR = {
+		tag = ENG
+		tag = ITA
+		tag = SPR
+		}
+		FRA = {exists = yes}
+		}
+		
+		
+		available = {
+        }
+		visible = {
+		NOT = {has_goverment = communism}
+		OR = {
+		AND = {
+		FRA = {has_completed_focus = FRA_spread_communism_eng}
+		FRA = {NOT = {has_completed_focus = FRA_communist_uprising_eng}}
+		tag = ENG
+		}
+		AND = {
+		FRA = {has_completed_focus = FRA_spread_communism_ita}
+		FRA = {NOT = {has_completed_focus = FRA_communist_uprising_ita}}
+		tag = ITA
+		}
+		AND = {
+		FRA = {has_completed_focus = FRA_spread_communism_spr}
+		FRA = {NOT = {has_completed_focus = FRA_communist_uprising_spr}}
+		tag = SPR
+		}
+		}
+		}
+		
+		cost = 75
+		complete_effect = {
+		if = {limit = {tag = SPR} add_popularity = { ideology = SPR.ruling_party popularity = 0.05}}
+		if = {limit = {tag = ENG} add_popularity = { ideology = ENG.ruling_party popularity = 0.05}}
+		if = {limit = {tag = ITA} add_popularity = { ideology = ITA.ruling_party popularity = 0.05}}
+		}
+		ai_will_do = { factor = 120 }
+	}
+}

@@ -1,0 +1,62 @@
+﻿capital=327
+set_politics = {
+    ruling_party = democratic
+    last_election = "1905.1.23"
+    election_frequency = 72
+    elections_allowed = yes
+}
+set_popularities = {
+    democratic = 66
+    fascism = 13
+    communism = 6
+    neutrality = 15
+}
+set_research_slots = 2
+set_stability = 0.58
+set_war_support = 0.23
+set_convoys = 5
+
+create_country_leader = {
+	name = "Emilio Aguinaldo" 
+	picture = "gfx/leaders/PHI/PHI_emilio_aguinaldo.dds" 
+	expire = "1935.1.1" 
+	ideology = fascism_ideology 
+	traits = { nationalist_symbol trait_proto_fascism } 
+}
+create_country_leader = {
+	name = "Manuel Luis Quezón"
+	picture = "gfx/leaders/PHI/PHI_manuel_luis_quezon.dds"
+	expire = "1935.1.1"
+	ideology = social_liberalism
+	traits = { trait_social_liberalism } 
+}
+create_country_leader = {
+	name = "Gregorio Aglipay"
+	picture = "gfx/leaders/PHI/PHI_gregorio_aglipay.dds"
+	expire = "1935.1.1"
+	ideology = theocracy
+	traits = { trait_theocracy } 
+}
+create_country_leader = { 
+	name = "Hermenegildo Cruz" 
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_3.dds" 
+	expire = "1935.1.1" 
+	ideology = reformist_socialism 
+	traits = { trait_reformist_socialism } 
+}
+
+	set_technology = {
+		#infantry
+		infantry_weapons = 1
+		support_weapons = 1
+		
+		#support
+		tech_support = 1
+
+		#navy
+		transport = 1
+
+		#engineering
+		electrical_engineering = 1
+		mechanical_engineering = 1
+	}

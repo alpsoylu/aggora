@@ -1,0 +1,241 @@
+
+
+shared_focus = {
+		id = TUR_send_kemal_to_samsun
+		icon = GFX_cumhuriyet
+		prerequisite = { focus =  }
+		mutually_exclusive = { focus =  }
+		x = 50
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		has_global_flag = great_war_ends
+		NOT = {has_country_flag = great_war_winner}
+		#æ#NOT = {
+		#æ#OR = {
+		#æ#controls_state = 553
+		#æ#controls_state = 554
+		#æ#controls_state = 677
+		#æ#controls_state = 680
+		#æ#controls_state = 829
+		#æ#controls_state = 455
+		#æ#controls_state = 454
+		#æ#controls_state = 679
+		#æ#controls_state = 747
+		#æ#controls_state = 662
+		#æ#controls_state = 654
+		#æ#controls_state = 293
+		#æ#}
+		#æ#}
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		TUR = {
+		remove_unit_leader = 90013
+		remove_unit_leader = 90516 
+		remove_unit_leader = 90515
+		remove_unit_leader = 90522 
+		remove_unit_leader = 90523 
+		remove_unit_leader = 90525  
+		remove_unit_leader = 90527  
+		remove_unit_leader = 90529  
+		remove_unit_leader = 90533
+		remove_unit_leader = 90535
+		remove_unit_leader = 90536 
+		remove_unit_leader = 90538 
+		remove_unit_leader = 90531  
+		}
+		}
+	}
+
+shared_focus = {
+		id = TUR_amasya_genelgesi
+		icon = GFX_tur_amasya
+		prerequisite = { focus = TUR_send_kemal_to_samsun }
+		mutually_exclusive = { focus =  }
+		relative_position_id = TUR_send_kemal_to_samsun
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		355 = {add_dynamic_modifier = { modifier = TUR_kuvayimilliye_resistance }}
+		}
+	}
+
+shared_focus = {
+		id = TUR_erzurum_kongresi
+		icon = GFX_tur_erzurum
+		prerequisite = { focus = TUR_send_kemal_to_samsun }
+		mutually_exclusive = { focus =  }
+		relative_position_id = TUR_send_kemal_to_samsun
+		x = 0
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		has_completed_focus = TUR_amasya_genelgesi
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		353 = {add_dynamic_modifier = { modifier = TUR_kuvayimilliye_resistance }}
+		354 = {add_dynamic_modifier = { modifier = TUR_kuvayimilliye_resistance }}
+		}
+	}
+
+shared_focus = {
+		id = TUR_sivas_kongresi
+		icon = GFX_tur_sivas
+		prerequisite = { focus = TUR_send_kemal_to_samsun }
+		mutually_exclusive = { focus =  }
+		relative_position_id = TUR_send_kemal_to_samsun
+		x = 2
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		has_completed_focus = TUR_erzurum_kongresi
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		349 = {add_dynamic_modifier = { modifier = TUR_kuvayimilliye_resistance }}
+		}
+	}
+
+shared_focus = {
+		id = TUR_go_to_ankara
+		icon = GFX_focus_tur_son_kalan
+		prerequisite = { focus = TUR_sivas_kongresi }
+		prerequisite = { focus = TUR_erzurum_kongresi }
+		prerequisite = { focus = TUR_amasya_genelgesi }
+		mutually_exclusive = { focus =  }
+		relative_position_id = TUR_send_kemal_to_samsun
+		x = 0
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		49 = {add_dynamic_modifier = { modifier = TUR_kuvayimilliye_resistance }}
+		}
+	}
+
+shared_focus = {
+		id = TUR_meclis_kur
+		icon = GFX_elections1
+		prerequisite = { focus = TUR_go_to_ankara }
+		mutually_exclusive = { focus =  }
+		relative_position_id = TUR_go_to_ankara
+		x = 0
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		controls_state = 49
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		hidden_effect = {TIM = { change_tag_from = TUR }}
+		custom_effect_tooltip = TUR_change_tag_tt
+		TIM = {
+		transfer_state = 49
+		transfer_state = 354
+		transfer_state = 353
+		transfer_state = 349
+		transfer_state = 355
+		add_state_core = 49
+		add_state_core = 354
+		add_state_core = 353
+		add_state_core = 349
+		add_state_core = 355
+		load_focus_tree = TIM_focus_tree
+		
+		hidden_effect = {
+		TIM = {unlock_national_focus = TUR_sivas_kongresi}
+		TIM = {unlock_national_focus = TUR_send_kemal_to_samsun}
+		TIM = {unlock_national_focus = TUR_amasya_genelgesi}
+		TIM = {unlock_national_focus = TUR_erzurum_kongresi}
+		TIM = {unlock_national_focus = TUR_go_to_ankara}
+		load_oob = TUR_1919
+		}
+		
+		}
+	}
