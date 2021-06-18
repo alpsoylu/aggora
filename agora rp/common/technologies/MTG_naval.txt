@@ -256,7 +256,7 @@ technologies = {
 				has_war_with = GER
 			}
 			modifier = {
-				factor = 2
+				factor = 3
 				anti_submarine_strategy_required_trigger = yes
 			}
 		}
@@ -298,6 +298,9 @@ technologies = {
 			modifier = {
 				factor = 2
 				has_war_with = GER
+				has_navy_size = {
+					size > 0
+				}					
 			}
 			modifier = {
 				factor = 2
@@ -341,6 +344,9 @@ technologies = {
 			modifier = {
 				factor = 4
 				has_war_with = GER
+				has_navy_size = {
+					size > 0
+				}					
 			}
 			modifier = {
 				factor = 2
@@ -381,6 +387,9 @@ technologies = {
 			modifier = {
 				factor = 4
 				has_war_with = GER
+				has_navy_size = {
+					size > 0
+				}	
 			}
 			modifier = {
 				factor = 2
@@ -420,9 +429,12 @@ technologies = {
 			modifier = {
 				factor = 4
 				has_war_with = GER
+				has_navy_size = {
+					size > 0
+				}					
 			}
 			modifier = {
-				factor = 2
+				factor = 4
 				anti_submarine_strategy_required_trigger = yes
 			}
 		}
@@ -456,9 +468,12 @@ technologies = {
 			modifier = {
 				factor = 4
 				has_war_with = GER
+				has_navy_size = {
+					size > 0
+				}					
 			}
 			modifier = {
-				factor = 2
+				factor = 4
 				anti_submarine_strategy_required_trigger = yes
 			}
 		}
@@ -740,6 +755,7 @@ technologies = {
 			naval_equipment
 			cl_tech
 			ca_tech
+			naval_armor_tech
 		}
 	}
 
@@ -788,6 +804,7 @@ technologies = {
 			naval_equipment
 			cl_tech
 			ca_tech
+			naval_armor_tech
 		}
 	}
 	advanced_cruiser_armor_scheme = {
@@ -830,6 +847,7 @@ technologies = {
 			naval_equipment
 			cl_tech
 			ca_tech
+			naval_armor_tech
 		}
 	}
 
@@ -1106,6 +1124,7 @@ technologies = {
 			naval_equipment
 			bb_tech
 			bc_tech
+			naval_armor_tech
 		}
 	}
 
@@ -1153,6 +1172,7 @@ technologies = {
 			naval_equipment
 			bb_tech
 			bc_tech
+			naval_armor_tech
 		}
 	}
 
@@ -1384,6 +1404,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			torpedo_equipment
 		}
 	}
 
@@ -1448,6 +1469,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			torpedo_equipment
 		}
 	}
 
@@ -1494,6 +1516,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			torpedo_equipment
 		}
 	}
 
@@ -1529,6 +1552,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			torpedo_equipment
 		}
 	}
 	improved_ship_torpedo_launcher = {
@@ -1567,6 +1591,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			torpedo_equipment
 		}
 	}
 	advanced_ship_torpedo_launcher = {
@@ -1605,6 +1630,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			torpedo_equipment
 		}
 	}
 	modern_ship_torpedo_launcher = {
@@ -1637,6 +1663,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			torpedo_equipment
 		}
 	}
 
@@ -1963,6 +1990,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			naval_gunnery_tech
 		}
 	}
 
@@ -2007,6 +2035,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			naval_gunnery_tech
 		}
 	}
 	improved_light_battery = {
@@ -2045,6 +2074,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			naval_gunnery_tech
 		}
 	}
 	advanced_light_battery = {
@@ -2077,6 +2107,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			naval_gunnery_tech
 		}
 	}
 
@@ -2134,6 +2165,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			naval_shell_tech
 		}
 	}
 	improved_light_shell = {
@@ -2185,6 +2217,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			naval_shell_tech
 		}
 	}
 
@@ -2230,6 +2263,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			naval_gunnery_tech
 		}
 	}
 	improved_medium_battery = {
@@ -2267,6 +2301,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			naval_gunnery_tech
 		}
 	}
 	advanced_medium_battery = {
@@ -2295,6 +2330,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			naval_gunnery_tech
 		}
 	}
 	basic_medium_shell = {
@@ -2335,6 +2371,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			naval_shell_tech
 		}
 	}
 	improved_medium_shell = {
@@ -2422,6 +2459,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			naval_gunnery_tech
 		}
 	}
 	improved_heavy_battery = {
@@ -2465,6 +2503,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			naval_gunnery_tech
 		}
 	}
 	advanced_heavy_battery = {
@@ -2503,6 +2542,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			naval_gunnery_tech
 		}
 	}
 	basic_heavy_shell = {
@@ -2512,7 +2552,7 @@ early_ship_hull_carrier = {
 		xp_research_bonus = 1.50
 		research_cost = 0.7
 
-		start_year = 1936
+		start_year = 1938
 
 		path = {
 			leads_to_tech = improved_heavy_shell
@@ -2545,6 +2585,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			naval_shell_tech
 		}
 	}
 	improved_heavy_shell = {
@@ -2582,6 +2623,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			naval_shell_tech
 		}
 	}
 
@@ -2622,6 +2664,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			naval_gunnery_tech
 		}
 	}
 	improved_secondary_battery = {
@@ -2661,6 +2704,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			naval_gunnery_tech
 		}
 	}
 	dp_secondary_battery = {
@@ -2697,6 +2741,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			naval_gunnery_tech
 		}
 	}
 
@@ -2743,6 +2788,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			damage_control_tech
 		}
 	}
 
@@ -2782,6 +2828,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			damage_control_tech
 		}
 	}
 
@@ -2817,6 +2864,7 @@ early_ship_hull_carrier = {
 		
 		categories = {
 			naval_equipment
+			damage_control_tech
 		}
 	}
 
@@ -3236,6 +3284,15 @@ early_ship_hull_carrier = {
 		category_tac_bomber = { 
 			mines_planting = 0.08 
 		}
+
+		category_flying_boat = { 
+			mines_sweeping = 0.08 
+		}
+
+		category_medium_maritime = { 
+			mines_sweeping = 0.08 
+		}
+
 		category_strat_bomber = { 
 			mines_planting = 0.13 
 		}
@@ -3309,6 +3366,19 @@ early_ship_hull_carrier = {
 		category_tac_bomber = { 
 			mines_sweeping = 0.15 
 		}
+		
+		category_flying_boat = { 
+			mines_sweeping = 0.15 
+		}
+
+		category_medium_maritime = { 
+			mines_sweeping = 0.15 
+		}
+
+		category_strat_bomber = { 
+			mines_sweeping = 0.15 
+		}		
+		
 
 		folder = {
 			name = mtgnavalfolder
